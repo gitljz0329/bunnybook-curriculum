@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - ops/verify-netlify-aliases-20260712
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
