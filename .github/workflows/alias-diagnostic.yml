@@ -1,0 +1,64 @@
+name: One-time alias route diagnostics
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/alias-diagnostic.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    if: github.event.pull_request.head.ref == 'ops/netlify-alias-deploy-20260712'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Capture production routes
+        shell: bash
+        run: |
+          set -u
+          mkdir -p /tmp/alias-diagnostic
+          base="https://bunnybook-curriculum.netlify.app"
+          for spec in \
+            'explore-no-slash|/explore' \
+            'explore-slash|/explore/' \
+            'map-no-slash|/map' \
+            'map-slash|/map/'; do
+            slug="${spec%%|*}"
+            path="${spec#*|}"
+            code=$(curl -sS --max-redirs 0 \
+              -D "/tmp/alias-diagnostic/${slug}.headers" \
+              -o "/tmp/alias-diagnostic/${slug}.html" \
+              -w "%{http_code}" \
+              "$base$path?diagnostic=${GITHUB_RUN_ID}" || true)
+            {
+              echo "path=$path"
+              echo "status=$code"
+              echo "has_location=$(grep -Eic '^location:' /tmp/alias-diagnostic/${slug}.headers || true)"
+              echo "has_base=$(grep -Fc '<base href=\"/mvp/\">' /tmp/alias-diagnostic/${slug}.html || true)"
+              echo "has_bunnybook=$(grep -Fc 'BunnyBook' /tmp/alias-diagnostic/${slug}.html || true)"
+              echo "bytes=$(wc -c < /tmp/alias-diagnostic/${slug}.html 2>/dev/null || echo 0)"
+            } > "/tmp/alias-diagnostic/${slug}.summary"
+          done
+
+          for path in /mvp/styles.css /mvp/app.js /api/v1/learning-map.json; do
+            slug=$(echo "$path" | tr '/' '_' | sed 's/^_//')
+            code=$(curl -sS --max-redirs 0 \
+              -D "/tmp/alias-diagnostic/${slug}.headers" \
+              -o "/tmp/alias-diagnostic/${slug}.body" \
+              -w "%{http_code}" \
+              "$base$path?diagnostic=${GITHUB_RUN_ID}" || true)
+            echo "path=$path" > "/tmp/alias-diagnostic/${slug}.summary"
+            echo "status=$code" >> "/tmp/alias-diagnostic/${slug}.summary"
+            echo "bytes=$(wc -c < /tmp/alias-diagnostic/${slug}.body 2>/dev/null || echo 0)" >> "/tmp/alias-diagnostic/${slug}.summary"
+          done
+
+      - name: Upload route diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: alias-route-diagnostics
+          path: /tmp/alias-diagnostic/
+          if-no-files-found: error
+          retention-days: 1
