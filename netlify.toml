@@ -1,27 +1,45 @@
 [build]
   publish = "."
 
-# Keep the browser URL at /explore/ so the graph's relative assets resolve
-# through the same rewrite family. /map remains a short human-facing alias.
+# /explore and /map are stable aliases for the same graph application.
+# Serve both forms as direct 200 rewrites instead of chaining trailing-slash
+# redirects. The graph page declares /mvp/ as its asset base, so resources stay
+# stable regardless of which alias the browser keeps in the address bar.
 [[redirects]]
   from = "/explore"
-  to = "/explore/"
-  status = 301
+  to = "/mvp/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/explore/"
+  to = "/mvp/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/explore/*"
   to = "/mvp/:splat"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/map"
-  to = "/explore/"
-  status = 302
+  to = "/mvp/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/map/"
+  to = "/mvp/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/map/*"
-  to = "/explore/:splat"
-  status = 302
+  to = "/mvp/:splat"
+  status = 200
+  force = true
 
 # Stable machine-facing aliases. Every interface reads the same canonical graph
 # and the same universal teacher/AI protocol.

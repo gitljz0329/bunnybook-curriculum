@@ -44,10 +44,14 @@ FORBIDDEN_DUPLICATE_ENTRY_FILES = (
 
 REQUIRED_NETLIFY_FRAGMENTS = (
     'publish = "."',
+    'from = "/explore"',
+    'from = "/explore/"',
     'from = "/explore/*"',
-    'to = "/mvp/:splat"',
     'from = "/map"',
-    'to = "/explore/"',
+    'from = "/map/"',
+    'from = "/map/*"',
+    'to = "/mvp/index.html"',
+    'to = "/mvp/:splat"',
     'from = "/api/v1/learning-map.json"',
     'to = "/mvp/learning-map.json"',
     'from = "/api/v1/graph-manifest.json"',
@@ -106,6 +110,22 @@ def validate_netlify(errors: list[str]) -> None:
     for fragment in REQUIRED_NETLIFY_FRAGMENTS:
         if fragment not in text:
             errors.append(f"netlify.toml is missing contract fragment: {fragment}")
+
+    if text.count('to = "/mvp/index.html"') < 4:
+        errors.append("all four base alias forms must rewrite directly to /mvp/index.html")
+    if 'to = "/explore/"' in text or 'to = "/map/"' in text:
+        errors.append("/explore and /map aliases must not redirect to one another")
+    if "status = 301" in text or "status = 302" in text:
+        errors.append("alias routing must use direct 200 rewrites, not redirect chains")
+
+    graph_html = ROOT / "mvp" / "index.html"
+    try:
+        graph_text = graph_html.read_text(encoding="utf-8")
+    except OSError as exc:
+        errors.append(f"cannot read mvp/index.html: {exc}")
+    else:
+        if '<base href="/mvp/">' not in graph_text:
+            errors.append("mvp/index.html must anchor relative assets to /mvp/")
 
     if re.search(r"https://[a-f0-9]{24,}--bunnybook-curriculum\.netlify\.app", text):
         errors.append("netlify.toml must not depend on an immutable historical deploy URL")
