@@ -1,0 +1,201 @@
+{
+  "contract_version": "2.0-universal-entry",
+  "name": "BunnyBook Curriculum Source",
+  "description": "A link-first, read-only curriculum knowledge service for teacher-AI lesson planning conversations.",
+  "language": "zh-CN",
+  "canonical_site_url": "https://bunnybook-curriculum.netlify.app",
+  "repository_url": "https://github.com/gitljz0329/bunnybook-curriculum",
+  "access": {
+    "authentication_required": false,
+    "teacher_installation_required": false,
+    "mcp_required": false,
+    "writeback_allowed": false,
+    "human_review_required": true
+  },
+  "audiences": [
+    "teachers",
+    "general-purpose AI assistants",
+    "agent developers",
+    "curriculum knowledge engineers"
+  ],
+  "discovery": {
+    "llms_index": "/llms.txt",
+    "offline_context": "/llms-full.txt",
+    "start_here": "/agent/START-HERE.md",
+    "source_manifest": "/api/v1/source-manifest.json",
+    "learning_map": "/api/v1/learning-map.json",
+    "detailed_graph_manifest": "/api/v1/graph-manifest.json",
+    "data_notice": "/mvp/data-notice.md",
+    "human_map": "/map/?role=teacher",
+    "agent_map": "/map/?role=agent"
+  },
+  "conversation_contract": {
+    "classify_before_retrieval": true,
+    "maximum_initial_questions": 3,
+    "reuse_information_already_provided": true,
+    "progressive_retrieval": true,
+    "scan_entire_site_by_default": false,
+    "blueprint_before_full_plan": true,
+    "fallback_when_web_unavailable": "Ask the teacher to paste /llms-full.txt and, when precise IDs are needed, a relevant theme package or JSON excerpt. Never pretend the site was read.",
+    "must_not_require": [
+      "MCP",
+      "Plugin",
+      "Skill",
+      "a specific AI vendor",
+      "teacher-hosted infrastructure"
+    ]
+  },
+  "modes": {
+    "lesson_plan": {
+      "label_zh": "单课时备课",
+      "intent": "Design one teachable lesson or trial activity.",
+      "default_deliverables": [
+        "one-page blueprint",
+        "target topics and prerequisites",
+        "timed lesson sequence",
+        "student artifacts",
+        "observable mastery evidence",
+        "materials and differentiated support",
+        "curriculum evidence and human review"
+      ]
+    },
+    "full_planning": {
+      "label_zh": "全盘规划",
+      "intent": "Plan a unit, project, or multi-session learning sequence.",
+      "default_deliverables": [
+        "authentic question",
+        "shared product",
+        "subject contributions",
+        "key topics and sequence",
+        "session or week plan",
+        "formative checkpoints",
+        "assessment evidence",
+        "teacher decisions"
+      ]
+    },
+    "learning_progression": {
+      "label_zh": "学习进阶",
+      "intent": "Trace what learners need before a target topic and what it unlocks next.",
+      "default_deliverables": [
+        "target topic",
+        "hard prerequisites",
+        "soft supporting prerequisites",
+        "observable mastery evidence",
+        "possible gaps without individual diagnosis",
+        "compensatory tasks",
+        "next unlocked topics"
+      ]
+    },
+    "review": {
+      "label_zh": "核对已有教案",
+      "intent": "Review an existing plan against the graph and evidence boundaries.",
+      "default_deliverables": [
+        "goal-activity-evidence alignment",
+        "prerequisite and sequence review",
+        "reference and stable-ID validation",
+        "missing evidence",
+        "overclaim and risk review",
+        "prioritized revisions"
+      ]
+    }
+  },
+  "default_output_contract": {
+    "format": "markdown",
+    "section_order": [
+      "course_blueprint",
+      "target_topics_and_learning_progression",
+      "timed_learning_sequence",
+      "assessment_and_support",
+      "curriculum_evidence_project_mapping_and_teacher_review"
+    ],
+    "activity_minimum_fields": [
+      "time",
+      "teacher_action",
+      "student_action",
+      "student_artifact",
+      "observable_mastery_evidence"
+    ],
+    "final_metadata": [
+      "theme_ids",
+      "topic_ids",
+      "dependency_direction_and_strength",
+      "source_refs",
+      "review_status",
+      "warnings",
+      "teacher_decisions"
+    ]
+  },
+  "graph_semantics": {
+    "canonical_theme_collection": "themes",
+    "compatibility_theme_alias": "routes",
+    "topic_collection": "topics",
+    "dependency_collection": "dependencies",
+    "dependency_direction": "prerequisite_id -> topic_id",
+    "hard_meaning": "A necessary prerequisite in the current BunnyBook project model; not a direct curriculum-standard mandate.",
+    "soft_meaning": "A supporting or helpful prerequisite in the current BunnyBook project model; not a direct curriculum-standard mandate.",
+    "coverage_units_are_topics": false,
+    "interdisciplinary_is_curriculum_subject": false
+  },
+  "source_counts": {
+    "themes": 8,
+    "topics": 87,
+    "dependencies": 189,
+    "curriculum_subjects": 12,
+    "competencies": 51,
+    "coverage_units": 182
+  },
+  "trust_policy": {
+    "human_review_required": true,
+    "student_personal_data_allowed": false,
+    "individual_student_diagnosis_allowed": false,
+    "high_risk_automated_decisions_allowed": false,
+    "verified_as_source_facts": [
+      "curriculum subject names",
+      "51 competency names and local source-page locations"
+    ],
+    "project_mapping_pending_review": [
+      "themes",
+      "topics",
+      "dependencies",
+      "topic-to-curriculum mappings",
+      "subject contributions",
+      "performance tasks"
+    ],
+    "must_not_claim": [
+      "BunnyBook themes are directly prescribed by curriculum standards",
+      "BunnyBook prerequisite order is directly prescribed by curriculum standards",
+      "pending project mappings are expert consensus",
+      "the corpus represents every national high-school subject standard",
+      "BunnyBook or an AI vendor endorses generated lesson plans"
+    ]
+  },
+  "optional_integrations": {
+    "mcp": {
+      "required": false,
+      "status": "local_verified_install_required",
+      "access_mode": "read_only",
+      "guide": "/mvp/mcp-guide.md"
+    },
+    "kimi_code_plugin": {
+      "required": false,
+      "status": "third_party_local_test_package",
+      "official_marketplace_status": "not_submitted_or_listed"
+    }
+  },
+  "licensing": {
+    "rights_holder": "lixiaozuyi",
+    "database_structure_ids_relationships": "ODbL-1.0",
+    "bunnybook_authored_text": "CC-BY-4.0",
+    "software": "Apache-2.0",
+    "brand_assets": "all-rights-reserved",
+    "license_map": "https://github.com/gitljz0329/bunnybook-curriculum/blob/main/LICENSE.md",
+    "attribution": "Contains information from BunnyBook Curriculum Graph, made available under ODbL 1.0. BunnyBook-authored text is Copyright 2026 lixiaozuyi and licensed under CC BY 4.0."
+  },
+  "forking": {
+    "supported": true,
+    "guide": "/docs/BUILD_YOUR_OWN.md",
+    "first_config_file": "/site-config.js",
+    "canonical_graph_file": "/mvp/learning-map.json",
+    "brand_reuse_granted": false
+  }
+}
