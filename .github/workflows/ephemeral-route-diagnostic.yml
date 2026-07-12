@@ -1,0 +1,53 @@
+name: Ephemeral route diagnostic
+
+on:
+  push:
+    branches:
+      - ops/netlify-deploy-20260712
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    if: github.event.head_commit.message == 'Diagnose production redirect chain'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Inspect production routes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://bunnybook-curriculum.netlify.app"
+          report=/tmp/route-diagnostic.txt
+          : > "$report"
+
+          for path in "/" "/llms.txt" "/agent/manifest.json" "/api/v1/source-manifest.json" "/api/v1/learning-map.json" "/explore" "/explore/" "/map" "/map/" "/mvp/index.html"; do
+            echo "=== $path ===" >> "$report"
+            curl -sS --max-redirs 0 -o /dev/null -D - "$base$path?diagnostic=$GITHUB_RUN_ID" \
+              | tr -d '\r' \
+              | grep -Ei '^(HTTP/|location:|content-type:|access-control-allow-origin:)' \
+              >> "$report" || true
+            echo >> "$report"
+          done
+
+          python3 - "$report" /tmp/request.json <<'PY'
+          import base64
+          import json
+          import sys
+          from pathlib import Path
+
+          payload = Path(sys.argv[1]).read_bytes()
+          request = {
+              "message": "Record production route diagnostic",
+              "content": base64.b64encode(payload).decode("ascii"),
+              "branch": "ops/netlify-deploy-20260712",
+          }
+          Path(sys.argv[2]).write_text(json.dumps(request), encoding="utf-8")
+          PY
+
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.github/netlify-deploy/route-diagnostic.txt" \
+            --input /tmp/request.json >/dev/null
