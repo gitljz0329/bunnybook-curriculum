@@ -1,0 +1,16 @@
+{
+  "status": "failure",
+  "source_sha": "e40e25f0024b214ce73ad211d1dde36af4067b40",
+  "deploy_id": "6a5340605d0c161286d0f12d",
+  "workflow_run_id": "29184217088",
+  "checked_at": "2026-07-12T07:25:38.065636+00:00",
+  "checks": [
+    "universal homepage text",
+    "llms discovery index",
+    "agent manifest modes and counts",
+    "source manifest modes and counts",
+    "learning-map counts",
+    "teacher graph route",
+    "API CORS header"
+  ]
+}
