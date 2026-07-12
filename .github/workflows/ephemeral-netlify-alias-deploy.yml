@@ -8,10 +8,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: bunnybook-netlify-production-deploy
-  cancel-in-progress: false
-
 jobs:
   deploy-and-smoke:
     if: github.event.pull_request.head.ref == 'ops/netlify-alias-deploy-20260712'
