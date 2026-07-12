@@ -1,0 +1,119 @@
+name: Ephemeral production smoke test
+
+on:
+  push:
+    branches:
+      - ops/netlify-deploy-20260712
+
+permissions:
+  contents: write
+
+jobs:
+  smoke:
+    if: github.event.head_commit.message == 'Run production live smoke test'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check production endpoints
+        id: smoke
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://bunnybook-curriculum.netlify.app"
+          query="smoke=${GITHUB_RUN_ID}"
+
+          curl -fsSL --retry 5 --retry-delay 2 "$base/?$query" -o /tmp/index.html
+          grep -Fq "老师看得懂" /tmp/index.html
+          grep -Fq "AI 也找得到" /tmp/index.html
+
+          curl -fsSL --retry 5 --retry-delay 2 "$base/llms.txt?$query" -o /tmp/llms.txt
+          grep -Fq "# BunnyBook Curriculum Source" /tmp/llms.txt
+          grep -Fq "/agent/START-HERE.md" /tmp/llms.txt
+
+          curl -fsSL --retry 5 --retry-delay 2 "$base/agent/manifest.json?$query" -o /tmp/agent-manifest.json
+          curl -fsSL --retry 5 --retry-delay 2 "$base/api/v1/source-manifest.json?$query" -o /tmp/source-manifest.json
+          curl -fsSL --retry 5 --retry-delay 2 "$base/api/v1/learning-map.json?$query" -o /tmp/learning-map.json
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          agent = json.loads(Path('/tmp/agent-manifest.json').read_text())
+          source = json.loads(Path('/tmp/source-manifest.json').read_text())
+          graph = json.loads(Path('/tmp/learning-map.json').read_text())
+
+          expected_modes = {'lesson_plan', 'full_planning', 'learning_progression', 'review'}
+          assert set(agent['modes']) == expected_modes
+          assert set(source['conversation_modes']) == expected_modes
+          assert agent['source_counts'] == {
+              'themes': 8,
+              'topics': 87,
+              'dependencies': 189,
+              'curriculum_subjects': 12,
+              'competencies': 51,
+              'coverage_units': 182,
+          }
+          assert len(graph['themes']) == 8
+          assert len(graph['topics']) == 87
+          assert len(graph['dependencies']) == 189
+          assert len(graph['curriculum_alignment']['curriculum_subjects']) == 12
+          assert len(graph['curriculum_alignment']['competencies']) == 51
+          assert len(graph['curriculum_alignment']['coverage_units']) == 182
+          PY
+
+          curl -fsSL --retry 5 --retry-delay 2 "$base/explore/?role=teacher&$query" -o /tmp/explore.html
+          grep -Fq "BunnyBook" /tmp/explore.html
+          grep -Fq "role-switch" /tmp/explore.html
+
+          curl -fsSLI --retry 5 --retry-delay 2 "$base/api/v1/source-manifest.json?$query" -o /tmp/api.headers
+          grep -Eiq '^access-control-allow-origin: \*$' /tmp/api.headers
+
+      - name: Publish smoke-test result
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - "$SMOKE_OUTCOME" "$GITHUB_RUN_ID" /tmp/live-smoke.json /tmp/live-smoke-request.json <<'PY'
+          import base64
+          import json
+          import sys
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          outcome, run_id, result_path, request_path = sys.argv[1:]
+          result = {
+              'status': outcome,
+              'source_sha': 'e40e25f0024b214ce73ad211d1dde36af4067b40',
+              'deploy_id': '6a5340605d0c161286d0f12d',
+              'workflow_run_id': run_id,
+              'checked_at': datetime.now(timezone.utc).isoformat(),
+              'checks': [
+                  'universal homepage text',
+                  'llms discovery index',
+                  'agent manifest modes and counts',
+                  'source manifest modes and counts',
+                  'learning-map counts',
+                  'teacher graph route',
+                  'API CORS header',
+              ],
+          }
+          result_bytes = json.dumps(result, indent=2).encode()
+          Path(result_path).write_bytes(result_bytes)
+          request = {
+              'message': 'Record production live smoke-test result',
+              'content': base64.b64encode(result_bytes).decode('ascii'),
+              'branch': 'ops/netlify-deploy-20260712',
+          }
+          Path(request_path).write_text(json.dumps(request), encoding='utf-8')
+          PY
+
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.github/netlify-deploy/live-smoke.json" \
+            --input /tmp/live-smoke-request.json >/dev/null
+
+      - name: Fail when production smoke test failed
+        if: steps.smoke.outcome != 'success'
+        run: exit 1
