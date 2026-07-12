@@ -130,24 +130,25 @@ jobs:
       - name: Validate universal teacher and AI entry
         run: python3 scripts/validate_universal_entry.py
 
+      - name: Validate Netlify deployment contract
+        run: python3 scripts/validate_netlify_contract.py
+
       - name: Assemble validated Netlify source
         if: success()
         shell: bash
         run: |
-          rm -rf /tmp/bunnybook-netlify-source /tmp/bunnybook-netlify-source.zip
+          rm -rf /tmp/bunnybook-netlify-source
           mkdir -p /tmp/bunnybook-netlify-source
           rsync -a \
             --exclude '.git' \
             --exclude 'node_modules' \
-            --exclude 'bunnybook-netlify-source.zip' \
             ./ /tmp/bunnybook-netlify-source/
-          (cd /tmp/bunnybook-netlify-source && zip -qr /tmp/bunnybook-netlify-source.zip .)
 
       - name: Upload validated Netlify source
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: bunnybook-netlify-source
-          path: /tmp/bunnybook-netlify-source.zip
+          path: /tmp/bunnybook-netlify-source/
           if-no-files-found: error
           retention-days: 3

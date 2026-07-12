@@ -23,7 +23,8 @@
   to = "/explore/:splat"
   status = 302
 
-# Stable machine-facing aliases. Every interface reads the same canonical graph.
+# Stable machine-facing aliases. Every interface reads the same canonical graph
+# and the same universal teacher/AI protocol.
 [[redirects]]
   from = "/api/v1/learning-map.json"
   to = "/mvp/learning-map.json"
@@ -34,12 +35,28 @@
   to = "/mvp/agent-manifest.json"
   status = 200
 
+[[redirects]]
+  from = "/api/v1/manifest.json"
+  to = "/agent/manifest.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/start-here"
+  to = "/agent/START-HERE.md"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/llms.txt"
+  to = "/llms.txt"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
 
 [[headers]]
   for = "/index.html"
@@ -61,8 +78,23 @@
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/agent/*"
+  for = "/agent/*.md"
   [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/agent/*.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/docs/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
     Cache-Control = "public, max-age=300, must-revalidate"
     Access-Control-Allow-Origin = "*"
 
