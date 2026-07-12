@@ -19,40 +19,130 @@ jobs:
       BASE_URL: https://bunnybook-curriculum.netlify.app
 
     steps:
-      - name: Diagnose human exploration route
-        shell: bash
-        run: |
-          set +e
-          curl -sS -L --max-redirs 10 \
-            -H 'Cache-Control: no-cache' \
-            -D /tmp/explore.headers \
-            -w 'curl_http=%{http_code}\ncurl_final_url=%{url_effective}\ncurl_redirects=%{num_redirects}\n' \
-            "${BASE_URL}/explore/?role=teacher&smoke=${GITHUB_RUN_ID}" \
-            -o /tmp/explore.html
-          CURL_EXIT=$?
-          set -e
-          echo "curl_exit=${CURL_EXIT}"
-          echo '--- response status/location chain ---'
-          grep -Ei '^(HTTP/|location:|content-type:|content-security-policy:)' /tmp/explore.headers || true
-          echo '--- response markers ---'
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('/tmp/explore.html')
-          text = path.read_text(encoding='utf-8', errors='replace') if path.exists() else ''
-          print(f'bytes={len(text.encode("utf-8"))}')
-          for marker in ('id="learning-map"', '探索教学图谱', 'CURRICULUM SOURCE', '老师看得懂'):
-              print(f'{marker}={marker in text}')
-          print('prefix=' + repr(text[:180]))
-          PY
-          if [[ "$CURL_EXIT" -ne 0 ]]; then
-            exit "$CURL_EXIT"
-          fi
-
-      - name: Verify human exploration route
+      - name: Verify live teacher and AI entry without cache
         shell: bash
         run: |
           set -euo pipefail
-          grep -F 'id="learning-map"' /tmp/explore.html
-          grep -F '探索教学图谱' /tmp/explore.html
-          grep -F 'CURRICULUM SOURCE' /tmp/explore.html
-          grep -Fi 'content-security-policy:' /tmp/explore.headers
+          CACHE_BUSTER="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/root.headers \
+            "${BASE_URL}/?smoke=${CACHE_BUSTER}" \
+            -o /tmp/root.html
+          grep -F '老师看得懂' /tmp/root.html
+          grep -F 'id="persona-teacher"' /tmp/root.html
+          grep -F 'id="persona-agent"' /tmp/root.html
+          grep -F 'id="prompt-builder"' /tmp/root.html
+          grep -F 'data-select-mode="full_planning"' /tmp/root.html
+          grep -F 'data-select-mode="learning_progression"' /tmp/root.html
+          grep -Fi 'content-security-policy:' /tmp/root.headers
+
+      - name: Verify universal AI manifest and discovery routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/manifest.headers \
+            "${BASE_URL}/api/v1/manifest.json?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/manifest.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path('/tmp/manifest.json').read_text(encoding='utf-8'))
+          assert manifest['access']['authentication_required'] is False
+          assert manifest['access']['teacher_installation_required'] is False
+          assert manifest['access']['mcp_required'] is False
+          assert manifest['access']['human_review_required'] is True
+          modes = manifest['modes']
+          mode_ids = set(modes) if isinstance(modes, dict) else {
+              item if isinstance(item, str) else item['id'] for item in modes
+          }
+          assert mode_ids == {
+              'lesson_plan', 'full_planning', 'learning_progression', 'review'
+          }
+          assert manifest['source_counts'] == {
+              'themes': 8,
+              'topics': 87,
+              'dependencies': 189,
+              'curriculum_subjects': 12,
+              'competencies': 51,
+              'coverage_units': 182,
+          }
+          print('Universal AI manifest is live and internally consistent.')
+          PY
+          grep -Fi 'access-control-allow-origin: *' /tmp/manifest.headers
+          grep -Fi 'content-type: application/json' /tmp/manifest.headers
+
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            "${BASE_URL}/api/v1/start-here?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/start-here.md
+          grep -F '教师安装要求：无' /tmp/start-here.md
+          grep -F '第一轮最多提出 3 个必要问题' /tmp/start-here.md
+          grep -F 'MCP、Plugin 与 Skill' /tmp/start-here.md
+
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/llms.headers \
+            "${BASE_URL}/api/v1/llms.txt?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/llms.txt
+          grep -F '不要要求教师安装 MCP、Plugin 或 Skill' /tmp/llms.txt
+          grep -F '最多先问 3 个必要问题' /tmp/llms.txt
+          grep -Fi 'access-control-allow-origin: *' /tmp/llms.headers
+          grep -Fi 'content-type: text/plain' /tmp/llms.headers
+
+      - name: Verify canonical graph API
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/graph.headers \
+            "${BASE_URL}/api/v1/learning-map.json?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/graph.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          graph = json.loads(Path('/tmp/graph.json').read_text(encoding='utf-8'))
+          themes = graph.get('themes') or graph.get('routes') or []
+          assert len(themes) == 8
+          assert len(graph['topics']) == 87
+          assert len(graph['dependencies']) == 189
+          assert len(graph['curriculum_alignment']['curriculum_subjects']) == 12
+          print('Canonical graph route is live.')
+          PY
+          grep -Fi 'access-control-allow-origin: *' /tmp/graph.headers
+          grep -Fi 'content-type: application/json' /tmp/graph.headers
+
+      - name: Verify all human graph aliases without redirect loops
+        shell: bash
+        run: |
+          set -euo pipefail
+          for alias in explore explore/ map map/; do
+            safe_name="${alias//\//_}"
+            curl -fsS --retry 5 --retry-all-errors \
+              -H 'Cache-Control: no-cache' \
+              -D "/tmp/${safe_name}.headers" \
+              -w '%{http_code} %{num_redirects} %{url_effective}\n' \
+              "${BASE_URL}/${alias}?role=teacher&smoke=${GITHUB_RUN_ID}" \
+              -o "/tmp/${safe_name}.html" \
+              | tee "/tmp/${safe_name}.result"
+            grep -E '^200 0 ' "/tmp/${safe_name}.result"
+            grep -F 'id="learning-map"' "/tmp/${safe_name}.html"
+            grep -F '探索教学图谱' "/tmp/${safe_name}.html"
+            grep -F '<base href="/mvp/">' "/tmp/${safe_name}.html"
+            grep -Fi 'content-security-policy:' "/tmp/${safe_name}.headers"
+          done
+
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            "${BASE_URL}/mvp/styles.css?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/graph-styles.css
+          grep -F ':root {' /tmp/graph-styles.css
+
+      - name: Summarize live verification
+        run: |
+          echo 'Production root, teacher starter, AI protocol, stable aliases, graph, CORS, CSP, and all four human graph routes passed.'
