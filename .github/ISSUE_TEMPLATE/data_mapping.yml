@@ -1,0 +1,58 @@
+name: 课标映射建议
+description: 提议新增或修改节点、关系、学科贡献或课标依据
+title: "[Mapping] "
+labels:
+  - curriculum-mapping
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请用来源名称、公开链接、页码或章节定位说明依据，并用自己的话概述。不要上传课标 PDF、扫描图或大段原文。
+  - type: input
+    id: stable_id
+    attributes:
+      label: 相关稳定 ID
+      placeholder: 主题、节点、关系或学科 ID；新建议可写“待分配”
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议内容
+      description: 说明希望新增、修改或删除什么，以及它对跨学科主题活动的作用。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 来源定位
+      description: 来源名称、官方公开链接、页码、章节或条目位置。
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: 证据等级
+      options:
+        - official（课标可直接核对）
+        - author（贡献者原创建模）
+        - inferred（基于来源的推断）
+        - uncertain（尚不确定）
+    validations:
+      required: true
+  - type: textarea
+    id: review
+    attributes:
+      label: 建议的人工复核
+      description: 需要哪一学科或哪类专家复核？
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 权利确认
+      options:
+        - label: 我没有上传 PDF、扫描图、大段第三方原文或内部审阅数据。
+          required: true
+        - label: 我理解这是一项项目映射建议，不会把推断表述为课标直接规定。
+          required: true

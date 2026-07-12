@@ -1,0 +1,79 @@
+# Operating-system and editor files
+.DS_Store
+**/.DS_Store
+._*
+.idea/
+.vscode/
+/.agents/
+/.codex/
+/.kimi/
+/.claude/
+*.swp
+*.swo
+*~
+*.log
+
+# Local environments, caches and test artifacts
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+/.playwright-cli/
+playwright-report/
+test-results/
+node_modules/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+/.mcp.json
+/.npmrc
+/.pypirc
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+credentials*.json
+secrets*.json
+*secret*.json
+*.local.json
+*.sqlite
+*.sqlite3
+
+# Third-party curriculum source files are local research copies only.
+# No PDF is part of the BunnyBook public distribution.
+*.pdf
+*.PDF
+
+# Internal review and provenance-working data. The public graph is exported to
+# mvp/learning-map.json; raw review tables and source excerpts stay local.
+/data/build/
+/data/review/
+/data/working/
+/data/catalog/source_maps/
+/data/catalog/pdf_manifest.csv
+/data/catalog/standard_sections.csv
+/data/catalog/standard_sections_ranged.csv
+
+# Internal reports, screenshots and temporary render output
+/tmp/
+/output/
+/outputs/
+/PROJECT_STATE.md
+
+# Local release/export directories
+/dist/
+/release/
+/public-repo/
+*.zip
+*.tar.gz

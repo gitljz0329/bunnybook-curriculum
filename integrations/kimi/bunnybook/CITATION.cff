@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use BunnyBook in research, teaching, or an Agent integration, please cite it using this metadata."
+title: "BunnyBook Curriculum"
+abstract: "A traceable interdisciplinary curriculum graph and read-only Agent information source for teachers."
+type: dataset
+authors:
+  - name: lixiaozuyi
+    email: lixiaozuyi@gmail.com
+version: "0.3-full-alpha"
+date-released: "2026-07-11"
+keywords:
+  - interdisciplinary curriculum
+  - curriculum graph
+  - curriculum standards
+  - teacher agent
+  - model context protocol
+preferred-citation:
+  type: database
+  title: "BunnyBook Curriculum"
+  authors:
+    - name: lixiaozuyi
+  year: 2026
+  version: "0.3-full-alpha"

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "bunnybook-curriculum-source": {
+      "command": "__BUNNYBOOK_PROJECT_ROOT__/.venv/bin/python",
+      "args": [
+        "__BUNNYBOOK_PROJECT_ROOT__/agent_runtime/mcp_server.py"
+      ]
+    }
+  }
+}

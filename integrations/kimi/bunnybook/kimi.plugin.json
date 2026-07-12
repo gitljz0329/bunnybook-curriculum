@@ -1,0 +1,42 @@
+{
+  "name": "bunnybook-curriculum",
+  "version": "0.1.0",
+  "description": "BunnyBook 课程图谱的第三方本地测试插件，并非 Kimi 官方插件；通过只读 MCP 为跨学科主题活动设计提供可追溯的课标信息。",
+  "author": "lixiaozuyi",
+  "license": "SEE LICENSE.md",
+  "keywords": [
+    "curriculum",
+    "education",
+    "interdisciplinary",
+    "mcp",
+    "teacher"
+  ],
+  "interface": {
+    "displayName": "BunnyBook Curriculum",
+    "shortDescription": "给备课 Agent 的可追溯课标知识底座",
+    "longDescription": "面向教师的第三方本地测试插件。读取 BunnyBook 的主题、学习节点、先修关系与课标来源，帮助 Agent 设计可复核的跨学科主题活动。它不是 Kimi 官方插件，也不会写回图谱。",
+    "developerName": "lixiaozuyi"
+  },
+  "skills": "./skills/",
+  "sessionStart": {
+    "skill": "using-bunnybook"
+  },
+  "skillInstructions": "把 BunnyBook 作为只读信息源使用。保留稳定 ID、关系方向、source_ref 与 review_status；不得把项目映射表述为课标直接规定，也不得写回本体。",
+  "commands": "./commands/",
+  "mcpServers": {
+    "bunnybook": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "./runtime",
+        "--frozen",
+        "python",
+        "./runtime/mcp_server.py"
+      ],
+      "cwd": "./",
+      "startupTimeoutMs": 120000,
+      "toolTimeoutMs": 30000
+    }
+  }
+}

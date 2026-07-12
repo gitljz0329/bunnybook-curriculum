@@ -1,0 +1,26 @@
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.csv -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.zip binary
+*.gz binary
+
+*.lock -diff
+
+# Built data mirrors source-controlled JSON and should not dominate language stats.
+/mvp/data.js linguist-generated=true
+/mvp/learning-map.json linguist-generated=true
+/mvp/agent-manifest.json linguist-generated=true
+/integrations/kimi/bunnybook/mvp/*.json linguist-generated=true
+/integrations/kimi/bunnybook/sync-manifest.json linguist-generated=true

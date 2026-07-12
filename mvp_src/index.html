@@ -1,0 +1,166 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b16">
+  <meta name="description" content="BunnyBook 是给备课 Agent 的课标知识底座：用可追溯的高中课标、跨学科主题与学习关系设计活动，而不是凭空生成。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="BunnyBook · 给备课 Agent 的课标知识底座">
+  <meta property="og:description" content="从真实问题出发，把主题结构、学科分工、学习关系与课标证据交给你已有的 Agent。">
+  <meta property="og:image" content="assets/bunnybook-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BunnyBook：让备课 Agent 不再凭空编课">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BunnyBook · 给备课 Agent 的课标知识底座">
+  <meta name="twitter:description" content="让备课 Agent 不再凭空编课。">
+  <meta name="twitter:image" content="assets/bunnybook-social-card.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2379a9ff'/%3E%3Ccircle cx='11' cy='12' r='4' fill='%235de2a5'/%3E%3Ccircle cx='21' cy='20' r='4' fill='%23c79cff'/%3E%3C/svg%3E">
+  <link rel="alternate" type="application/json" href="agent-manifest.json" title="Agent manifest">
+  <link rel="alternate" type="application/json" href="learning-map.json" title="Learning map data">
+  <link rel="alternate" type="text/markdown" href="agent-prompt.md" title="Agent prompt">
+  <link rel="alternate" type="application/json" href="mcp-config.example.json" title="MCP configuration example">
+  <link rel="license" href="LICENSE.md" title="BunnyBook license map">
+  <title>BunnyBook · 给备课 Agent 的课标知识底座</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-persona="teacher">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="BunnyBook 跨学科课程知识底座">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>BunnyBook</span>
+        <span class="pilot-badge">CURRICULUM SOURCE</span>
+      </div>
+
+      <div class="search-wrap">
+        <label class="sr-only" id="topic-search-label" for="topic-search">搜索学习节点</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="topic-search" type="search" autocomplete="off" placeholder="搜索节点、课标科目、核心素养或主题…">
+        <kbd>⌘ K</kbd>
+        <div class="search-results" id="search-results" hidden></div>
+      </div>
+
+      <div class="topbar-meta">
+        <span id="map-counts">载入学习地图…</span>
+        <div class="persona-actions" id="persona-actions" aria-label="当前模式操作">
+          <button class="topbar-link persona-action persona-action-teacher" id="coverage-toggle" type="button" aria-pressed="false">课标依据</button>
+          <button class="topbar-link persona-action persona-action-teacher agent-connect-trigger" id="agent-entry-toggle" type="button">了解 Agent 接入</button>
+          <a class="persona-action persona-action-teacher persona-action-agent" id="data-link" href="data-notice.md" target="_blank" rel="noreferrer" aria-label="查看数据版本与使用边界">数据说明</a>
+          <a class="persona-action persona-action-agent" id="mcp-config-link" href="mcp-config.example.json" target="_blank" rel="noreferrer" hidden>MCP 配置</a>
+          <a class="persona-action persona-action-agent" id="mcp-guide-link" href="mcp-guide.md" target="_blank" rel="noreferrer" hidden>接入说明</a>
+          <a class="persona-action persona-action-agent" id="agent-manifest-link" href="agent-manifest.json" target="_blank" rel="noreferrer" hidden>Agent 清单</a>
+          <a class="persona-action persona-action-agent" id="agent-prompt-link" href="agent-prompt.md" target="_blank" rel="noreferrer" hidden>启动提示</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="persona-bar" aria-label="选择产品入口">
+      <div class="persona-tabs" role="tablist" aria-label="选择教学图谱或 Agent 接入">
+        <button class="persona-tab" id="persona-teacher" type="button" role="tab" data-persona="teacher" aria-selected="true" aria-controls="persona-content" tabindex="0">
+          <span class="persona-tab-dot" aria-hidden="true"></span>
+          <span data-persona-label>1 · 探索教学图谱</span>
+        </button>
+        <button class="persona-tab" id="persona-agent" type="button" role="tab" data-persona="agent" aria-selected="false" aria-controls="persona-content" tabindex="-1">
+          <span class="persona-tab-dot" aria-hidden="true"></span>
+          <span data-persona-label>2 · 接入备课 Agent</span>
+        </button>
+      </div>
+      <p class="sr-only" id="persona-status" aria-live="polite" aria-atomic="true"></p>
+    </nav>
+
+    <main class="workspace" id="persona-content" role="tabpanel" aria-labelledby="persona-teacher">
+      <aside class="explore-panel" aria-label="地图说明与筛选">
+        <div class="promise">
+          <p class="eyebrow" id="promise-eyebrow">给备课 Agent 的课标知识底座</p>
+          <h1 id="promise-title">让你的备课 Agent 不再凭空编课</h1>
+          <p class="promise-copy" id="promise-copy">从一个真实问题出发，把主题结构、学科分工、学习关系与课标证据交给你已有的 Agent。</p>
+          <div class="hero-actions" aria-label="开始体验">
+            <button class="hero-primary" id="featured-trial" type="button">用“AI 可以替我们做决定吗？”试一试</button>
+            <button class="hero-secondary" id="browse-all-themes" type="button">浏览全部 8 个主题</button>
+          </div>
+          <p class="hero-note" id="hero-note">无需安装 · 先复制主题使用包 · 再决定是否接入 MCP</p>
+        </div>
+
+        <div class="trust-line" id="trust-line"></div>
+
+        <section class="control-section" aria-labelledby="route-heading">
+          <div class="section-heading">
+            <h2 id="route-heading">跨学科主题</h2>
+            <button class="text-button" id="show-all" type="button" aria-pressed="true">查看全部</button>
+          </div>
+          <div class="route-list" id="route-list"></div>
+        </section>
+
+        <section class="control-section" aria-labelledby="subject-heading">
+          <div class="section-heading">
+            <h2 id="subject-heading">节点视角 · 点击筛选</h2>
+            <button class="text-button" id="toggle-subjects" type="button">全选</button>
+          </div>
+          <div class="subject-filters" id="subject-filters"></div>
+        </section>
+
+        <div class="boundary-note">
+          <span class="boundary-dot" aria-hidden="true"></span>
+          <p><strong>当前语料范围 · Alpha 结构版</strong><br>12 科核心素养名称已核对；主题、节点映射与先修关系待教师复核。黄色环形为综合运用节点，不是第十三门课标科目。</p>
+        </div>
+      </aside>
+
+      <section class="map-panel" aria-label="可交互学习依赖地图">
+        <div class="map-titlebar">
+          <div>
+            <p id="active-context">8 个跨学科主题入口</p>
+            <span id="visible-count"></span>
+          </div>
+          <button class="close-focus" id="clear-focus" type="button" hidden>退出聚焦</button>
+        </div>
+
+        <svg id="learning-map" viewBox="0 0 1400 900" role="img" aria-labelledby="map-svg-title map-svg-desc">
+          <title id="map-svg-title">高中学习节点与前置关系地图</title>
+          <desc id="map-svg-desc">围绕跨学科主题，横向按学习进阶阶段排列；颜色和形状表示学科或综合运用节点。点击节点可查看课标科目、核心素养、全部前置谱系和直接解锁内容。</desc>
+          <defs>
+            <filter id="node-glow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+              <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+            </filter>
+            <marker id="arrow-hard" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L8,4 L0,8 Z"></path>
+            </marker>
+            <marker id="arrow-soft" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L8,4 L0,8 Z"></path>
+            </marker>
+          </defs>
+          <g id="viewport">
+            <g id="stage-layer"></g>
+            <g id="edge-layer"></g>
+            <g id="node-layer"></g>
+          </g>
+        </svg>
+
+        <div class="coverage-view" id="coverage-view" hidden aria-labelledby="coverage-title"></div>
+
+        <div class="map-tooltip" id="map-tooltip" hidden></div>
+
+        <div class="zoom-controls" aria-label="地图缩放">
+          <button id="zoom-in" type="button" aria-label="放大">＋</button>
+          <button id="zoom-out" type="button" aria-label="缩小">−</button>
+          <button id="reset-view" type="button" aria-label="重置视图">↺</button>
+        </div>
+
+        <div class="map-hint">
+          <span>拖动平移</span><span>滚轮缩放</span><span>双击复位</span><span>点按节点聚焦</span>
+        </div>
+      </section>
+
+      <aside class="detail-panel" id="detail-panel" aria-live="polite"></aside>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="personas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "format_version": "1",
+  "notice": "Generated copies; edit the canonical source files, then run scripts/sync_kimi_plugin.py.",
+  "files": [
+    {
+      "source": "agent_runtime/mcp_server.py",
+      "target": "runtime/mcp_server.py",
+      "sha256": "13e3942bd6acc7c7fb53bc402dd8cb7a2207364811c42b67aed938dff6ae01b9",
+      "bytes": 6801
+    },
+    {
+      "source": "agent_runtime/curriculum_source.py",
+      "target": "runtime/curriculum_source.py",
+      "sha256": "165ff0206cd7a24a6249a34658436a01d168b622cba00cce3be0bc1533130abf",
+      "bytes": 20861
+    },
+    {
+      "source": "mvp/learning-map.json",
+      "target": "mvp/learning-map.json",
+      "sha256": "b6a74d3691c3fe2ca740a7916f3848ad129395569286e8b53b2d36a76ced300d",
+      "bytes": 518991
+    },
+    {
+      "source": "mvp/agent-manifest.json",
+      "target": "mvp/agent-manifest.json",
+      "sha256": "68449e05007ff01efcb32756a87740969a4738bfcf07763f1a526125c9d51f58",
+      "bytes": 6113
+    },
+    {
+      "source": "LICENSE.md",
+      "target": "LICENSE.md",
+      "sha256": "4bd7ca2cbcee2c13e9e77d154abb8cda349094ff413242b3bad5567d0d28721b",
+      "bytes": 4484
+    },
+    {
+      "source": "NOTICE",
+      "target": "NOTICE",
+      "sha256": "f67152ef24554aafe50562c60f12355e2aa9dd5876e96b2d5c4fcd38be368ae7",
+      "bytes": 682
+    },
+    {
+      "source": "THIRD_PARTY_NOTICES.md",
+      "target": "THIRD_PARTY_NOTICES.md",
+      "sha256": "3adaea1aba82bbff2f800c910b425c405ae48de149bc2ce1aeff8ce69de177f9",
+      "bytes": 2584
+    },
+    {
+      "source": "TRADEMARKS.md",
+      "target": "TRADEMARKS.md",
+      "sha256": "74d03ca5d3151381215e4acd65f8f4159d99ca0753c5b020216f185180ae922a",
+      "bytes": 1482
+    },
+    {
+      "source": "CITATION.cff",
+      "target": "CITATION.cff",
+      "sha256": "bdb294f3060a2e5ee0548d981c3420814970b4d6471d17c26f3c1512eaa900e1",
+      "bytes": 685
+    },
+    {
+      "source": "LICENSES/ODbL-1.0.txt",
+      "target": "LICENSES/ODbL-1.0.txt",
+      "sha256": "1d553feead201a7619788171b43cca12675e82d70b197aa45795986bb8603e72",
+      "bytes": 25279
+    },
+    {
+      "source": "LICENSES/CC-BY-4.0.txt",
+      "target": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    {
+      "source": "LICENSES/Apache-2.0.txt",
+      "target": "LICENSES/Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+name: 缺陷报告
+description: 报告主站、MCP、Kimi Code 插件或公开数据中的可复现问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。安全漏洞、私钥、个人信息或未授权材料请按 SECURITY.md 私下报告，不要粘贴在这里。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 主站与交互地图
+        - MCP
+        - Kimi Code 插件
+        - 公开图谱数据
+        - 文档
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本或提交
+      placeholder: 例如 Full Alpha 0.3
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 请提供最小、可公开的复现步骤，不要上传课程标准 PDF 或敏感数据。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 发布前确认
+      options:
+        - label: 我已移除个人信息、访问凭据、未授权原文和内部审阅材料。
+          required: true

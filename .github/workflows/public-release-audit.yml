@@ -1,0 +1,128 @@
+name: Public release audit
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Block private and third-party artifacts
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import subprocess
+          import sys
+
+          tracked = subprocess.check_output(
+              ["git", "ls-files", "-z"], text=False
+          ).decode("utf-8").split("\0")
+          tracked = [item for item in tracked if item]
+
+          forbidden_prefixes = (
+              ".agents/",
+              ".claude/",
+              ".codex/",
+              ".kimi/",
+              ".playwright-cli/",
+              ".venv/",
+              "data/build/",
+              "data/review/",
+              "data/working/",
+              "data/catalog/source_maps/",
+              "output/",
+              "outputs/",
+              "tmp/",
+          )
+          forbidden_exact = {
+              ".env",
+              ".mcp.json",
+              ".npmrc",
+              ".pypirc",
+              "PROJECT_STATE.md",
+              "data/catalog/pdf_manifest.csv",
+              "data/catalog/standard_sections.csv",
+              "data/catalog/standard_sections_ranged.csv",
+          }
+
+          violations = []
+          for name in tracked:
+              lower = name.lower()
+              base = Path(name).name.lower()
+              if lower.endswith(".pdf"):
+                  violations.append(f"third-party PDF: {name}")
+              if name in forbidden_exact or name.startswith(forbidden_prefixes):
+                  violations.append(f"internal artifact: {name}")
+              if "/__pycache__/" in f"/{name}" or lower.endswith((".pyc", ".pyo")):
+                  violations.append(f"cache artifact: {name}")
+              if base.startswith(".env") and base != ".env.example":
+                  violations.append(f"environment file: {name}")
+              if lower.endswith((".pem", ".key", ".p12", ".pfx", ".jks")):
+                  violations.append(f"key or credential file: {name}")
+              if base.startswith(("credentials", "secrets")) and lower.endswith(".json"):
+                  violations.append(f"credential JSON: {name}")
+
+          secret_patterns = {
+              "private key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
+              "GitHub token": re.compile(r"\b(?:ghp|github_pat)_[A-Za-z0-9_]{20,}\b"),
+              "AWS access key": re.compile(r"\bAKIA[0-9A-Z]{16}\b"),
+              "machine-local user path": re.compile(r"/(?:Users|home)/[^/\s]+/"),
+              "assigned API key": re.compile(
+                  r"(?i)\b(?:api[_-]?key|access[_-]?token|client[_-]?secret)\b\s*[:=]\s*['\"][^'\"${}\s]{12,}['\"]"
+              ),
+          }
+
+          for name in tracked:
+              path = Path(name)
+              if not path.is_file() or path.stat().st_size > 2_000_000:
+                  continue
+              try:
+                  text = path.read_text(encoding="utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              for label, pattern in secret_patterns.items():
+                  if pattern.search(text):
+                      violations.append(f"possible {label}: {name}")
+
+          if violations:
+              print("Public release audit failed:")
+              for item in sorted(set(violations)):
+                  print(f"- {item}")
+              sys.exit(1)
+
+          print(f"Public release audit passed for {len(tracked)} tracked files.")
+          PY
+
+      - name: Validate public graph mirrors
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          canonical = json.loads(Path("mvp/learning-map.json").read_text(encoding="utf-8"))
+          plugin = json.loads(
+              Path("integrations/kimi/bunnybook/mvp/learning-map.json").read_text(encoding="utf-8")
+          )
+          assert canonical == plugin, "Kimi plugin graph differs from public canonical graph"
+          assert len(canonical["themes"]) == 8
+          assert len(canonical["topics"]) == 87
+          assert len(canonical["dependencies"]) == 189
+          assert len(canonical["curriculum_alignment"]["curriculum_subjects"]) == 12
+          print("Public graph mirrors and Full Alpha counts are valid.")
+          PY
+
+      - name: Validate public package and license map
+        run: python3 scripts/validate_public_release.py
+
+      - name: Validate activity-first Agent trial prompts
+        run: node scripts/validate_agent_trial.js

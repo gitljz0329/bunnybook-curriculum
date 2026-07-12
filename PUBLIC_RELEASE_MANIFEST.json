@@ -1,0 +1,635 @@
+{
+  "format_version": "1",
+  "product": "BunnyBook Curriculum",
+  "version": "0.3-full-alpha",
+  "rights_holder": "lixiaozuyi",
+  "license_map": {
+    "database": "ODbL-1.0",
+    "authored_content": "CC-BY-4.0",
+    "software": "Apache-2.0",
+    "brand": "all-rights-reserved"
+  },
+  "file_count": 124,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 588,
+      "sha256": "db629fe9e572bf4a77c8a24df43a6bb178cb64b2a7b7cfe9f4c6d06124b1b31b"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "bytes": 1431,
+      "sha256": "e995117691ef82be53d637569e104419519915c276fa2cd0390e24df2695731e"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 46,
+      "sha256": "8b09e7df09fc7534371988062769ee427af2954a02c04c763e8a8005be0f2be4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/data_mapping.yml",
+      "bytes": 1842,
+      "sha256": "667f233844f3309eb2fa01fa6ebaf96f45ad2f702197c10ccca17819dba3180a"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 691,
+      "sha256": "8ebf379a83cc3cc66c3037661a8c69ab287ac96bf066d831db2a5906c2e85a88"
+    },
+    {
+      "path": ".github/workflows/public-release-audit.yml",
+      "bytes": 4708,
+      "sha256": "9df017dfcd70574720b46c4959edde708c1b68069e86ef9cf83e3d137fc16e6b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1236,
+      "sha256": "05ffb851efc7378880675398b1a30c2994ecc5ad71f55e6f11de4d8d04875aec"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 685,
+      "sha256": "bdb294f3060a2e5ee0548d981c3420814970b4d6471d17c26f3c1512eaa900e1"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "bytes": 1599,
+      "sha256": "be3dac20742ab0bef349161da07f6c134ba2964d8bd72314c101860730c2ac7f"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 3065,
+      "sha256": "b096f40a448b6987b3161543b0f0e1b39f12bc6f19114624582634d8ab9a9c0c"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 4484,
+      "sha256": "4bd7ca2cbcee2c13e9e77d154abb8cda349094ff413242b3bad5567d0d28721b"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "LICENSES/ODbL-1.0.txt",
+      "bytes": 25279,
+      "sha256": "1d553feead201a7619788171b43cca12675e82d70b197aa45795986bb8603e72"
+    },
+    {
+      "path": "MVP_README.md",
+      "bytes": 3706,
+      "sha256": "cdb7bc0416f7fedfb01f0d995d1ee4f5dc398c6eac3566b019cd9f50c7eae6e9"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 682,
+      "sha256": "f67152ef24554aafe50562c60f12355e2aa9dd5876e96b2d5c4fcd38be368ae7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5729,
+      "sha256": "e196ae4f6be8c3362f1619d9a1aaf3ede2649fa9ba2ad7ddb586ad7c13a1f362"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1284,
+      "sha256": "10f7004b738f2949607fda7386597b7e7cca1332f8901932c1ae3a1597b7fdb8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2584,
+      "sha256": "3adaea1aba82bbff2f800c910b425c405ae48de149bc2ce1aeff8ce69de177f9"
+    },
+    {
+      "path": "TRADEMARKS.md",
+      "bytes": 1482,
+      "sha256": "74d03ca5d3151381215e4acd65f8f4159d99ca0753c5b020216f185180ae922a"
+    },
+    {
+      "path": "agent_runtime/README.md",
+      "bytes": 1626,
+      "sha256": "63df0e0d5b647d530ff820893e8b03ccd4feb789fcd3e90379cce78734afeecd"
+    },
+    {
+      "path": "agent_runtime/curriculum_source.py",
+      "bytes": 20861,
+      "sha256": "165ff0206cd7a24a6249a34658436a01d168b622cba00cce3be0bc1533130abf"
+    },
+    {
+      "path": "agent_runtime/mcp-config.example.json",
+      "bytes": 222,
+      "sha256": "1f2409dccfb83a31e854d61b57455bc3a50001b980f2cd9091fef5d02c24c662"
+    },
+    {
+      "path": "agent_runtime/mcp_server.py",
+      "bytes": 6801,
+      "sha256": "13e3942bd6acc7c7fb53bc402dd8cb7a2207364811c42b67aed938dff6ae01b9"
+    },
+    {
+      "path": "data/catalog/source_rights.csv",
+      "bytes": 4586,
+      "sha256": "15fd41602048f0b4b1cce93fbccba04591acada754aedf7416b50402abf04f71"
+    },
+    {
+      "path": "docs/anchor_extraction_guidelines.md",
+      "bytes": 2200,
+      "sha256": "f5967e7e9c614ab937681db48ff582a9e68e500be53e9d79fad4967c3849000d"
+    },
+    {
+      "path": "docs/bq_linking_guidelines.md",
+      "bytes": 2386,
+      "sha256": "25d46a6b7ece32352890182bd1268db25242fb026ee6ba7815281207e7c19c52"
+    },
+    {
+      "path": "docs/brand_and_domain.md",
+      "bytes": 2366,
+      "sha256": "03e963fec60a5df2495b5d3d51ec3a13c0552ebfa91b6a385a5fdbccfbb793cd"
+    },
+    {
+      "path": "docs/content_coverage_workflow.md",
+      "bytes": 1917,
+      "sha256": "ef1fece46eb2b1d5c6d0d84b7a09b48a7883a95ea8b076bd7bee950939266c08"
+    },
+    {
+      "path": "docs/copyright_and_provenance.md",
+      "bytes": 950,
+      "sha256": "de8a528d944adc20f747b689fe26c9e5c8d3854887850737a0ac17401a378319"
+    },
+    {
+      "path": "docs/data_model.md",
+      "bytes": 18018,
+      "sha256": "d5fe71f17c0292ff86ff9a9ae4766d8848988bc3945d5030cd295acfeb70ac3f"
+    },
+    {
+      "path": "docs/deep_theme_workflow.md",
+      "bytes": 1928,
+      "sha256": "d41404f54b0f923e5f4c8abbc13184acde9306704a84ac31d741956d5cb42863"
+    },
+    {
+      "path": "docs/deployment_readiness.md",
+      "bytes": 2040,
+      "sha256": "9803a307960d9e3aaeb37c85e7771c672cb2cfba6635713e5bdaf9c82af5a534"
+    },
+    {
+      "path": "docs/github_release_checklist.md",
+      "bytes": 5474,
+      "sha256": "ee15944627d844654a698105c7c41266bf0f3e5995358db8c3408d6e032d57f9"
+    },
+    {
+      "path": "docs/licensing_plan.md",
+      "bytes": 6147,
+      "sha256": "dbed196535508b581f21e679def0809a6db97beba0da5e7a6aaa9e9d527056fc"
+    },
+    {
+      "path": "docs/mvp_delivery.md",
+      "bytes": 5080,
+      "sha256": "f57a1c27e6d655ef11f9cb812ccf97140d71cf15921f9c773c50be27f31fb982"
+    },
+    {
+      "path": "docs/pilot_theme_workflow.md",
+      "bytes": 1537,
+      "sha256": "c83e5a0fd66554a443ed95117728bc42f6c3877de013ab507810b3f369ac0d62"
+    },
+    {
+      "path": "docs/product_direction.md",
+      "bytes": 6101,
+      "sha256": "db203777682ccd32137e2eeee5e07515869837f46f36497d553f5b22e3e385e6"
+    },
+    {
+      "path": "docs/project_brief.md",
+      "bytes": 3858,
+      "sha256": "349bd3ea9807b90ada845e62d05050b3483a8eb41e1c03757e5b5a811eaad59d"
+    },
+    {
+      "path": "docs/review_and_promotion.md",
+      "bytes": 2867,
+      "sha256": "6358c06eeb47898bcd2d9440ba02204e4f2a2c32b731b1d30960710211756df7"
+    },
+    {
+      "path": "docs/source_mapping.md",
+      "bytes": 1920,
+      "sha256": "1beac29387b8b506447ffed0dbc7d23fc68b61cdd834d35729de0db741baf696"
+    },
+    {
+      "path": "docs/theme_generation_guidelines.md",
+      "bytes": 1415,
+      "sha256": "b5ff292ce17b7fffb8f7247da6cc2f6a5081bd9934c41561701172f713f533e1"
+    },
+    {
+      "path": "docs/workflow.md",
+      "bytes": 4289,
+      "sha256": "c2f10d37308935edb132240852b8315ebe2356f040c83d0f67c948fa392ee8e7"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/CITATION.cff",
+      "bytes": 685,
+      "sha256": "bdb294f3060a2e5ee0548d981c3420814970b4d6471d17c26f3c1512eaa900e1"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/LICENSE.md",
+      "bytes": 4484,
+      "sha256": "4bd7ca2cbcee2c13e9e77d154abb8cda349094ff413242b3bad5567d0d28721b"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/LICENSES/ODbL-1.0.txt",
+      "bytes": 25279,
+      "sha256": "1d553feead201a7619788171b43cca12675e82d70b197aa45795986bb8603e72"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/NOTICE",
+      "bytes": 682,
+      "sha256": "f67152ef24554aafe50562c60f12355e2aa9dd5876e96b2d5c4fcd38be368ae7"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/README.md",
+      "bytes": 3359,
+      "sha256": "76d78795d9a49adfe38223d791a0b139b8046a35a23457be979afafae5fbe307"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/THIRD_PARTY_NOTICES.md",
+      "bytes": 2584,
+      "sha256": "3adaea1aba82bbff2f800c910b425c405ae48de149bc2ce1aeff8ce69de177f9"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/TRADEMARKS.md",
+      "bytes": 1482,
+      "sha256": "74d03ca5d3151381215e4acd65f8f4159d99ca0753c5b020216f185180ae922a"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/commands/design-theme.md",
+      "bytes": 2122,
+      "sha256": "b48f16efc35dfc282198bea0fd5caa3bdcae8d0e8f23020a7c50cb028d32d9ad"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/commands/inspect-evidence.md",
+      "bytes": 876,
+      "sha256": "e78582013b673ba33af7490d89ee330f8549d0d78f5bdefb2e2d01cce19dbbb1"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/kimi.plugin.json",
+      "bytes": 1460,
+      "sha256": "a31ce7f12f1e2363fdd76e0a11ab3a3d3b1658b9e5b64885e43baa8990dd0953"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/mvp/agent-manifest.json",
+      "bytes": 6113,
+      "sha256": "68449e05007ff01efcb32756a87740969a4738bfcf07763f1a526125c9d51f58"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/mvp/learning-map.json",
+      "bytes": 518991,
+      "sha256": "b6a74d3691c3fe2ca740a7916f3848ad129395569286e8b53b2d36a76ced300d"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/runtime/curriculum_source.py",
+      "bytes": 20861,
+      "sha256": "165ff0206cd7a24a6249a34658436a01d168b622cba00cce3be0bc1533130abf"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/runtime/mcp_server.py",
+      "bytes": 6801,
+      "sha256": "13e3942bd6acc7c7fb53bc402dd8cb7a2207364811c42b67aed938dff6ae01b9"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/runtime/pyproject.toml",
+      "bytes": 244,
+      "sha256": "0e365b3f0e58987f018b5b3a4cb2926454f6a63159601c0c43ec58fd03bde023"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/runtime/uv.lock",
+      "bytes": 142033,
+      "sha256": "ff6d4e47cd502866a9d047940e47ef84fda0da63243dbaca30c2fc380d9cfdde"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/skills/using-bunnybook/SKILL.md",
+      "bytes": 3851,
+      "sha256": "929f9c1c4e31644fdab21c4f0adf66e589c67f23a65a37927bfad737c315f8e2"
+    },
+    {
+      "path": "integrations/kimi/bunnybook/sync-manifest.json",
+      "bytes": 2493,
+      "sha256": "b91db7f6df753d395d9caef84fa64b85a630c35c0306fe8d0f57ad7309ad2c76"
+    },
+    {
+      "path": "materials/pilot/README.md",
+      "bytes": 277,
+      "sha256": "8dca5372bd18e250ec7980291fce2b46d9c05d731d78d7a1b5b0ac8e77711b7b"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-004/data_review_template.csv",
+      "bytes": 138,
+      "sha256": "96daa587b432ef1778303f64eb480a3aaee46654bbced69c65488fd2539a5626"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-004/sample_data_claims.csv",
+      "bytes": 1183,
+      "sha256": "18b94397f7ecf26d1eac82d76d5c2e99f30996d0a34b796029e2a20dea23d5ec"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-004/student_worksheet.md",
+      "bytes": 958,
+      "sha256": "948657e26982e3c4849f9b8ca9a3742a1636a303cdec47f4c5bfe2dd1a47800d"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-007/ai_case_cards.md",
+      "bytes": 1685,
+      "sha256": "f130d65fb7b6ea03518fa8e0638d5370bc9f4ccb1fe6a1f1e3869ccd10d1eee6"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-007/risk_matrix_template.csv",
+      "bytes": 197,
+      "sha256": "0bd47517c65861444bf955bade09b183cef1ed67e1e6567cef8e9e8a5a1f1189"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-007/role_cards.md",
+      "bytes": 602,
+      "sha256": "c6b97ed4f69137290a75cd5ebebd8412f1e34e419e4edbc3bedf208017f43267"
+    },
+    {
+      "path": "materials/pilot/TH-CAND-007/student_worksheet.md",
+      "bytes": 985,
+      "sha256": "b1fe17824b70b5a8b9c663125a45e576f95a86f0be1b8a34b67152272b5dcab3"
+    },
+    {
+      "path": "mvp/CITATION.cff",
+      "bytes": 685,
+      "sha256": "bdb294f3060a2e5ee0548d981c3420814970b4d6471d17c26f3c1512eaa900e1"
+    },
+    {
+      "path": "mvp/LICENSE.md",
+      "bytes": 4484,
+      "sha256": "4bd7ca2cbcee2c13e9e77d154abb8cda349094ff413242b3bad5567d0d28721b"
+    },
+    {
+      "path": "mvp/LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "mvp/LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "mvp/LICENSES/ODbL-1.0.txt",
+      "bytes": 25279,
+      "sha256": "1d553feead201a7619788171b43cca12675e82d70b197aa45795986bb8603e72"
+    },
+    {
+      "path": "mvp/NOTICE",
+      "bytes": 682,
+      "sha256": "f67152ef24554aafe50562c60f12355e2aa9dd5876e96b2d5c4fcd38be368ae7"
+    },
+    {
+      "path": "mvp/THIRD_PARTY_NOTICES.md",
+      "bytes": 2584,
+      "sha256": "3adaea1aba82bbff2f800c910b425c405ae48de149bc2ce1aeff8ce69de177f9"
+    },
+    {
+      "path": "mvp/TRADEMARKS.md",
+      "bytes": 1482,
+      "sha256": "74d03ca5d3151381215e4acd65f8f4159d99ca0753c5b020216f185180ae922a"
+    },
+    {
+      "path": "mvp/agent-manifest.json",
+      "bytes": 6113,
+      "sha256": "68449e05007ff01efcb32756a87740969a4738bfcf07763f1a526125c9d51f58"
+    },
+    {
+      "path": "mvp/agent-prompt.md",
+      "bytes": 5739,
+      "sha256": "8ca86b444ceae289525237f0a9654971b12c2cb7bc40735e1b85c7d1e050322d"
+    },
+    {
+      "path": "mvp/app.js",
+      "bytes": 93059,
+      "sha256": "e16bab7443dc573f10d0304b7a75a65cfa9775e9e3e62acb1ab7fd489b4c3779"
+    },
+    {
+      "path": "mvp/assets/bunnybook-social-card.png",
+      "bytes": 309887,
+      "sha256": "cff77e194ff3af9f6540ac1b192568d1de66e777422079b7568fe47f7e660faf"
+    },
+    {
+      "path": "mvp/assets/mvp-graph.svg",
+      "bytes": 6006,
+      "sha256": "1fe7683cea6e499291787ebcc2cb93f1f1ebdde7219184b7f7bf68484993c154"
+    },
+    {
+      "path": "mvp/data-notice.md",
+      "bytes": 3042,
+      "sha256": "94ad0b6d71c2ef2e024920470f309cce2293524d343d1e3e2f5b2d183b36062c"
+    },
+    {
+      "path": "mvp/data.js",
+      "bytes": 553503,
+      "sha256": "e4fbc8d0acf30459c3ec9fb390701226729d0f0d39500b3e12b0ad27e4e7e629"
+    },
+    {
+      "path": "mvp/index.html",
+      "bytes": 10044,
+      "sha256": "0b692ba3ad83b0c8c956b73ae4e5d45a7327887f16aa538c4df4bdfe9879f6d4"
+    },
+    {
+      "path": "mvp/learning-map.json",
+      "bytes": 518991,
+      "sha256": "b6a74d3691c3fe2ca740a7916f3848ad129395569286e8b53b2d36a76ced300d"
+    },
+    {
+      "path": "mvp/mcp-config.example.json",
+      "bytes": 222,
+      "sha256": "1f2409dccfb83a31e854d61b57455bc3a50001b980f2cd9091fef5d02c24c662"
+    },
+    {
+      "path": "mvp/mcp-guide.md",
+      "bytes": 1626,
+      "sha256": "63df0e0d5b647d530ff820893e8b03ccd4feb789fcd3e90379cce78734afeecd"
+    },
+    {
+      "path": "mvp/personas.js",
+      "bytes": 3211,
+      "sha256": "9a76c87a4f53e91182ff3c068c0a2b4bf15dc5e2f84d52e9736f313b2eae8bb0"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-004/data_review_template.csv",
+      "bytes": 136,
+      "sha256": "e45422361104440bcb87d383a683838023d3e7dc53016eef76776d4c11cf13b7"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-004/sample_data_claims.csv",
+      "bytes": 1178,
+      "sha256": "d381dce8958cf255f36566869cd671907b5e016dbee840eb283c9788a7e692ef"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-004/student_worksheet.md",
+      "bytes": 958,
+      "sha256": "948657e26982e3c4849f9b8ca9a3742a1636a303cdec47f4c5bfe2dd1a47800d"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-007/ai_case_cards.md",
+      "bytes": 1685,
+      "sha256": "f130d65fb7b6ea03518fa8e0638d5370bc9f4ccb1fe6a1f1e3869ccd10d1eee6"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-007/risk_matrix_template.csv",
+      "bytes": 192,
+      "sha256": "87da9f3c2a7a51ea3a43ff1267c774581cac763562379429ca2dc0040e00e9ce"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-007/role_cards.md",
+      "bytes": 602,
+      "sha256": "c6b97ed4f69137290a75cd5ebebd8412f1e34e419e4edbc3bedf208017f43267"
+    },
+    {
+      "path": "mvp/resources/materials/TH-CAND-007/student_worksheet.md",
+      "bytes": 985,
+      "sha256": "b1fe17824b70b5a8b9c663125a45e576f95a86f0be1b8a34b67152272b5dcab3"
+    },
+    {
+      "path": "mvp/resources/themes/TH-CAND-004.md",
+      "bytes": 4598,
+      "sha256": "a8550fafe81fb38bb697c6e79c11ddee6ddb0a89c96180283dd4437f6cff3054"
+    },
+    {
+      "path": "mvp/resources/themes/TH-CAND-007.md",
+      "bytes": 4384,
+      "sha256": "9af5a53735acb6bd9638c40a3df12d4bdd52d51a1b8ce286e0f83b6d9a95a8b9"
+    },
+    {
+      "path": "mvp/styles.css",
+      "bytes": 45975,
+      "sha256": "02e21cd5c04505286fce6886b1eb04bbb593e322ad914ba2f3097ead45097b6e"
+    },
+    {
+      "path": "mvp_src/agent-prompt.md",
+      "bytes": 5739,
+      "sha256": "8ca86b444ceae289525237f0a9654971b12c2cb7bc40735e1b85c7d1e050322d"
+    },
+    {
+      "path": "mvp_src/app.js",
+      "bytes": 93059,
+      "sha256": "e16bab7443dc573f10d0304b7a75a65cfa9775e9e3e62acb1ab7fd489b4c3779"
+    },
+    {
+      "path": "mvp_src/assets/bunnybook-social-card.png",
+      "bytes": 309887,
+      "sha256": "cff77e194ff3af9f6540ac1b192568d1de66e777422079b7568fe47f7e660faf"
+    },
+    {
+      "path": "mvp_src/assets/bunnybook-social-card.svg",
+      "bytes": 5453,
+      "sha256": "113c2b71ea3a36af12147454cd35d15242a89e810333fe6fd97e96fbc92e78b6"
+    },
+    {
+      "path": "mvp_src/data-notice.md",
+      "bytes": 3042,
+      "sha256": "94ad0b6d71c2ef2e024920470f309cce2293524d343d1e3e2f5b2d183b36062c"
+    },
+    {
+      "path": "mvp_src/index.html",
+      "bytes": 10044,
+      "sha256": "0b692ba3ad83b0c8c956b73ae4e5d45a7327887f16aa538c4df4bdfe9879f6d4"
+    },
+    {
+      "path": "mvp_src/personas.js",
+      "bytes": 3211,
+      "sha256": "9a76c87a4f53e91182ff3c068c0a2b4bf15dc5e2f84d52e9736f313b2eae8bb0"
+    },
+    {
+      "path": "mvp_src/styles.css",
+      "bytes": 45975,
+      "sha256": "02e21cd5c04505286fce6886b1eb04bbb593e322ad914ba2f3097ead45097b6e"
+    },
+    {
+      "path": "requirements-mcp.txt",
+      "bytes": 18,
+      "sha256": "2aa959b586bbc663f0260eafe24a6c44fee8e15668b1ba3d32f0d4ff82808a5c"
+    },
+    {
+      "path": "scripts/browser_persona_qa.js",
+      "bytes": 15010,
+      "sha256": "2728269bb55893007018c8e331ec1848dee3089e58e5893e89a70a910ef3646a"
+    },
+    {
+      "path": "scripts/build_public_release.py",
+      "bytes": 4578,
+      "sha256": "e90b311243c3787f8d817e3c242e4d451b85254fb7d9e401147c2ded1bccf56c"
+    },
+    {
+      "path": "scripts/sync_kimi_plugin.py",
+      "bytes": 3008,
+      "sha256": "5b094001353ab40514c2710dd883b145dec577a8b3116ea6802a70083f1e2121"
+    },
+    {
+      "path": "scripts/validate_agent_trial.js",
+      "bytes": 6106,
+      "sha256": "af69a2c17dd9b9b69313daaf232a57ec7def8274e71101be363b521eaa05659d"
+    },
+    {
+      "path": "scripts/validate_kimi_plugin.py",
+      "bytes": 16136,
+      "sha256": "35338dbbc49833ab00cb0cb2ae6a5cd13339f6bc61ef121a31fb2410b8bb4440"
+    },
+    {
+      "path": "scripts/validate_mcp_server.py",
+      "bytes": 6186,
+      "sha256": "9f7c6b19aa1b4324b8805332d14e375a4ed7e1aeb6d20836c018b836ffd9064e"
+    },
+    {
+      "path": "scripts/validate_public_release.py",
+      "bytes": 8229,
+      "sha256": "8ed6508df7a4e6f9892b985576c6ef37167b5c918c2dd18fa9478d28162c1de9"
+    },
+    {
+      "path": "themes/deep/TH-CAND-001.md",
+      "bytes": 3318,
+      "sha256": "36388b0265ac78044a49165cb486ea43d0c58aaf1ba9288e32876fa596fc200f"
+    },
+    {
+      "path": "themes/deep/TH-CAND-002.md",
+      "bytes": 3239,
+      "sha256": "de15316a49ad78b36c92593b6fc6df1dd3837008b3f8f5a2c65f1e12a27a2477"
+    },
+    {
+      "path": "themes/deep/TH-CAND-004.md",
+      "bytes": 3234,
+      "sha256": "d580b8669077b3abb8881f70f5c0065347783dc230bda129b352ded6dd77042c"
+    },
+    {
+      "path": "themes/deep/TH-CAND-007.md",
+      "bytes": 3294,
+      "sha256": "ef28190028e63168e1feacaa48a1428a526edd33a606ba19843333d865147ead"
+    },
+    {
+      "path": "themes/deep/TH-CAND-010.md",
+      "bytes": 3260,
+      "sha256": "5ea024bf648f7231d23d065e1762eff5a8baa0782e735bf163c6d7299360b272"
+    },
+    {
+      "path": "themes/pilot/TH-CAND-004.md",
+      "bytes": 4598,
+      "sha256": "a8550fafe81fb38bb697c6e79c11ddee6ddb0a89c96180283dd4437f6cff3054"
+    },
+    {
+      "path": "themes/pilot/TH-CAND-007.md",
+      "bytes": 4384,
+      "sha256": "9af5a53735acb6bd9638c40a3df12d4bdd52d51a1b8ce286e0f83b6d9a95a8b9"
+    }
+  ]
+}

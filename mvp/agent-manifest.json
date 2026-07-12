@@ -1,0 +1,178 @@
+{
+  "contract_version": "1.2",
+  "name": "BunnyBook · 跨学科课程知识底座",
+  "language": "zh-CN",
+  "graph": {
+    "href": "learning-map.json",
+    "media_type": "application/json",
+    "schema_version": "0.3-full-alpha",
+    "counts": {
+      "themes": 8,
+      "topics": 87,
+      "dependencies": 189,
+      "curriculum_subjects": 12,
+      "competencies": 51,
+      "coverage_units": 182
+    },
+    "input_contract": {
+      "required_top_level_fields": [
+        "schema_version",
+        "licensing",
+        "themes",
+        "topics",
+        "dependencies",
+        "curriculum_alignment"
+      ],
+      "canonical_theme_collection": "themes",
+      "compatibility_alias": "routes",
+      "dependency_direction": "prerequisite_id -> topic_id"
+    }
+  },
+  "prompt": {
+    "href": "agent-prompt.md",
+    "media_type": "text/markdown"
+  },
+  "role_url": "index.html?role=agent",
+  "capabilities": [
+    "get_source_overview",
+    "list_themes",
+    "search_curriculum",
+    "get_theme_context",
+    "get_topic_context",
+    "trace_learning_path",
+    "build_activity_context",
+    "validate_references"
+  ],
+  "integrations": {
+    "mcp": {
+      "status": "local_verified_install_required",
+      "server_name": "BunnyBook Curriculum Source",
+      "sdk": "official Python MCP SDK 1.x",
+      "config_example": "mcp-config.example.json",
+      "guide": "mcp-guide.md",
+      "transports": [
+        "stdio",
+        "streamable-http"
+      ],
+      "default_transport": "stdio",
+      "access_mode": "read_only",
+      "web_runtime_available": false,
+      "remote_endpoint_available": false,
+      "distribution_status": "public_package_pending",
+      "note": "The MCP runtime is verified in the source workspace. This static site does not execute Python or expose a remote MCP endpoint."
+    },
+    "plugin": {
+      "status": "local_test_package_available",
+      "target_host": "Kimi Code",
+      "distribution": "third_party_custom_plugin",
+      "official_marketplace_status": "not_submitted_or_listed",
+      "note": "The source workspace contains a third-party Kimi Code local test package. It reuses this read-only MCP and is not a Kimi official plugin."
+    },
+    "static_context": {
+      "status": "available",
+      "manifest": "agent-manifest.json",
+      "prompt": "agent-prompt.md",
+      "graph": "learning-map.json",
+      "data_notice": "data-notice.md"
+    }
+  },
+  "deployment": {
+    "site_mode": "static_context_only",
+    "remote_mcp_available": false,
+    "local_runtime_distribution": "pending"
+  },
+  "licensing": {
+    "status": "active",
+    "rights_holder": "lixiaozuyi",
+    "copyright": "Copyright 2026 lixiaozuyi",
+    "scopes": {
+      "database_structure_ids_relationships": "ODbL-1.0",
+      "bunnybook_authored_text": "CC-BY-4.0",
+      "software": "Apache-2.0",
+      "brand_assets": "all-rights-reserved"
+    },
+    "license_overview": "LICENSE.md",
+    "license_files": {
+      "database": "LICENSES/ODbL-1.0.txt",
+      "content": "LICENSES/CC-BY-4.0.txt",
+      "software": "LICENSES/Apache-2.0.txt"
+    },
+    "attribution": "Contains information from BunnyBook Curriculum Graph, made available under ODbL 1.0. BunnyBook-authored text is Copyright 2026 lixiaozuyi and licensed under CC BY 4.0.",
+    "excluded_material": [
+      "third-party curriculum standards and source PDFs",
+      "official labels or excerpts where BunnyBook does not own the rights",
+      "third-party names, logos, and trademarks"
+    ],
+    "notice": "See LICENSE.md, THIRD_PARTY_NOTICES.md, and TRADEMARKS.md for the complete boundary."
+  },
+  "output_contract": {
+    "default_format": "markdown",
+    "required_sections": [
+      "answer",
+      "source_ids",
+      "curriculum_evidence",
+      "human_review_statement",
+      "ui_url"
+    ],
+    "json_envelope_required_fields": [
+      "result_type",
+      "summary",
+      "theme_ids",
+      "topic_steps",
+      "curriculum_evidence",
+      "human_review_required",
+      "warnings",
+      "ui_url"
+    ]
+  },
+  "activity_design_contract": {
+    "activity_count": 1,
+    "trial_mode": "single_session_slice",
+    "defaults": {
+      "learner_stage": "高一",
+      "duration_minutes": 90,
+      "class_size": 40,
+      "grouping": "4—5 人小组"
+    },
+    "section_order": [
+      "activity_overview",
+      "shared_product_and_subject_contributions",
+      "timed_activity_sequence_with_observable_evidence",
+      "mastery_evidence",
+      "curriculum_evidence_and_human_review"
+    ],
+    "metadata_placement": "final_evidence_section",
+    "session_deliverable_rule": "Complete one shared intermediate artifact during the session; do not claim the whole multi-week performance task is finished in 90 minutes.",
+    "full_json_only_on_explicit_request": true,
+    "target_chinese_characters": [
+      1200,
+      1600
+    ]
+  },
+  "trust_policy": {
+    "access_mode": "read_only",
+    "human_review_required": true,
+    "writeback_allowed": false,
+    "verified_source_labels": [
+      "curriculum_alignment.competencies",
+      "curriculum_alignment.curriculum_subjects[].competency_source_ref"
+    ],
+    "candidate_source_index": [
+      "curriculum_alignment.coverage_units"
+    ],
+    "author_design_pending_review": [
+      "themes",
+      "topics",
+      "dependencies",
+      "topics[].curriculum_links",
+      "curriculum_alignment.coverage_matrix"
+    ],
+    "must_not_claim": [
+      "project_mapping_is_direct_curriculum_requirement",
+      "coverage_is_all_national_high_school_standards",
+      "unreviewed_mapping_is_expert_consensus"
+    ],
+    "corpus_boundary": "1 local curriculum plan and 12 local subject standards; general technology is absent",
+    "source_disclaimer": "本目录中的学科核心素养名称与页码已依据本地普通高中课程标准原文核对；它只声明本地课标语料与官方素养目录的覆盖边界，不代表主题、学习节点及其素养映射已经完成学科教师复核。PDF-001 为普通高中课程方案，是顶层政策来源，不计作第十三门学科；当前本地语料不含普通高中通用技术课程标准。"
+  }
+}
