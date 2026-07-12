@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bunnybook-curriculum.netlify.app/</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/map/?role=teacher</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/map/?role=agent</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/llms.txt</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/llms-full.txt</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/agent/START-HERE.md</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/agent/manifest.json</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/api/v1/source-manifest.json</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/docs/universal_entry.md</loc></url>
+  <url><loc>https://bunnybook-curriculum.netlify.app/docs/BUILD_YOUR_OWN.md</loc></url>
+</urlset>
