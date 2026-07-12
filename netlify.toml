@@ -1,27 +1,11 @@
 [build]
   publish = "."
 
-# Stable teacher-facing graph URL. Keeping the trailing slash means the graph's
-# relative assets resolve through the /map/* rewrite below.
-[[redirects]]
-  from = "/map"
-  to = "/map/"
-  status = 301
-
-[[redirects]]
-  from = "/map/*"
-  to = "/mvp/:splat"
-  status = 200
-
-# Preserve links from the first public release.
+# Keep the browser URL at /explore/ so the graph's relative assets resolve
+# through the same rewrite family. /map remains a short human-facing alias.
 [[redirects]]
   from = "/explore"
-  to = "/map/"
-  status = 301
-
-[[redirects]]
-  from = "/explore/"
-  to = "/map/"
+  to = "/explore/"
   status = 301
 
 [[redirects]]
@@ -29,8 +13,17 @@
   to = "/mvp/:splat"
   status = 200
 
-# Stable machine-facing aliases. The canonical graph itself remains in mvp/ so
-# the webpage, APIs, MCP and host adapters all read the same source.
+[[redirects]]
+  from = "/map"
+  to = "/explore/"
+  status = 302
+
+[[redirects]]
+  from = "/map/*"
+  to = "/explore/:splat"
+  status = 302
+
+# Stable machine-facing aliases. Every interface reads the same canonical graph.
 [[redirects]]
   from = "/api/v1/learning-map.json"
   to = "/mvp/learning-map.json"
@@ -76,7 +69,6 @@
 [[headers]]
   for = "/api/v1/*"
   [headers.values]
-    Content-Type = "application/json; charset=utf-8"
     Cache-Control = "public, max-age=300, must-revalidate"
     Access-Control-Allow-Origin = "*"
 
