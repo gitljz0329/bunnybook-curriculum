@@ -1,0 +1,48 @@
+=== / ===
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+
+=== /llms.txt ===
+HTTP/2 200 
+access-control-allow-origin: *
+content-type: text/plain; charset=utf-8
+
+=== /agent/manifest.json ===
+HTTP/2 200 
+access-control-allow-origin: *
+content-type: application/json
+
+=== /api/v1/source-manifest.json ===
+HTTP/2 200 
+access-control-allow-origin: *
+content-type: application/json
+
+=== /api/v1/learning-map.json ===
+HTTP/2 200 
+access-control-allow-origin: *
+content-type: application/json
+
+=== /explore ===
+HTTP/2 301 
+content-type: text/plain
+location: /explore/?diagnostic=29184283331
+
+=== /explore/ ===
+HTTP/2 301 
+content-type: text/plain
+location: /explore/?diagnostic=29184283331
+
+=== /map ===
+HTTP/2 302 
+content-type: text/plain
+location: /explore/?diagnostic=29184283331
+
+=== /map/ ===
+HTTP/2 302 
+content-type: text/plain
+location: /explore/?diagnostic=29184283331
+
+=== /mvp/index.html ===
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+
