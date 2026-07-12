@@ -1,0 +1,91 @@
+[build]
+  publish = "."
+
+# Stable teacher-facing graph URL. Keeping the trailing slash means the graph's
+# relative assets resolve through the /map/* rewrite below.
+[[redirects]]
+  from = "/map"
+  to = "/map/"
+  status = 301
+
+[[redirects]]
+  from = "/map/*"
+  to = "/mvp/:splat"
+  status = 200
+
+# Preserve links from the first public release.
+[[redirects]]
+  from = "/explore"
+  to = "/map/"
+  status = 301
+
+[[redirects]]
+  from = "/explore/"
+  to = "/map/"
+  status = 301
+
+[[redirects]]
+  from = "/explore/*"
+  to = "/mvp/:splat"
+  status = 200
+
+# Stable machine-facing aliases. The canonical graph itself remains in mvp/ so
+# the webpage, APIs, MCP and host adapters all read the same source.
+[[redirects]]
+  from = "/api/v1/learning-map.json"
+  to = "/mvp/learning-map.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/graph-manifest.json"
+  to = "/mvp/agent-manifest.json"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/agent/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/api/v1/*"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
