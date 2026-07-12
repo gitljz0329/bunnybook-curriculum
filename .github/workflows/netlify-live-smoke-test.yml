@@ -1,0 +1,125 @@
+name: Netlify live smoke test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'agent/netlify-live-smoke-test'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BASE_URL: https://bunnybook-curriculum.netlify.app
+
+    steps:
+      - name: Fetch live production surface without cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          CACHE_BUSTER="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/root.headers \
+            "${BASE_URL}/?smoke=${CACHE_BUSTER}" \
+            -o /tmp/root.html
+          grep -F '老师看得懂' /tmp/root.html
+          grep -F 'id="persona-teacher"' /tmp/root.html
+          grep -F 'id="persona-agent"' /tmp/root.html
+          grep -F 'id="prompt-builder"' /tmp/root.html
+          grep -F 'data-select-mode="full_planning"' /tmp/root.html
+          grep -F 'data-select-mode="learning_progression"' /tmp/root.html
+          grep -Fi 'content-security-policy:' /tmp/root.headers
+
+      - name: Verify universal AI manifest alias
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/manifest.headers \
+            "${BASE_URL}/api/v1/manifest.json?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/manifest.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path('/tmp/manifest.json').read_text(encoding='utf-8'))
+          assert manifest['access']['authentication_required'] is False
+          assert manifest['access']['teacher_installation_required'] is False
+          assert manifest['access']['mcp_required'] is False
+          assert manifest['access']['human_review_required'] is True
+          assert {item['id'] for item in manifest['modes']} == {
+              'lesson_plan', 'full_planning', 'learning_progression', 'review'
+          }
+          assert manifest['source_counts'] == {
+              'themes': 8,
+              'topics': 87,
+              'dependencies': 189,
+              'curriculum_subjects': 12,
+              'competencies': 51,
+              'coverage_units': 182,
+          }
+          print('Universal AI manifest is live and internally consistent.')
+          PY
+          grep -Fi 'access-control-allow-origin: *' /tmp/manifest.headers
+          grep -Fi 'content-type: application/json' /tmp/manifest.headers
+
+      - name: Verify AI instructions and LLM discovery aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            "${BASE_URL}/api/v1/start-here?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/start-here.md
+          grep -F '教师安装要求：无' /tmp/start-here.md
+          grep -F '第一轮最多提出 3 个必要问题' /tmp/start-here.md
+          grep -F 'MCP、Plugin 与 Skill' /tmp/start-here.md
+
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -D /tmp/llms.headers \
+            "${BASE_URL}/api/v1/llms.txt?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/llms.txt
+          grep -F '不要要求教师安装 MCP、Plugin 或 Skill' /tmp/llms.txt
+          grep -F '最多先问 3 个必要问题' /tmp/llms.txt
+          grep -Fi 'access-control-allow-origin: *' /tmp/llms.headers
+          grep -Fi 'content-type: text/plain' /tmp/llms.headers
+
+      - name: Verify graph and human exploration routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            "${BASE_URL}/api/v1/learning-map.json?smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/graph.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          graph = json.loads(Path('/tmp/graph.json').read_text(encoding='utf-8'))
+          assert len(graph['themes']) == 8
+          assert len(graph['topics']) == 87
+          assert len(graph['dependencies']) == 189
+          assert len(graph['curriculum_alignment']['curriculum_subjects']) == 12
+          print('Canonical graph route is live.')
+          PY
+
+          curl -fsSL --retry 5 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            "${BASE_URL}/explore/?role=teacher&smoke=${GITHUB_RUN_ID}" \
+            -o /tmp/explore.html
+          grep -F 'id="learning-map"' /tmp/explore.html
+          grep -F '探索教学图谱' /tmp/explore.html
+
+      - name: Summarize live verification
+        run: |
+          echo 'Production root, teacher starter, AI protocol, stable aliases, graph, CORS, CSP, and explore route all passed.'
