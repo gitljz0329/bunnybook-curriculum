@@ -1,0 +1,85 @@
+name: Verify production Netlify aliases
+
+on:
+  push:
+    branches:
+      - ops/verify-netlify-aliases-20260712
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify explore and map aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          base="https://bunnybook-curriculum.netlify.app"
+          canonical_body="$(mktemp)"
+          curl -fsS --retry 5 --retry-delay 2 \
+            "$base/mvp/index.html?verify=${GITHUB_RUN_ID}" \
+            -o "$canonical_body"
+
+          check_alias() {
+            local path="$1"
+            local headers body code location
+            headers="$(mktemp)"
+            body="$(mktemp)"
+
+            code=$(curl -sS --retry 5 --retry-delay 2 \
+              -D "$headers" \
+              -o "$body" \
+              -w '%{http_code}' \
+              "$base$path")
+
+            if [[ "$code" != "200" ]]; then
+              echo "Expected 200 for $path, got $code" >&2
+              cat "$headers" >&2
+              exit 1
+            fi
+
+            location=$(awk 'BEGIN{IGNORECASE=1} /^location:/{print; exit}' "$headers")
+            if [[ -n "$location" ]]; then
+              echo "Unexpected redirect header for $path: $location" >&2
+              exit 1
+            fi
+
+            grep -Fq '<base href="/mvp/">' "$body"
+            grep -Fq 'id="learning-map"' "$body"
+            cmp -s "$canonical_body" "$body" || {
+              echo "Alias body differs from canonical graph for $path" >&2
+              exit 1
+            }
+
+            echo "PASS $path -> direct 200 rewrite"
+          }
+
+          check_alias "/explore?verify=${GITHUB_RUN_ID}"
+          check_alias "/explore/?verify=${GITHUB_RUN_ID}"
+          check_alias "/map?verify=${GITHUB_RUN_ID}"
+          check_alias "/map/?verify=${GITHUB_RUN_ID}"
+          check_alias "/explore/?role=teacher&verify=${GITHUB_RUN_ID}"
+          check_alias "/map/?role=agent&verify=${GITHUB_RUN_ID}"
+          check_alias "/explore/?theme=theme-bq5-ai-decisions&verify=${GITHUB_RUN_ID}"
+
+          for asset in \
+            /mvp/styles.css \
+            /mvp/app.js \
+            /explore/styles.css \
+            /explore/app.js \
+            /map/styles.css \
+            /map/app.js; do
+            code=$(curl -sS --retry 5 --retry-delay 2 \
+              -o /dev/null \
+              -w '%{http_code}' \
+              "$base$asset?verify=${GITHUB_RUN_ID}")
+            if [[ "$code" != "200" ]]; then
+              echo "Expected 200 for asset $asset, got $code" >&2
+              exit 1
+            fi
+            echo "PASS $asset -> 200"
+          done
