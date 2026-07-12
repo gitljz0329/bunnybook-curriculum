@@ -1,0 +1,42 @@
+# BunnyBook Curriculum Source
+
+> BunnyBook 是同时面向教师与 AI 的开放课程知识服务：教师从自然语言教学意图开始，AI 按公开协议读取高中跨学科主题、学习节点、前置关系和课标来源，协助完成可追溯、可修改、需教师复核的课程设计。
+
+重要说明：
+- 不要要求教师安装 MCP、Plugin 或 Skill。公开网页与文本入口足以完成第一次使用；MCP 只是可选的高频调用方式。
+- 收到教师请求后，先把任务归入 `lesson_plan`、`full_planning`、`learning_progression` 或 `review`，最多先问 3 个必要问题。
+- 默认先给一页课程蓝图，再展开课堂方案；不要把节点列表直接当作教案。
+- 只引用数据中真实存在的稳定 ID、关系和来源。`dependencies` 方向是 `prerequisite_id -> topic_id`。
+- `hard` 与 `soft` 是 BunnyBook 当前项目建模，不是课程标准直接规定的学习顺序。
+- 核心素养名称与来源页码已经过本地课标核对；主题、节点、先修关系和具体映射仍待学科教师复核。
+- 无法打开网页时，请明确说明，并要求教师复制 `llms-full.txt` 或图谱中的主题使用包；不得假装已读取或编造 ID。
+- 不得处理可识别学生身份的个人数据，也不得自动评价学生或作出升学、健康、纪律等高风险个体决定。
+
+## Start here
+
+- [AI / Agent 操作协议](https://bunnybook-curriculum.netlify.app/agent/START-HERE.md): 通用对话流程、任务路由、渐进读取顺序、输出契约与信任边界。
+- [通用 Agent Manifest](https://bunnybook-curriculum.netlify.app/agent/manifest.json): 机器可读的模式、资源、默认行为与人工复核要求。
+- [课程信息源 Manifest](https://bunnybook-curriculum.netlify.app/api/v1/source-manifest.json): 当前版本、计数、资源地址、图谱语义与许可状态。
+
+## Data
+
+- [完整学习图谱](https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json): 8 个主题、87 个学习节点、189 条前置关系以及课标映射。
+- [详细图谱能力清单](https://bunnybook-curriculum.netlify.app/mvp/agent-manifest.json): 图谱字段、可选 MCP 能力、许可与详细信任策略。
+- [数据版本与使用边界](https://bunnybook-curriculum.netlify.app/mvp/data-notice.md): 已核对内容、待教师复核内容、隐私和高风险使用边界。
+
+## Human interface
+
+- [教师 / AI 双入口首页](https://bunnybook-curriculum.netlify.app/): 生成备课启动语，并选择教师或 AI 入口。
+- [完整教学图谱](https://bunnybook-curriculum.netlify.app/map/?role=teacher): 主题、学科、节点、前置关系与课标依据的交互地图。
+- [AI 图谱视图](https://bunnybook-curriculum.netlify.app/map/?role=agent): 面向稳定 ID、关系方向和来源状态的图谱视图。
+
+## Reuse and source
+
+- [开源仓库](https://github.com/gitljz0329/bunnybook-curriculum): 软件、公开图谱、文档、验证脚本与可选 MCP / Kimi Code 适配。
+- [构建自己的课程信息源](https://bunnybook-curriculum.netlify.app/docs/BUILD_YOUR_OWN.md): 使用 NGSS、义务教育课程标准或其他体系复用架构时的步骤和许可边界。
+- [许可地图](https://github.com/gitljz0329/bunnybook-curriculum/blob/main/LICENSE.md): 软件、数据库结构、原创内容、第三方材料与品牌适用的不同许可。
+
+## Optional
+
+- [完整离线启动上下文](https://bunnybook-curriculum.netlify.app/llms-full.txt): 当宿主 AI 不能浏览网页时，由教师复制粘贴；包含工作协议、主题目录、输出结构和边界，但不替代完整图谱。
+- [MCP 接入说明](https://bunnybook-curriculum.netlify.app/mvp/mcp-guide.md): 仅供能够安装本地工具的开发者和高频用户；不是教师第一次使用的前提。

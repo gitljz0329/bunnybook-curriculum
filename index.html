@@ -1,0 +1,118 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="BunnyBook 是同时面向教师和 AI 的开放课程知识服务：把链接发给任意 AI，从课程图谱开始备课。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BunnyBook · 老师看得懂，AI 也找得到">
+  <meta property="og:description" content="无需安装。链接即接口，对话即应用，图谱即知识底座。">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="BunnyBook LLM index">
+  <link rel="alternate" type="text/markdown" href="/agent/START-HERE.md" title="BunnyBook Agent protocol">
+  <link rel="alternate" type="application/json" href="/api/v1/source-manifest.json" title="BunnyBook source manifest">
+  <link rel="alternate" type="application/json" href="/api/v1/learning-map.json" title="BunnyBook learning map">
+  <title>BunnyBook · 老师看得懂，AI 也找得到</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-persona="teacher">
+<a class="skip-link" href="#main-content">跳到主要内容</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="BunnyBook 首页"><span class="brand-mark" aria-hidden="true">B</span><span><strong>BunnyBook</strong><small>CURRICULUM SOURCE</small></span></a>
+  <nav aria-label="主要导航"><a href="/map?role=teacher">教学图谱</a><a href="/llms.txt">AI 入口</a><a href="https://github.com/gitljz0329/bunnybook-curriculum" target="_blank" rel="noreferrer">GitHub</a></nav>
+  <div class="header-stats"><span><b data-count="themes">8</b> 主题</span><span><b data-count="topics">87</b> 节点</span><span><b data-count="dependencies">189</b> 关系</span></div>
+</header>
+
+<main id="main-content">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">LINK-FIRST CURRICULUM SOURCE</p>
+    <h1>老师看得懂，<br><em>AI 也找得到。</em></h1>
+    <p class="lead">BunnyBook 把高中课程图谱整理成教师可用的备课入口和 AI 可读的公开协议。无需安装插件，不要求部署智能体，从一句话开始。</p>
+    <div class="persona-switch" role="tablist" aria-label="选择使用身份">
+      <button id="persona-teacher" class="persona-button active" type="button" role="tab" data-persona="teacher" aria-selected="true" aria-controls="teacher-view"><span>教</span><b>我是老师<small>图谱、规划与进阶</small></b></button>
+      <button id="persona-agent" class="persona-button" type="button" role="tab" data-persona="agent" aria-selected="false" aria-controls="agent-view" tabindex="-1"><span>AI</span><b>我是 AI / Agent<small>协议、操作与数据</small></b></button>
+    </div>
+    <p class="principle">链接即接口 · 对话即应用 · 图谱即知识底座</p>
+  </div>
+  <aside class="conversation-card" aria-label="使用示例">
+    <div class="window-bar"><i></i><i></i><i></i><span>任意 AI 对话框</span><b>无需安装</b></div>
+    <div class="bubble user"><small>老师</small><p>我是个高中生物老师，想用 bunnybook-curriculum.netlify.app 帮我备节课。</p></div>
+    <div class="bubble ai"><small>AI</small><p>我会先读取 BunnyBook 的公开协议，再根据课程图谱协助你。最多先确认 3 个必要信息。</p></div>
+    <div class="outputs"><span>课程蓝图</span><span>学习进阶</span><span>课堂方案</span><span>依据与复核</span></div>
+  </aside>
+</section>
+
+<section id="teacher-view" class="persona-view" role="tabpanel" aria-labelledby="persona-teacher">
+  <div class="section-head"><div><p class="eyebrow">TEACHER STARTER</p><h2>把一句教学意图，变成一段有依据的备课对话</h2></div><p>选择最少信息，复制启动语到 ChatGPT、Kimi、豆包、Claude、千问或其他 AI。不能联网时，使用离线启动包。</p></div>
+
+  <div class="builder-grid">
+    <form id="prompt-builder" class="panel">
+      <div class="panel-title"><span>01</span><h3>生成备课启动语</h3><small>最多先问 3 个问题</small></div>
+      <div class="fields">
+        <label>学科<input id="subject" name="subject" value="高中生物学"></label>
+        <label>年级<select id="grade" name="grade"><option>高一</option><option>高二</option><option>高三</option><option>高中混合年级</option></select></label>
+        <label>任务<select id="mode" name="mode"><option value="lesson_plan">单课时备课</option><option value="full_planning">全盘规划</option><option value="learning_progression">学习进阶</option><option value="review">核对已有教案</option></select></label>
+        <label>课时<select id="duration" name="duration"><option>40 分钟</option><option selected>45 分钟</option><option>60 分钟</option><option>90 分钟</option><option>多课时 / 单元</option></select></label>
+      </div>
+      <label class="wide">内容、真实问题或目标节点<input id="focus" name="focus" placeholder="例如：稳态与调节；或“数据能告诉我们真相吗？”"></label>
+      <label class="wide">班情与约束 <small>可不填；不要输入学生个人信息</small><textarea id="context" name="context" rows="3" placeholder="例如：40 人，已学过细胞结构；希望包含小组讨论和一份当堂成果。"></textarea></label>
+      <fieldset><legend>AI 能否打开网页？</legend><label><input type="radio" name="access" value="web" checked>可以或不确定</label><label><input type="radio" name="access" value="offline">不能打开</label></fieldset>
+    </form>
+    <div class="panel prompt-panel">
+      <div class="panel-title"><span>02</span><h3>复制给你的 AI</h3><small class="live">实时生成</small></div>
+      <textarea id="generated-prompt" readonly aria-label="生成的备课启动语"></textarea>
+      <div class="actions"><button id="copy-prompt" class="primary" type="button">复制启动语</button><a class="secondary" href="/mvp/index.html?role=teacher" target="_blank" rel="noreferrer">先看教学图谱 ↗</a></div>
+      <button id="copy-offline-package" class="text-button" type="button">AI 不能联网？复制完整离线启动包</button>
+      <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="section-head compact"><div><p class="eyebrow">TWO CORE PATHS</p><h2>教师真正需要的两条路径</h2></div><p>不是让 AI 漫无边际地生成，而是沿图谱完成可讨论、可修改的专业任务。</p></div>
+  <div class="mode-grid">
+    <article class="mode-card plan"><span>A · FULL PLANNING</span><h3>全盘规划</h3><p>组织真实问题、共同成果、学科贡献、关键节点、课时安排和评价证据。</p><ul><li>回答“整个单元怎样组织”</li><li>先蓝图，再展开课时</li><li>明确教师最终决策</li></ul><button type="button" data-select-mode="full_planning">用这条路径开始 →</button></article>
+    <article class="mode-card path"><span>B · LEARNING PROGRESSION</span><h3>学习进阶</h3><p>追踪目标内容之前需要会什么、可能卡在哪里、掌握后能解锁什么。</p><ul><li>区分 hard 与 soft 前置</li><li>绑定可观察掌握证据</li><li>不冒充个体诊断</li></ul><button type="button" data-select-mode="learning_progression">用这条路径开始 →</button></article>
+  </div>
+
+  <div class="section-head compact"><div><p class="eyebrow">EXPLORE THE GRAPH</p><h2>先看学习世界，再让 AI 组织课堂</h2></div><div class="links"><a href="/mvp/index.html?role=teacher" target="_blank" rel="noreferrer">全屏打开图谱 ↗</a><a href="/mvp/data-notice.md" target="_blank" rel="noreferrer">数据与证据边界</a></div></div>
+  <div class="map-shell"><iframe src="/mvp/index.html?role=teacher" title="BunnyBook 高中跨学科教学图谱" loading="lazy"></iframe><div><span>8 个真实问题</span><span>12 门课标学科</span><span>87 个学习节点</span><span>189 条学习关系</span></div></div>
+
+  <div class="section-head compact"><div><p class="eyebrow">EIGHT ENTRY QUESTIONS</p><h2>从一个值得研究的问题开始</h2></div><p>点击问题，把它带入启动器；AI 再按需读取对应主题、节点与前置关系。</p></div>
+  <div id="question-grid" class="question-grid"></div>
+
+  <div class="reuse-block">
+    <div><p class="eyebrow">OPEN SOURCE BLUEPRINT</p><h2>不只使用 BunnyBook，也可以做自己的版本</h2><p>公开仓库同时是产品真源和复用模板。保留“教师入口 + AI 协议 + 课程图谱 + 证据边界”，即可替换为 NGSS、义务教育、地方或校本课程。</p><div class="actions"><a class="primary" href="https://github.com/gitljz0329/bunnybook-curriculum" target="_blank" rel="noreferrer">查看 GitHub ↗</a><a class="secondary" href="/docs/BUILD_YOUR_OWN.md" target="_blank" rel="noreferrer">阅读复用指南 ↗</a></div></div>
+    <ol><li><b>换课程真源</b><span>替换主题、节点、关系和来源映射。</span></li><li><b>换公开协议</b><span>修改配置、LLM 入口和复核边界。</span></li><li><b>验证再部署</b><span>让网页和 AI 始终引用同一真源。</span></li></ol>
+  </div>
+  <div class="trust"><strong>✓</strong><div><p class="eyebrow">HUMAN REVIEW BY DESIGN</p><h2>AI 协助组织，教师负责判断</h2><p>核心素养名称与来源页码已经核对；主题、节点、关系及其映射仍是项目设计，必须保留人工复核。不要向公开 AI 输入学生个人信息。</p></div><a href="/mvp/data-notice.md" target="_blank" rel="noreferrer">查看完整边界</a></div>
+</section>
+
+<section id="agent-view" class="persona-view" role="tabpanel" aria-labelledby="persona-agent" hidden>
+  <div class="agent-hero">
+    <div><p class="eyebrow">UNIVERSAL AI ENTRY</p><h2>先读协议，再按需取数</h2><p>任何能读取公开网页、Markdown 或用户粘贴文本的 AI 都可使用 BunnyBook。MCP、Plugin、Skill 只是高频调用的可选加速层。</p><div class="actions"><button id="copy-agent-bootstrap" class="primary" type="button">复制 AI 启动协议</button><a class="secondary" href="/agent/START-HERE.md" target="_blank" rel="noreferrer">打开 START-HERE.md ↗</a></div><p id="agent-copy-status" class="status" role="status"></p></div>
+    <ol class="read-order"><li><span>1</span><b>/llms.txt</b><small>发现站点</small></li><li><span>2</span><b>/agent/START-HERE.md</b><small>理解协议</small></li><li><span>3</span><b>/api/v1/source-manifest.json</b><small>确认语义</small></li><li><span>4</span><b>/api/v1/learning-map.json</b><small>按需读图</small></li></ol>
+  </div>
+
+  <div class="section-head compact"><div><p class="eyebrow">CONVERSATION PROTOCOL</p><h2>收到教师链接后的工作路径</h2></div><p>目标不是返回节点堆栈，而是形成可上课、可追溯、可复核的设计。</p></div>
+  <ol class="workflow"><li><span>01</span><div><b>识别任务</b><p>单课时、全盘规划、学习进阶或教案核对。</p></div></li><li><span>02</span><div><b>最少追问</b><p>最多先问 3 个真正影响方案的问题。</p></div></li><li><span>03</span><div><b>渐进读取</b><p>先 manifest，再读相关主题和节点。</p></div></li><li><span>04</span><div><b>先给蓝图</b><p>先目标、成果、顺序与证据，再展开流程。</p></div></li><li><span>05</span><div><b>保留边界</b><p>分开课标事实、项目映射和教师决策。</p></div></li></ol>
+
+  <div class="section-head compact"><div><p class="eyebrow">PUBLIC RESOURCES</p><h2>稳定、只读、无需鉴权</h2></div><p>所有机器入口和教师页面使用同一份规范图谱。</p></div>
+  <div class="resource-grid">
+    <a href="/llms.txt"><small>TEXT</small><b>/llms.txt</b><span>最短发现入口</span></a>
+    <a href="/llms-full.txt"><small>TEXT</small><b>/llms-full.txt</b><span>离线复制上下文</span></a>
+    <a href="/agent/manifest.json"><small>JSON</small><b>/agent/manifest.json</b><span>对话能力与输出契约</span></a>
+    <a href="/api/v1/source-manifest.json"><small>JSON</small><b>/api/v1/source-manifest.json</b><span>版本、资源与语义</span></a>
+    <a href="/api/v1/learning-map.json"><small>JSON</small><b>/api/v1/learning-map.json</b><span>完整课程图谱</span></a>
+    <a href="/api/v1/graph-manifest.json"><small>JSON</small><b>/api/v1/graph-manifest.json</b><span>详细图谱清单</span></a>
+  </div>
+  <div class="semantics"><article><code>themes</code><h3>主题不是标签</h3><p>真实问题、多学科贡献和共同成果。</p></article><article><code>topics</code><h3>节点可教、可观察</h3><p>引用时保留稳定 ID 和掌握证据。</p></article><article><code>prerequisite_id → topic_id</code><h3>关系有方向</h3><p>hard / soft 都是项目建模，不是课标规定。</p></article><article><code>review_status</code><h3>证据边界显式</h3><p>待审内容不得写成专家共识。</p></article></div>
+  <div class="fallback"><div><p class="eyebrow">FALLBACK</p><h2>无法访问网页时，不要假装读过</h2><p>请教师复制 <code>/llms-full.txt</code> 或相关主题包；在获得数据前不得编造 ID、关系或来源。</p></div><button id="copy-fallback" class="secondary" type="button">复制离线请求话术</button></div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">B</span><span><strong>BunnyBook</strong><small>OPEN CURRICULUM SOURCE</small></span></div><p>给教师看的图谱，给 AI 读取的课程信息源。</p><nav><a href="/map?role=teacher">教学图谱</a><a href="/agent/START-HERE.md">AI 操作协议</a><a href="/docs/BUILD_YOUR_OWN.md">复用指南</a><a href="https://github.com/gitljz0329/bunnybook-curriculum">GitHub</a></nav></footer>
+<script src="/site-config.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

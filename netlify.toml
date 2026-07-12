@@ -1,0 +1,83 @@
+[build]
+  publish = "."
+
+# Keep the browser URL at /explore/ so the graph's relative assets resolve
+# through the same rewrite family. /map remains a short human-facing alias.
+[[redirects]]
+  from = "/explore"
+  to = "/explore/"
+  status = 301
+
+[[redirects]]
+  from = "/explore/*"
+  to = "/mvp/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/map"
+  to = "/explore/"
+  status = 302
+
+[[redirects]]
+  from = "/map/*"
+  to = "/explore/:splat"
+  status = 302
+
+# Stable machine-facing aliases. Every interface reads the same canonical graph.
+[[redirects]]
+  from = "/api/v1/learning-map.json"
+  to = "/mvp/learning-map.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/graph-manifest.json"
+  to = "/mvp/agent-manifest.json"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/agent/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/api/v1/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

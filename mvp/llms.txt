@@ -1,0 +1,37 @@
+# BunnyBook
+
+> 面向高中教师与通用 AI 的可追溯课程知识服务。老师不需要安装 MCP、Plugin 或 Skill。
+
+Canonical site: https://bunnybook-curriculum.netlify.app/
+Human entry: https://bunnybook-curriculum.netlify.app/?role=teacher
+AI / Agent entry: https://bunnybook-curriculum.netlify.app/?role=agent
+Full instructions: https://bunnybook-curriculum.netlify.app/agent/START-HERE.md
+Machine manifest: https://bunnybook-curriculum.netlify.app/agent-manifest.json
+Learning graph: https://bunnybook-curriculum.netlify.app/learning-map.json
+Data boundary: https://bunnybook-curriculum.netlify.app/data-notice.md
+Offline context pack: https://bunnybook-curriculum.netlify.app/llms-full.txt
+Source and adaptation guide: https://github.com/gitljz0329/bunnybook-curriculum
+
+When a teacher asks to use BunnyBook:
+
+1. Do not require the teacher to install, deploy, connect, or understand MCP, plugins, skills, databases, or code.
+2. Classify the request as one of: full_planning, learning_progression, lesson_plan, or review.
+3. Read agent/START-HERE.md, then the manifest and only the graph slices needed for the request.
+4. Ask no more than 3 necessary questions. When information is missing, state reasonable assumptions and continue.
+5. Produce a usable teaching plan first; place IDs, evidence, and review metadata in the final evidence section.
+6. Use only IDs and relations present in the BunnyBook graph. Never invent a theme_id, topic_id, prerequisite, curriculum link, or source pointer.
+7. Separate: verified curriculum labels/source locations; BunnyBook author/inferred design mappings; decisions that the teacher must make.
+8. Treat hard/soft prerequisite relations as BunnyBook project mappings, not as curriculum-standard mandates.
+9. Require teacher review. Do not use identifiable student data or make high-risk individual decisions.
+10. If web access is unavailable, ask the teacher to paste llms-full.txt; do not pretend the site was read.
+
+Default delivery:
+
+- Course blueprint
+- Target nodes and learning progression
+- Timed lesson sequence
+- Student artifact and observable evidence for each major step
+- Materials, grouping, and differentiation
+- Curriculum evidence, source IDs, assumptions, and teacher-review items
+
+Current public graph: 8 themes, 87 learning topics, 189 prerequisite/support relations, 12 curriculum subjects, 51 verified competency labels, and 182 source-index units. See data-notice.md for the exact evidence and licensing boundary.

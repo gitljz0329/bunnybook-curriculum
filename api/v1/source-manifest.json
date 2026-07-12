@@ -1,0 +1,132 @@
+{
+  "manifest_version": "1.0",
+  "service": "BunnyBook Curriculum Source",
+  "release": "0.3-full-alpha+universal-entry-2.0",
+  "language": "zh-CN",
+  "canonical_site_url": "https://bunnybook-curriculum.netlify.app",
+  "repository_url": "https://github.com/gitljz0329/bunnybook-curriculum",
+  "published_at": "2026-07-12",
+  "access": {
+    "public": true,
+    "authentication_required": false,
+    "read_only": true,
+    "teacher_installation_required": false,
+    "mcp_required": false,
+    "human_review_required": true
+  },
+  "counts": {
+    "themes": 8,
+    "topics": 87,
+    "dependencies": 189,
+    "curriculum_subjects": 12,
+    "competencies": 51,
+    "coverage_units": 182
+  },
+  "conversation_modes": [
+    "lesson_plan",
+    "full_planning",
+    "learning_progression",
+    "review"
+  ],
+  "resources": {
+    "llms_index": {
+      "href": "https://bunnybook-curriculum.netlify.app/llms.txt",
+      "media_type": "text/plain",
+      "purpose": "Shortest discovery index for general-purpose AI assistants."
+    },
+    "offline_context": {
+      "href": "https://bunnybook-curriculum.netlify.app/llms-full.txt",
+      "media_type": "text/plain",
+      "purpose": "Copy-and-paste fallback when an AI cannot browse the web."
+    },
+    "agent_protocol": {
+      "href": "https://bunnybook-curriculum.netlify.app/agent/START-HERE.md",
+      "media_type": "text/markdown",
+      "purpose": "Task routing, progressive retrieval, output contract, and trust boundaries."
+    },
+    "universal_agent_manifest": {
+      "href": "https://bunnybook-curriculum.netlify.app/agent/manifest.json",
+      "media_type": "application/json",
+      "purpose": "Machine-readable conversation capabilities and defaults."
+    },
+    "learning_map": {
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json",
+      "media_type": "application/json",
+      "purpose": "Canonical public graph containing themes, topics, dependencies, and curriculum alignment."
+    },
+    "detailed_graph_manifest": {
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/graph-manifest.json",
+      "media_type": "application/json",
+      "purpose": "Detailed graph contract, integrations, licensing, and trust policy."
+    },
+    "human_map": {
+      "href": "https://bunnybook-curriculum.netlify.app/map/?role=teacher",
+      "media_type": "text/html",
+      "purpose": "Teacher-facing graph exploration and evidence review."
+    },
+    "agent_map": {
+      "href": "https://bunnybook-curriculum.netlify.app/map/?role=agent",
+      "media_type": "text/html",
+      "purpose": "Stable-ID and relationship-oriented graph view."
+    },
+    "data_notice": {
+      "href": "https://bunnybook-curriculum.netlify.app/mvp/data-notice.md",
+      "media_type": "text/markdown",
+      "purpose": "Version, evidence, licensing, privacy, and high-risk-use boundaries."
+    },
+    "reuse_guide": {
+      "href": "https://bunnybook-curriculum.netlify.app/docs/BUILD_YOUR_OWN.md",
+      "media_type": "text/markdown",
+      "purpose": "Fork the architecture for NGSS, compulsory education, or another curriculum system."
+    },
+    "universal_entry_architecture": {
+      "href": "https://bunnybook-curriculum.netlify.app/docs/universal_entry.md",
+      "media_type": "text/markdown",
+      "purpose": "Architecture, task modes, retrieval flow, output contract, trust boundaries, and acceptance tests."
+    }
+  },
+  "graph_semantics": {
+    "canonical_theme_collection": "themes",
+    "compatibility_theme_alias": "routes",
+    "topic_collection": "topics",
+    "dependency_collection": "dependencies",
+    "dependency_direction": "prerequisite_id -> topic_id",
+    "hard": "Necessary prerequisite in the current BunnyBook project model; not a direct curriculum-standard mandate.",
+    "soft": "Supporting or helpful prerequisite in the current BunnyBook project model; not a direct curriculum-standard mandate.",
+    "coverage_units_are_learning_topics": false,
+    "interdisciplinary_is_a_curriculum_subject": false
+  },
+  "retrieval_policy": {
+    "classify_task_first": true,
+    "progressive_retrieval": true,
+    "scan_entire_site_by_default": false,
+    "maximum_initial_questions": 3,
+    "blueprint_before_full_plan": true,
+    "invalid_id_policy": "State that the ID was not found, offer up to three real candidates, and never invent an ID."
+  },
+  "trust_policy": {
+    "verified_source_facts": [
+      "12 curriculum subject names",
+      "51 competency names and local source-page locations"
+    ],
+    "project_mappings_requiring_teacher_review": [
+      "themes",
+      "topics",
+      "dependencies",
+      "topic-to-curriculum mappings",
+      "subject contributions",
+      "performance tasks"
+    ],
+    "student_personal_data_allowed": false,
+    "individual_student_diagnosis_allowed": false,
+    "high_risk_automated_decisions_allowed": false
+  },
+  "licensing": {
+    "rights_holder": "lixiaozuyi",
+    "database_structure_ids_relationships": "ODbL-1.0",
+    "bunnybook_authored_text": "CC-BY-4.0",
+    "software": "Apache-2.0",
+    "brand_assets": "all-rights-reserved",
+    "license_map": "https://github.com/gitljz0329/bunnybook-curriculum/blob/main/LICENSE.md"
+  }
+}
