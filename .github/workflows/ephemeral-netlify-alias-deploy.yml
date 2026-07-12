@@ -1,9 +1,9 @@
 name: Ephemeral Netlify alias deploy
 
 on:
-  push:
+  pull_request:
     branches:
-      - ops/netlify-alias-deploy-20260712
+      - main
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   deploy-and-smoke:
-    if: github.event.head_commit.message == 'Start alias fix Netlify deployment handshake'
+    if: github.event.pull_request.head.ref == 'ops/netlify-alias-deploy-20260712'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -75,7 +75,7 @@ jobs:
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer $GH_TOKEN" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
-              --data-urlencode "ref=$GITHUB_REF_NAME" \
+              --data-urlencode "ref=$GITHUB_HEAD_REF" \
               "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/.github/netlify-deploy/payload.b64")
             if [ "$http_code" = "200" ]; then
               found=1
