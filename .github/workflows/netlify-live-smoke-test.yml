@@ -55,7 +55,15 @@ jobs:
           assert manifest['access']['teacher_installation_required'] is False
           assert manifest['access']['mcp_required'] is False
           assert manifest['access']['human_review_required'] is True
-          assert {item['id'] for item in manifest['modes']} == {
+          modes = manifest['modes']
+          if isinstance(modes, dict):
+              mode_ids = set(modes)
+          else:
+              mode_ids = {
+                  item if isinstance(item, str) else item['id']
+                  for item in modes
+              }
+          assert mode_ids == {
               'lesson_plan', 'full_planning', 'learning_progression', 'review'
           }
           assert manifest['source_counts'] == {
