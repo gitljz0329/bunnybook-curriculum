@@ -1,0 +1,168 @@
+name: Ephemeral Netlify alias deploy
+
+on:
+  push:
+    branches:
+      - ops/netlify-alias-deploy-20260712
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bunnybook-netlify-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy-and-smoke:
+    if: github.event.head_commit.message == 'Start alias fix Netlify deployment handshake'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out audited production source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Re-run production validation
+        run: |
+          python3 scripts/validate_public_release.py
+          python3 scripts/validate_universal_entry.py
+          python3 scripts/validate_netlify_contract.py
+          node scripts/validate_agent_trial.js
+
+      - name: Generate one-time deployment certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          handshake="$RUNNER_TEMP/netlify-handshake"
+          mkdir -p "$handshake"
+          openssl req -x509 -newkey rsa:3072 \
+            -keyout "$handshake/private.pem" \
+            -out "$handshake/certificate.pem" \
+            -sha256 -days 1 -nodes \
+            -subj "/CN=bunnybook-netlify-${GITHUB_RUN_ID}"
+          chmod 600 "$handshake/private.pem"
+
+      - name: Publish one-time public certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: netlify-alias-deploy-certificate
+          path: ${{ runner.temp }}/netlify-handshake/certificate.pem
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Receive encrypted authorization and deploy main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NETLIFY_SITE_ID: b11f1d05-270b-439b-85da-6939c3f2b288
+        shell: bash
+        run: |
+          set -euo pipefail
+          handshake="$RUNNER_TEMP/netlify-handshake"
+          payload_json="$handshake/payload.json"
+          payload_der="$handshake/payload.der"
+          found=0
+
+          for attempt in $(seq 1 150); do
+            http_code=$(curl -sS -G \
+              -o "$payload_json" \
+              -w "%{http_code}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              --data-urlencode "ref=$GITHUB_REF_NAME" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/.github/netlify-deploy/payload.b64")
+            if [ "$http_code" = "200" ]; then
+              found=1
+              break
+            fi
+            sleep 2
+          done
+
+          if [ "$found" != "1" ]; then
+            echo "Encrypted deployment payload was not received." >&2
+            exit 1
+          fi
+
+          python3 - "$payload_json" "$payload_der" <<'PY'
+          import base64
+          import json
+          import sys
+          from pathlib import Path
+
+          response = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          repository_text = base64.b64decode(response["content"]).decode("ascii").strip()
+          Path(sys.argv[2]).write_bytes(base64.b64decode(repository_text))
+          PY
+
+          openssl cms -decrypt -binary -inform DER \
+            -in "$payload_der" \
+            -recip "$handshake/certificate.pem" \
+            -inkey "$handshake/private.pem" \
+            -out "$handshake/proxy-path.txt"
+
+          proxy_path=$(cat "$handshake/proxy-path.txt")
+          case "$proxy_path" in
+            https://netlify-mcp.netlify.app/proxy/*) ;;
+            *)
+              echo "Decrypted payload is not a Netlify deployment proxy URL." >&2
+              exit 1
+              ;;
+          esac
+
+          echo "::add-mask::$proxy_path"
+          rm -f "$payload_json" "$payload_der" "$handshake/proxy-path.txt"
+          npx -y @netlify/mcp@latest \
+            --site-id "$NETLIFY_SITE_ID" \
+            --proxy-path "$proxy_path"
+
+      - name: Smoke-test production aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://bunnybook-curriculum.netlify.app"
+
+          check_alias() {
+            local path="$1"
+            local slug="$2"
+            local code=""
+            for attempt in $(seq 1 20); do
+              code=$(curl -sS --max-redirs 0 \
+                -D "/tmp/${slug}.headers" \
+                -o "/tmp/${slug}.html" \
+                -w "%{http_code}" \
+                "$base$path?smoke=${GITHUB_RUN_ID}-${attempt}" || true)
+              if [ "$code" = "200" ] \
+                && ! grep -Eiq '^location:' "/tmp/${slug}.headers" \
+                && grep -Fq '<base href="/mvp/">' "/tmp/${slug}.html" \
+                && grep -Fq 'BunnyBook' "/tmp/${slug}.html"; then
+                return 0
+              fi
+              sleep 3
+            done
+            echo "Alias $path failed: HTTP $code" >&2
+            cat "/tmp/${slug}.headers" >&2 || true
+            exit 1
+          }
+
+          check_alias "/explore" "explore-no-slash"
+          check_alias "/explore/" "explore-slash"
+          check_alias "/map" "map-no-slash"
+          check_alias "/map/" "map-slash"
+
+          curl -fsSL "$base/mvp/styles.css?smoke=${GITHUB_RUN_ID}" | grep -Fq -- '--bg:'
+          curl -fsSL "$base/mvp/app.js?smoke=${GITHUB_RUN_ID}" | grep -Fq 'const data = window.BIG_MVP_DATA'
+          curl -fsSL "$base/api/v1/learning-map.json?smoke=${GITHUB_RUN_ID}" -o /tmp/learning-map.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          graph = json.loads(Path('/tmp/learning-map.json').read_text(encoding='utf-8'))
+          assert len(graph['themes']) == 8
+          assert len(graph['topics']) == 87
+          assert len(graph['dependencies']) == 189
+          PY
