@@ -24,6 +24,7 @@ REQUIRED_FILES = (
     "api/v1/source-manifest.json",
     "docs/BUILD_YOUR_OWN.md",
     "docs/universal_entry.md",
+    "mvp/index.html",
     "netlify.toml",
     "robots.txt",
     "sitemap.xml",
@@ -255,17 +256,31 @@ def validate_config_and_scripts(root: Path, errors: list[str], warnings: list[st
 
 def validate_netlify(root: Path, errors: list[str]) -> None:
     config = read_text(root, "netlify.toml", errors)
+    graph_html = read_text(root, "mvp/index.html", errors)
     expected_rules = (
+        'from = "/explore"',
+        'from = "/explore/"',
         'from = "/explore/*"',
-        'to = "/mvp/:splat"',
         'from = "/map"',
-        'to = "/explore/"',
+        'from = "/map/"',
+        'from = "/map/*"',
+        'to = "/mvp/index.html"',
+        'to = "/mvp/:splat"',
         'from = "/api/v1/learning-map.json"',
         'to = "/mvp/learning-map.json"',
     )
     for rule in expected_rules:
         if rule not in config:
             errors.append(f"netlify.toml is missing rule fragment: {rule}")
+
+    if config.count('to = "/mvp/index.html"') < 4:
+        errors.append("netlify.toml must directly rewrite all four base alias forms to /mvp/index.html")
+    if 'to = "/explore/"' in config or 'to = "/map/"' in config:
+        errors.append("netlify aliases must not redirect to one another")
+    if "status = 301" in config or "status = 302" in config:
+        errors.append("netlify aliases must use direct 200 rewrites, not redirect chains")
+    if '<base href="/mvp/">' not in graph_html:
+        errors.append("mvp/index.html must anchor relative graph assets to /mvp/")
 
 
 def validate_public_safety(root: Path, errors: list[str]) -> None:
