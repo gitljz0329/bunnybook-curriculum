@@ -1,0 +1,167 @@
+name: Secure Netlify deploy session
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'agent/secure-netlify-deploy-session'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      REPO_OWNER: ${{ github.repository_owner }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+      SITE_ID: b11f1d05-270b-439b-85da-6939c3f2b288
+
+    steps:
+      - name: Check out final main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Validate final deploy source
+        run: |
+          python3 scripts/validate_public_release.py
+          node scripts/validate_agent_trial.js
+          python3 scripts/validate_universal_entry.py
+          python3 scripts/validate_netlify_contract.py
+
+      - name: Create ephemeral public key
+        id: key
+        shell: bash
+        run: |
+          set -euo pipefail
+          SESSION_ID="$(openssl rand -hex 16)"
+          node <<'NODE'
+          const fs = require('fs');
+          const { generateKeyPairSync } = require('crypto');
+          const { publicKey, privateKey } = generateKeyPairSync('rsa', {
+            modulusLength: 3072,
+            publicKeyEncoding: { type: 'spki', format: 'pem' },
+            privateKeyEncoding: { type: 'pkcs8', format: 'pem' },
+          });
+          fs.writeFileSync('/tmp/netlify-public.pem', publicKey, { mode: 0o600 });
+          fs.writeFileSync('/tmp/netlify-private.pem', privateKey, { mode: 0o600 });
+          NODE
+          PUBLIC_KEY_B64="$(base64 -w0 /tmp/netlify-public.pem)"
+          printf 'session_id=%s\n' "$SESSION_ID" >> "$GITHUB_OUTPUT"
+          BODY="<!-- bunnybook-secure-netlify-deploy -->
+          NETLIFY_DEPLOY_PUBLIC_KEY:${SESSION_ID}:${PUBLIC_KEY_B64}"
+          gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" -f body="$BODY" >/dev/null
+
+      - name: Wait for owner-encrypted deploy payload
+        id: payload
+        shell: bash
+        env:
+          SESSION_ID: ${{ steps.key.outputs.session_id }}
+        run: |
+          set -euo pipefail
+          PREFIX="NETLIFY_DEPLOY_PAYLOAD:${SESSION_ID}:"
+          export PREFIX
+          for _attempt in $(seq 1 90); do
+            gh api --paginate "repos/${REPO}/issues/${PR_NUMBER}/comments" > /tmp/pr-comments.json
+            PAYLOAD="$(python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          comments = json.loads(Path('/tmp/pr-comments.json').read_text(encoding='utf-8'))
+          owner = os.environ['REPO_OWNER']
+          prefix = os.environ['PREFIX']
+          matches = [
+              item.get('body', '')[len(prefix):].strip()
+              for item in comments
+              if item.get('user', {}).get('login') == owner
+              and item.get('body', '').startswith(prefix)
+          ]
+          print(matches[-1] if matches else '')
+          PY
+            )"
+            if [[ -n "$PAYLOAD" ]]; then
+              printf '%s' "$PAYLOAD" > /tmp/netlify-payload.b64
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Timed out waiting for the encrypted deploy payload." >&2
+          exit 1
+
+      - name: Decrypt one-time Netlify proxy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const {
+            constants,
+            createDecipheriv,
+            privateDecrypt,
+          } = require('crypto');
+
+          const envelope = JSON.parse(
+            Buffer.from(
+              fs.readFileSync('/tmp/netlify-payload.b64', 'utf8').trim(),
+              'base64'
+            ).toString('utf8')
+          );
+          const privateKey = fs.readFileSync('/tmp/netlify-private.pem', 'utf8');
+          const aesKey = privateDecrypt(
+            {
+              key: privateKey,
+              padding: constants.RSA_PKCS1_OAEP_PADDING,
+              oaepHash: 'sha256',
+            },
+            Buffer.from(envelope.ek, 'base64')
+          );
+          const decipher = createDecipheriv(
+            'aes-256-gcm',
+            aesKey,
+            Buffer.from(envelope.iv, 'base64')
+          );
+          decipher.setAuthTag(Buffer.from(envelope.tag, 'base64'));
+          const proxyPath = Buffer.concat([
+            decipher.update(Buffer.from(envelope.ct, 'base64')),
+            decipher.final(),
+          ]).toString('utf8');
+          if (!proxyPath.startsWith('https://netlify-mcp.netlify.app/proxy/')) {
+            throw new Error('Decrypted payload is not an allowed Netlify deploy proxy.');
+          }
+          console.log(`::add-mask::${proxyPath}`);
+          fs.appendFileSync(
+            process.env.GITHUB_ENV,
+            `NETLIFY_PROXY_PATH<<__BUNNYBOOK_NETLIFY__\n${proxyPath}\n__BUNNYBOOK_NETLIFY__\n`
+          );
+          NODE
+          rm -f /tmp/netlify-payload.b64 /tmp/netlify-public.pem
+
+      - name: Deploy final main branch to Netlify
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx -y @netlify/mcp@1.15.1 \
+            --site-id "$SITE_ID" \
+            --proxy-path "$NETLIFY_PROXY_PATH"
+
+      - name: Record successful deploy
+        if: success()
+        shell: bash
+        env:
+          SESSION_ID: ${{ steps.key.outputs.session_id }}
+        run: |
+          BODY="NETLIFY_DEPLOY_RESULT:${SESSION_ID}:success"
+          gh api "repos/${REPO}/issues/${PR_NUMBER}/comments" -f body="$BODY" >/dev/null
+
+      - name: Remove ephemeral private key
+        if: always()
+        run: rm -f /tmp/netlify-private.pem /tmp/netlify-public.pem /tmp/netlify-payload.b64
