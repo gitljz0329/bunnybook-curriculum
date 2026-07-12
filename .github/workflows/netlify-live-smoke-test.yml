@@ -101,12 +101,13 @@ jobs:
           grep -Fi 'access-control-allow-origin: *' /tmp/llms.headers
           grep -Fi 'content-type: text/plain' /tmp/llms.headers
 
-      - name: Verify graph and human exploration routes
+      - name: Verify canonical graph API
         shell: bash
         run: |
           set -euo pipefail
           curl -fsSL --retry 5 --retry-all-errors \
             -H 'Cache-Control: no-cache' \
+            -D /tmp/graph.headers \
             "${BASE_URL}/api/v1/learning-map.json?smoke=${GITHUB_RUN_ID}" \
             -o /tmp/graph.json
           python3 - <<'PY'
@@ -114,19 +115,29 @@ jobs:
           from pathlib import Path
 
           graph = json.loads(Path('/tmp/graph.json').read_text(encoding='utf-8'))
-          assert len(graph['themes']) == 8
+          themes = graph.get('themes') or graph.get('routes') or []
+          assert len(themes) == 8
           assert len(graph['topics']) == 87
           assert len(graph['dependencies']) == 189
           assert len(graph['curriculum_alignment']['curriculum_subjects']) == 12
           print('Canonical graph route is live.')
           PY
+          grep -Fi 'access-control-allow-origin: *' /tmp/graph.headers
+          grep -Fi 'content-type: application/json' /tmp/graph.headers
 
+      - name: Verify human exploration route
+        shell: bash
+        run: |
+          set -euo pipefail
           curl -fsSL --retry 5 --retry-all-errors \
             -H 'Cache-Control: no-cache' \
+            -D /tmp/explore.headers \
             "${BASE_URL}/explore/?role=teacher&smoke=${GITHUB_RUN_ID}" \
             -o /tmp/explore.html
           grep -F 'id="learning-map"' /tmp/explore.html
           grep -F '探索教学图谱' /tmp/explore.html
+          grep -F 'CURRICULUM SOURCE' /tmp/explore.html
+          grep -Fi 'content-security-policy:' /tmp/explore.headers
 
       - name: Summarize live verification
         run: |
