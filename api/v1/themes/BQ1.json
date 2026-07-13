@@ -1,0 +1,2380 @@
+{
+  "bundle_version": "1.0-link-first",
+  "generated_from": "/mvp/learning-map.json",
+  "canonical_href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ1.json",
+  "purpose": "A bounded theme context for general-purpose AI lesson-planning conversations.",
+  "theme": {
+    "id": "theme-bq1-wellbeing",
+    "big_question_id": "BQ1",
+    "secondary_big_question_id": "BQ8",
+    "title": "怎样生活才算健康？",
+    "question": "怎样用证据设计一个既适合自己、尊重个体差异，又能得到同伴支持的健康生活方案？",
+    "description": "有尊严的健康成长不是用统一指标约束每个人，而是理解身体节律、情绪、学习、关系与环境之间的联系，在保护隐私和尊重差异的前提下形成可持续的自我管理与共同照护。",
+    "source_theme_ids": [
+      "TH-CAND-014",
+      "TH-CAND-015",
+      "TH-CAND-013"
+    ],
+    "topic_ids": [
+      "T-EVID-001",
+      "T-EVID-002",
+      "T-EVID-003",
+      "T-EVID-004",
+      "T-EVID-005",
+      "T-DATA-001",
+      "T-DATA-003",
+      "T-DATA-006",
+      "T-DATA-007",
+      "T-DATA-012",
+      "T-BIO-001",
+      "T-BIO-002",
+      "T-BIO-004",
+      "T-BIO-005",
+      "T-PE-001",
+      "T-PE-002",
+      "T-PE-003",
+      "T-PE-005",
+      "T-CHEM-001",
+      "T-CHEM-003",
+      "T-GOV-001",
+      "T-GOV-002",
+      "T-WELL-001",
+      "T-WELL-002",
+      "T-WELL-003"
+    ],
+    "entry_topic_ids": [
+      "T-WELL-003"
+    ],
+    "topic_roles": [
+      {
+        "topic_id": "T-EVID-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-003",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-006",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-007",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-012",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-BIO-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-BIO-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-BIO-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-BIO-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PE-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PE-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PE-003",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PE-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-CHEM-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-CHEM-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-WELL-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-WELL-002",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-WELL-003",
+        "phase": "create_and_act",
+        "importance": "entry"
+      }
+    ],
+    "theme_learning": {
+      "theme_statement": "有尊严的健康成长不是用统一指标约束每个人，而是理解身体节律、情绪、学习、关系与环境之间的联系，在保护隐私和尊重差异的前提下形成可持续的自我管理与共同照护。",
+      "learning_goals": [
+        "记录并解释运动、睡眠、饮食、专注和情绪等信息，区分观察、相关与因果。",
+        "综合生命科学、运动健康和数据证据，设计符合个人条件且可以迭代的健康方案。",
+        "识别健康数据的隐私与标签化风险，形成尊重差异的同伴支持和公共沟通方式。"
+      ],
+      "subject_contributions": [
+        {
+          "subject_id": "physical_education_health",
+          "content_area": "运动技能、体能发展与健康行为",
+          "competency_ids": [
+            "physical_education_health.motor_ability",
+            "physical_education_health.health_behavior",
+            "physical_education_health.sports_ethics"
+          ],
+          "contribution": "形成运动处方、健康行为目标和可持续锻炼策略，判断运动安全与同伴合作边界。"
+        },
+        {
+          "subject_id": "biology",
+          "content_area": "稳态与调节、生命活动与健康",
+          "competency_ids": [
+            "biology.life_concept",
+            "biology.scientific_thinking",
+            "biology.scientific_inquiry",
+            "biology.social_responsibility"
+          ],
+          "contribution": "解释睡眠、稳态、代谢、压力和身体调节机制，判断健康建议的科学依据。"
+        },
+        {
+          "subject_id": "chemistry",
+          "content_area": "营养物质、能量与健康相关物质",
+          "competency_ids": [
+            "chemistry.macro_micro",
+            "chemistry.evidence_model",
+            "chemistry.attitude_responsibility"
+          ],
+          "contribution": "解释营养物质、能量与身体健康相关的物质基础，审查产品宣传中的化学主张。"
+        },
+        {
+          "subject_id": "mathematics",
+          "content_area": "概率与统计、数据分析",
+          "competency_ids": [
+            "mathematics.data_analysis",
+            "mathematics.modeling",
+            "mathematics.logical_reasoning"
+          ],
+          "contribution": "分析个人或匿名小组数据，识别波动、相关关系和过度因果解释。"
+        },
+        {
+          "subject_id": "chinese",
+          "content_area": "实用性阅读与交流、反思性表达",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "contribution": "阅读健康材料、组织反思叙事，并以非污名化语言交流差异和支持需要。"
+        },
+        {
+          "subject_id": "civics",
+          "content_area": "公共生活、科学判断与共同责任",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "contribution": "讨论健康数据隐私、人格尊严、共同责任和学校健康支持机制。"
+        }
+      ],
+      "final_performance_task": {
+        "title": "四周健康改进与共同照护方案",
+        "authentic_audience": "学生本人、同伴小组、体育与健康教师或学校健康支持人员",
+        "brief": "在保护隐私的前提下记录健康行为，解释关键变量，设计并试行个人改进方案，同时为班级形成一份尊重差异的同伴支持约定。",
+        "required_artifacts": [
+          "匿名健康数据日志",
+          "机制解释卡",
+          "个人健康改进方案",
+          "同伴支持约定",
+          "迭代反思"
+        ]
+      }
+    },
+    "material_links": {}
+  },
+  "topics": [
+    {
+      "id": "T-EVID-001",
+      "name": "事实、数据与主张",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "区分发生了什么、记录了什么，以及表达者据此声称了什么，避免把主张直接当成事实。",
+      "mastery_evidence": [
+        "能在一段材料中分别标出事实陈述、数据和结论性主张。",
+        "能指出一个主张还需要什么证据才能成立。"
+      ],
+      "assessment_prompt": "这句话是在报告事实、呈现数据，还是提出一个需要证明的主张？",
+      "source_anchor_ids": [
+        "CA-CU-063"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-002",
+      "name": "论点、证据与推理",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 2,
+      "type": "representational",
+      "description": "用“论点—证据—推理”结构检查结论如何由材料支持，并识别推理中的跳步。",
+      "mastery_evidence": [
+        "能把一段论证拆成论点、证据和连接二者的理由。",
+        "能解释证据为什么支持或不足以支持结论。"
+      ],
+      "assessment_prompt": "这份证据和结论之间缺少哪一步解释？",
+      "source_anchor_ids": [
+        "CA-CU-057",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development",
+            "chinese.language_construction"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-057",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "chinese.language_construction",
+        "civics.scientific_spirit"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-003",
+      "name": "信息来源核验",
+      "subject": "chinese",
+      "domain": "媒介与阅读",
+      "stage": 2,
+      "type": "procedural",
+      "description": "检查材料的作者、出处、时间、证据来源与传播语境，判断是否值得继续使用。",
+      "mastery_evidence": [
+        "能追溯一则数据或说法的原始出处。",
+        "能说明来源的利益位置、时效与可核验程度。"
+      ],
+      "assessment_prompt": "如果只能做三项检查，你会怎样确认这条信息的来源可靠吗？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-013",
+        "CU-104"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 45 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.source_evidence"
+          ],
+          "content_anchor_ids": [
+            "CU-104"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "information_technology",
+        "history"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "information_technology.information_awareness",
+        "information_technology.information_social_responsibility",
+        "history.source_evidence"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-004",
+      "name": "限定语与不确定性表达",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 3,
+      "type": "language",
+      "description": "用范围、条件、概率和保留意见准确表达证据边界，不把有限发现写成绝对结论。",
+      "mastery_evidence": [
+        "能把“证明了”改写为与证据强度相称的表述。",
+        "能在结论中主动写明对象、时间和适用条件。"
+      ],
+      "assessment_prompt": "这句话需要加入哪些限定语，才不会说得比证据更多？",
+      "source_anchor_ids": [
+        "CA-CU-063",
+        "CU-078"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "language",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.logical_reasoning",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "mathematics.logical_reasoning",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-005",
+      "name": "公开质询与理由回应",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 4,
+      "type": "meta",
+      "description": "围绕证据、方法、影响与边界提出可回答的质询，并用理由回应而非只表达立场。",
+      "mastery_evidence": [
+        "每个质询都能指向具体证据或推理环节。",
+        "回应时能修正原判断或说明为何保留原判断。"
+      ],
+      "assessment_prompt": "你的问题是在追问证据和理由，还是只在表达赞成或反对？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "meta",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-001",
+      "name": "观测对象与变量",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "明确数据描述的是谁或什么，以及哪些特征正在被测量、分类或比较。",
+      "mastery_evidence": [
+        "能指出数据表中的观测对象、变量和变量取值。",
+        "能发现问题与所测变量不匹配的情形。"
+      ],
+      "assessment_prompt": "这张表的一行代表什么？每一列又在记录什么？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CU-013"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.data_analysis",
+        "information_technology.information_awareness"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-003",
+      "name": "样本与总体",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "区分实际收集到的样本与希望描述的总体，理解从局部推向整体需要条件。",
+      "mastery_evidence": [
+        "能指出研究的总体、样本和抽样单位。",
+        "能判断样本结论是否被过度推广。"
+      ],
+      "assessment_prompt": "这次调查问了谁，又想代表谁？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis",
+            "mathematics.modeling"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.data_analysis",
+        "mathematics.modeling"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-006",
+      "name": "平均数、中位数与分布",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 2,
+      "type": "representational",
+      "description": "根据数据分布选择合适的集中趋势指标，并避免用单一平均数遮蔽差异。",
+      "mastery_evidence": [
+        "能比较平均数与中位数对极端值的敏感性。",
+        "能结合分布而不是只报一个中心数值。"
+      ],
+      "assessment_prompt": "这个“平均水平”是否被少数极端值拉高或拉低了？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.data_analysis",
+            "mathematics.operation",
+            "mathematics.visual_imagination"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "competency_ids": [
+        "mathematics.data_analysis",
+        "mathematics.operation",
+        "mathematics.visual_imagination"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-007",
+      "name": "相关关系与因果解释",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 3,
+      "type": "conceptual",
+      "description": "区分变量一起变化与一个变量导致另一个变化，寻找混杂因素和替代解释。",
+      "mastery_evidence": [
+        "能为相关关系提出至少一个替代解释。",
+        "能说明什么额外证据才更接近因果判断。"
+      ],
+      "assessment_prompt": "两件事同时发生，为什么还不能直接说一个导致了另一个？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082",
+        "CU-096"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.logical_reasoning",
+            "mathematics.modeling",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "civics"
+      ],
+      "competency_ids": [
+        "mathematics.logical_reasoning",
+        "mathematics.modeling",
+        "mathematics.data_analysis",
+        "civics.scientific_spirit"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-012",
+      "name": "审查一个数据主张",
+      "subject": "interdisciplinary",
+      "domain": "数据判断",
+      "stage": 3,
+      "type": "meta",
+      "description": "把来源、样本、变量、统计方法、图表和结论串成完整证据链，形成暂时判断。",
+      "mastery_evidence": [
+        "能用统一审查框架检查一则真实或模拟数据主张。",
+        "能给出“可信、部分可信或证据不足”的理由。"
+      ],
+      "assessment_prompt": "从数据被收集到结论被公开，证据链的哪一环最薄弱？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-013",
+        "CA-CU-096"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": null,
+      "node_kind": "meta",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-096"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology",
+        "civics"
+      ],
+      "competency_ids": [
+        "mathematics.data_analysis",
+        "information_technology.information_awareness",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-001",
+      "name": "生命系统与结构功能",
+      "subject": "biology",
+      "primary_subject_id": "biology",
+      "domain": "生命系统",
+      "stage": 1,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "从细胞到个体，把生命现象理解为结构、功能与层级相互联系的系统，而不是孤立事实的集合。",
+      "mastery_evidence": [
+        "能用结构与功能关系解释一个生命现象，并指出解释所处的系统层级。"
+      ],
+      "assessment_prompt": "为什么同一种结构变化可能同时影响多个生命功能？",
+      "source_anchor_ids": [
+        "CU-008"
+      ],
+      "source_ref": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "biology",
+          "role": "primary",
+          "competency_ids": [
+            "biology.life_concept"
+          ],
+          "content_anchor_ids": [
+            "CU-008"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "competency_ids": [
+        "biology.life_concept"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-002",
+      "name": "稳态、节律与健康",
+      "subject": "biology",
+      "primary_subject_id": "biology",
+      "domain": "稳态与调节",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "用动态平衡解释睡眠、压力、体温、营养和运动等因素如何共同影响身体状态。",
+      "mastery_evidence": [
+        "能画出一个健康变量的调节关系，并解释偏离稳态后可能出现的反馈。"
+      ],
+      "assessment_prompt": "稳态为什么不是“始终保持同一个数值”？",
+      "source_anchor_ids": [
+        "CU-010"
+      ],
+      "source_ref": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "biology",
+          "role": "primary",
+          "competency_ids": [
+            "biology.life_concept",
+            "biology.scientific_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-010"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "competency_ids": [
+        "biology.life_concept",
+        "biology.scientific_thinking"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-004",
+      "name": "生物学观察与对照探究",
+      "subject": "biology",
+      "primary_subject_id": "biology",
+      "domain": "科学探究",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "从现实生命问题出发，提出可检验问题，设计观察、对照或实验方案，并用证据评估解释。",
+      "mastery_evidence": [
+        "能说明自变量、因变量、控制条件和重复测量，并识别方案中的混杂因素。"
+      ],
+      "assessment_prompt": "一个健康观察为什么不能只比较“改变前”和“改变后”？",
+      "source_anchor_ids": [
+        "CU-008",
+        "CU-010",
+        "CU-011"
+      ],
+      "source_ref": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 32 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "biology",
+          "role": "primary",
+          "competency_ids": [
+            "biology.scientific_inquiry",
+            "biology.scientific_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-008",
+            "CU-010",
+            "CU-011"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "competency_ids": [
+        "biology.scientific_inquiry",
+        "biology.scientific_thinking"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-005",
+      "name": "生物技术、健康与生态责任",
+      "subject": "biology",
+      "primary_subject_id": "biology",
+      "domain": "生物技术与社会",
+      "stage": 4,
+      "type": "meta",
+      "node_kind": "meta",
+      "description": "综合生命科学证据、技术能力、风险和受影响群体，判断健康或生态干预的适用边界与责任。",
+      "mastery_evidence": [
+        "能比较一项生物技术或健康干预的收益、风险、证据强度与社会责任。"
+      ],
+      "assessment_prompt": "技术上可行的生命干预为什么仍可能不值得采用？",
+      "source_anchor_ids": [
+        "CU-012"
+      ],
+      "source_ref": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 36 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "biology",
+          "role": "primary",
+          "competency_ids": [
+            "biology.life_concept",
+            "biology.scientific_thinking",
+            "biology.social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-012"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "competency_ids": [
+        "biology.life_concept",
+        "biology.scientific_thinking",
+        "biology.social_responsibility"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PE-001",
+      "name": "运动能力与身体反馈",
+      "subject": "physical_education_health",
+      "primary_subject_id": "physical_education_health",
+      "domain": "运动能力",
+      "stage": 1,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "理解体能、动作技能、运动认知和身体反馈的关系，用安全方式观察自己的运动状态。",
+      "mastery_evidence": [
+        "能选择并记录一项适合自身的运动表现指标，说明测量条件和安全边界。"
+      ],
+      "assessment_prompt": "运动表现提高，为什么不一定意味着健康状态全面改善？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-036"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.motor_ability"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-036"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "competency_ids": [
+        "physical_education_health.motor_ability"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PE-002",
+      "name": "健康行为与生活方式",
+      "subject": "physical_education_health",
+      "primary_subject_id": "physical_education_health",
+      "domain": "健康行为",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "把运动、睡眠、饮食、情绪和环境适应视为相互联系的健康行为系统，而不是孤立打卡指标。",
+      "mastery_evidence": [
+        "能分析一周健康行为记录，指出可能的关系、个体差异和需要进一步验证的解释。"
+      ],
+      "assessment_prompt": "为什么同一套健康建议不一定适合所有人？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-035"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.health_behavior"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "competency_ids": [
+        "physical_education_health.health_behavior"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PE-003",
+      "name": "个人运动与健康改进计划",
+      "subject": "physical_education_health",
+      "primary_subject_id": "physical_education_health",
+      "domain": "自我管理",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "根据个人条件、健康证据和安全边界设定目标，实施并调整可持续的运动与生活方式计划。",
+      "mastery_evidence": [
+        "能提交包含基线、目标、频率强度、风险控制、记录方式和调整规则的个人计划。"
+      ],
+      "assessment_prompt": "一个目标很有挑战性，为什么仍可能不是好目标？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-035"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.motor_ability",
+            "physical_education_health.health_behavior"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "competency_ids": [
+        "physical_education_health.motor_ability",
+        "physical_education_health.health_behavior"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PE-005",
+      "name": "健康行动成效与共同照护",
+      "subject": "physical_education_health",
+      "primary_subject_id": "physical_education_health",
+      "domain": "健康促进",
+      "stage": 4,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "综合个人数据、身体反馈、同伴支持和隐私边界，评价健康行动并形成尊重差异的共同照护方案。",
+      "mastery_evidence": [
+        "能用前后证据评价计划成效，说明不能得出的结论，并提出个人调整和集体支持建议。"
+      ],
+      "assessment_prompt": "一个班级平均健康指标改善，为什么仍不能说明每个人都受益？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-035"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.motor_ability",
+            "physical_education_health.health_behavior",
+            "physical_education_health.sports_ethics"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "competency_ids": [
+        "physical_education_health.motor_ability",
+        "physical_education_health.health_behavior",
+        "physical_education_health.sports_ethics"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-001",
+      "name": "宏观现象、微观结构与符号表征",
+      "subject": "chemistry",
+      "primary_subject_id": "chemistry",
+      "domain": "物质结构",
+      "stage": 1,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "在可观察现象、粒子层面解释和化学符号之间转换，用结构与性质关系理解材料。",
+      "mastery_evidence": [
+        "能用宏观、微观和符号三种表征解释同一物质或变化，并指出每种表征的作用。"
+      ],
+      "assessment_prompt": "只写出化学式，为什么还不能说明你理解了物质性质？",
+      "source_anchor_ids": [
+        "CU-157",
+        "CU-165"
+      ],
+      "source_ref": "9.普通高中化学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；9.普通高中化学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 44 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "chemistry",
+          "role": "primary",
+          "competency_ids": [
+            "chemistry.macro_micro"
+          ],
+          "content_anchor_ids": [
+            "CU-157",
+            "CU-165"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "competency_ids": [
+        "chemistry.macro_micro"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-003",
+      "name": "化学证据与模型解释",
+      "subject": "chemistry",
+      "primary_subject_id": "chemistry",
+      "domain": "证据推理",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "根据实验现象、测量数据和物质结构证据提出解释，区分观察、推断、模型和结论。",
+      "mastery_evidence": [
+        "能用证据支持或反驳一个物质性质解释，并说明模型如何连接证据与结论。"
+      ],
+      "assessment_prompt": "看见颜色变化时，我们到底观察到了什么，又推断了什么？",
+      "source_anchor_ids": [
+        "CU-156",
+        "CU-168"
+      ],
+      "source_ref": "9.普通高中化学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；9.普通高中化学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 51 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "chemistry",
+          "role": "primary",
+          "competency_ids": [
+            "chemistry.evidence_model",
+            "chemistry.macro_micro"
+          ],
+          "content_anchor_ids": [
+            "CU-156",
+            "CU-168"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "competency_ids": [
+        "chemistry.evidence_model",
+        "chemistry.macro_micro"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-001",
+      "name": "权利、责任与公共利益",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "从个人权利、机构责任和公共利益三个角度理解技术决策，而不是只比较效率高低。",
+      "mastery_evidence": [
+        "能指出一个技术决策影响了哪些权利与公共利益。",
+        "能区分“可以做”与“应该做”。"
+      ],
+      "assessment_prompt": "即使系统更高效，它还可能损害哪些不应被交换掉的权利？",
+      "source_anchor_ids": [
+        "CA-CU-090",
+        "CA-CU-091"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-090",
+            "CA-CU-091"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics"
+      ],
+      "competency_ids": [
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-002",
+      "name": "利益相关者与受影响群体",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 2,
+      "type": "representational",
+      "description": "识别谁设计、购买、使用系统，谁从中受益，以及谁承担错误和被忽视的成本。",
+      "mastery_evidence": [
+        "能绘制利益相关者图并标出权力差异。",
+        "能补入容易在设计讨论中缺席的受影响群体。"
+      ],
+      "assessment_prompt": "谁没有坐在决策桌前，却要承担这个系统的后果？",
+      "source_anchor_ids": [
+        "CA-CU-091",
+        "CA-CU-100"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 30 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.public_participation",
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-091"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.historical_materialism",
+            "history.historical_explanation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-100"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics",
+        "history"
+      ],
+      "competency_ids": [
+        "civics.public_participation",
+        "civics.scientific_spirit",
+        "history.historical_materialism",
+        "history.historical_explanation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-001",
+      "name": "健康问题、个体差异与尊严",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "健康与幸福",
+      "stage": 1,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "把健康问题界定为身体、行为、关系和环境共同作用的个人议题，同时保护隐私、尊重差异与自主选择。",
+      "mastery_evidence": [
+        "能提出一个不污名化、可调查且明确隐私边界的健康问题。"
+      ],
+      "assessment_prompt": "怎样讨论健康差异，才不会把个体变成标签？",
+      "source_anchor_ids": [
+        "CU-035",
+        "CU-010",
+        "CU-063"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.health_behavior",
+            "physical_education_health.sports_ethics"
+          ],
+          "content_anchor_ids": [
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "biology",
+          "role": "supporting",
+          "competency_ids": [
+            "biology.life_concept",
+            "biology.social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-010"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CU-063"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "chinese"
+      ],
+      "competency_ids": [
+        "physical_education_health.health_behavior",
+        "physical_education_health.sports_ethics",
+        "biology.life_concept",
+        "biology.social_responsibility",
+        "chinese.language_construction",
+        "chinese.thinking_development"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-002",
+      "name": "健康证据画像与机制解释",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "健康证据",
+      "stage": 3,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "综合匿名行为记录、趋势、身体机制和个人叙述，形成有限度的健康状态解释，而不是诊断或排名。",
+      "mastery_evidence": [
+        "能制作一份带有证据来源、趋势、可能机制、替代解释和隐私说明的健康画像。"
+      ],
+      "assessment_prompt": "健康数据变化与学习状态同时出现时，怎样避免直接断言因果？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-035",
+        "CU-010",
+        "CU-078"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.health_behavior"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "biology",
+          "role": "supporting",
+          "competency_ids": [
+            "biology.life_concept",
+            "biology.scientific_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-010"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis",
+            "mathematics.logical_reasoning"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "physical_education_health.health_behavior",
+        "biology.life_concept",
+        "biology.scientific_thinking",
+        "mathematics.data_analysis",
+        "mathematics.logical_reasoning"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-003",
+      "name": "健康改进与共同照护方案",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "行动与照护",
+      "stage": 4,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "基于个人条件和证据设计可试行、可调整的健康计划，同时形成尊重差异和隐私的同伴支持机制。",
+      "mastery_evidence": [
+        "能展示计划、试行证据、调整逻辑和同伴支持约定，并说明方案不适用的边界。"
+      ],
+      "assessment_prompt": "一个有效的个人健康方案，怎样才能转化为不强迫他人的共同照护？",
+      "source_anchor_ids": [
+        "CU-034",
+        "CU-035",
+        "CU-010",
+        "CU-091",
+        "CU-058",
+        "CU-063"
+      ],
+      "source_ref": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；10.普通高中生物学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physical_education_health",
+          "role": "primary",
+          "competency_ids": [
+            "physical_education_health.motor_ability",
+            "physical_education_health.health_behavior",
+            "physical_education_health.sports_ethics"
+          ],
+          "content_anchor_ids": [
+            "CU-034",
+            "CU-035"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "biology",
+          "role": "supporting",
+          "competency_ids": [
+            "biology.scientific_thinking",
+            "biology.social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-010"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-091"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction"
+          ],
+          "content_anchor_ids": [
+            "CU-058",
+            "CU-063"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "civics",
+        "chinese"
+      ],
+      "competency_ids": [
+        "physical_education_health.motor_ability",
+        "physical_education_health.health_behavior",
+        "physical_education_health.sports_ethics",
+        "biology.scientific_thinking",
+        "biology.social_responsibility",
+        "civics.scientific_spirit",
+        "civics.public_participation",
+        "chinese.language_construction"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    }
+  ],
+  "dependencies": [
+    {
+      "topic_id": "T-EVID-002",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "hard",
+      "reason": "先分清事实、数据与主张，才能判断证据如何支持论点。"
+    },
+    {
+      "topic_id": "T-EVID-003",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "识别主张与数据，有助于决定哪些来源最需要核验。"
+    },
+    {
+      "topic_id": "T-EVID-004",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "只有理解证据强度与推理，才能用合适的限定语表达结论。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "有效质询必须指向论点、证据或推理中的具体环节。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "soft",
+      "reason": "来源核验为公开质询提供可核查的事实基础。"
+    },
+    {
+      "topic_id": "T-DATA-003",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "先明确观测对象和变量，才能界定样本与总体。"
+    },
+    {
+      "topic_id": "T-DATA-006",
+      "prerequisite_id": "T-DATA-003",
+      "strength": "hard",
+      "reason": "描述样本分布前必须明确样本来自哪里、代表什么。"
+    },
+    {
+      "topic_id": "T-DATA-007",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "因果判断需要明确变量及其可能关系。"
+    },
+    {
+      "topic_id": "T-DATA-007",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "soft",
+      "reason": "论证结构帮助发现从相关跳到因果的推理跳步。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "数据主张审查需要把证据和结论之间的推理说清。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "hard",
+      "reason": "没有来源核验就无法确认数据链的起点。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-007",
+      "strength": "soft",
+      "reason": "相关与因果的区分能防止过度结论。"
+    },
+    {
+      "topic_id": "T-GOV-002",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "hard",
+      "reason": "识别利益相关者要以权利、责任和公共利益为判断框架。"
+    },
+    {
+      "topic_id": "T-PE-002",
+      "prerequisite_id": "T-PE-001",
+      "strength": "soft",
+      "reason": "理解身体反馈有助于把健康行为与个体状态联系起来。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PE-002",
+      "prerequisite_id": "T-BIO-001",
+      "strength": "soft",
+      "reason": "生命系统观支持对健康行为机制的解释。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PE-003",
+      "prerequisite_id": "T-PE-002",
+      "strength": "hard",
+      "reason": "设计健康计划需要理解生活方式行为之间的关系和个体差异。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PE-003",
+      "prerequisite_id": "T-DATA-006",
+      "strength": "soft",
+      "reason": "趋势和分布意识有助于判断计划效果而不被单次波动误导。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PE-005",
+      "prerequisite_id": "T-PE-003",
+      "strength": "hard",
+      "reason": "成效评价建立在明确、已实施并有记录的健康计划上。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PE-005",
+      "prerequisite_id": "T-DATA-012",
+      "strength": "soft",
+      "reason": "数据主张审查能防止把有限健康记录过度推广。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-002",
+      "prerequisite_id": "T-BIO-001",
+      "strength": "hard",
+      "reason": "理解稳态需要先能从系统层级与结构功能关系解释生命现象。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-004",
+      "prerequisite_id": "T-BIO-001",
+      "strength": "hard",
+      "reason": "设计生物学探究前需要能界定所观察的生命系统和变量。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-004",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "soft",
+      "reason": "证据推理有助于把观察结果转化为有限度的解释。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-005",
+      "prerequisite_id": "T-BIO-002",
+      "strength": "soft",
+      "reason": "健康干预判断需要理解生命调节与稳态。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-005",
+      "prerequisite_id": "T-BIO-004",
+      "strength": "hard",
+      "reason": "责任判断必须建立在能够评价探究证据的基础上。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CHEM-003",
+      "prerequisite_id": "T-CHEM-001",
+      "strength": "hard",
+      "reason": "化学证据解释需要能把现象与微观结构模型联系起来。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CHEM-003",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "soft",
+      "reason": "论点和证据的区分能提高化学解释的严谨性。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-001",
+      "prerequisite_id": "T-PE-001",
+      "strength": "soft",
+      "reason": "身体反馈提供界定健康问题的具体观察基础。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-001",
+      "prerequisite_id": "T-BIO-001",
+      "strength": "soft",
+      "reason": "生命系统观避免把健康简化为单一指标。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-001",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "区分事实与主张有助于避免用标签代替证据。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-001",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "soft",
+      "reason": "健康议题的隐私、尊严和共同责任需要公共利益视角。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-002",
+      "prerequisite_id": "T-WELL-001",
+      "strength": "hard",
+      "reason": "健康画像必须先有尊重差异和隐私边界的问题定义。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-002",
+      "prerequisite_id": "T-BIO-002",
+      "strength": "hard",
+      "reason": "机制解释需要理解稳态、节律和动态调节。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-002",
+      "prerequisite_id": "T-PE-002",
+      "strength": "hard",
+      "reason": "健康画像需要理解多种生活方式行为的相互作用。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-002",
+      "prerequisite_id": "T-DATA-006",
+      "strength": "soft",
+      "reason": "趋势与分布能防止被单次记录误导。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-003",
+      "prerequisite_id": "T-WELL-002",
+      "strength": "hard",
+      "reason": "行动方案需要建立在健康证据画像与机制解释上。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-003",
+      "prerequisite_id": "T-PE-003",
+      "strength": "hard",
+      "reason": "个人计划的目标、实施和调整规则来自健康自我管理。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-003",
+      "prerequisite_id": "T-PE-005",
+      "strength": "soft",
+      "reason": "共同照护方案需要能够评价个人与群体层面的不同结果。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-WELL-003",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "soft",
+      "reason": "公开回应有助于说明方案边界并接受质询。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ],
+  "external_prerequisites": [
+    {
+      "topic_id": "T-DATA-006",
+      "prerequisite_id": "T-DATA-002",
+      "strength": "soft",
+      "reason": "比例与基数帮助理解集中趋势数字的实际规模。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-004",
+      "strength": "hard",
+      "reason": "样本代表性决定结论能推广到多大范围。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-005",
+      "strength": "hard",
+      "reason": "统计口径决定比较是否成立。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-TECH-001",
+      "strength": "hard",
+      "reason": "数据采集过程决定证据链中可能出现哪些误差。"
+    },
+    {
+      "topic_id": "T-PE-005",
+      "prerequisite_id": "T-PE-004",
+      "strength": "soft",
+      "reason": "共同照护需要理解规则、公平和团队责任。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-BIO-005",
+      "prerequisite_id": "T-BIO-003",
+      "strength": "soft",
+      "reason": "生态干预判断需要理解系统中的连锁影响。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ],
+  "curriculum_subjects": [
+    {
+      "id": "biology",
+      "label": "生物学",
+      "file_id": "PDF-002",
+      "standard_file": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-002｜PDF第13-14页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "biology.life_concept",
+        "biology.scientific_thinking",
+        "biology.scientific_inquiry",
+        "biology.social_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-008",
+        "CU-009",
+        "CU-010",
+        "CU-011",
+        "CU-012"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "label": "化学",
+      "file_id": "PDF-013",
+      "standard_file": "9.普通高中化学课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-013｜PDF第11-12页（书内第3-4页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "chemistry.macro_micro",
+        "chemistry.changes_equilibrium",
+        "chemistry.evidence_model",
+        "chemistry.inquiry_innovation",
+        "chemistry.attitude_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-156",
+        "CU-157",
+        "CU-158",
+        "CU-159",
+        "CU-160",
+        "CU-161",
+        "CU-162",
+        "CU-163",
+        "CU-164",
+        "CU-165",
+        "CU-166",
+        "CU-167",
+        "CU-168",
+        "CU-169",
+        "CU-170",
+        "CU-171",
+        "CU-172",
+        "CU-173",
+        "CU-174",
+        "CU-175",
+        "CU-176",
+        "CU-177",
+        "CU-178",
+        "CU-179",
+        "CU-180",
+        "CU-181",
+        "CU-182"
+      ]
+    },
+    {
+      "id": "chinese",
+      "label": "语文",
+      "file_id": "PDF-006",
+      "standard_file": "2.普通高中语文课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-006｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "chinese.aesthetic_appreciation",
+        "chinese.cultural_inheritance"
+      ],
+      "coverage_unit_ids": [
+        "CU-057",
+        "CU-058",
+        "CU-059",
+        "CU-060",
+        "CU-061",
+        "CU-062",
+        "CU-063",
+        "CU-064",
+        "CU-065",
+        "CU-066",
+        "CU-067",
+        "CU-068",
+        "CU-069",
+        "CU-070",
+        "CU-071",
+        "CU-072",
+        "CU-073",
+        "CU-074"
+      ]
+    },
+    {
+      "id": "civics",
+      "label": "思想政治",
+      "file_id": "PDF-009",
+      "standard_file": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-009｜PDF第12-14页（书内第4-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "civics.political_identity",
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "coverage_unit_ids": [
+        "CU-090",
+        "CU-091",
+        "CU-092",
+        "CU-093",
+        "CU-094",
+        "CU-095",
+        "CU-096",
+        "CU-097",
+        "CU-098",
+        "CU-099"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "历史",
+      "file_id": "PDF-010",
+      "standard_file": "6.普通高中历史课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-010｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "history.historical_materialism",
+        "history.temporal_spatial",
+        "history.source_evidence",
+        "history.historical_explanation",
+        "history.national_sentiment"
+      ],
+      "coverage_unit_ids": [
+        "CU-100",
+        "CU-101",
+        "CU-102",
+        "CU-103",
+        "CU-104"
+      ]
+    },
+    {
+      "id": "information_technology",
+      "label": "信息技术",
+      "file_id": "PDF-003",
+      "standard_file": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-003｜PDF第13-14页（书内第5-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-013",
+        "CU-014",
+        "CU-015",
+        "CU-016",
+        "CU-017",
+        "CU-018",
+        "CU-019",
+        "CU-020",
+        "CU-021",
+        "CU-022"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "label": "数学",
+      "file_id": "PDF-007",
+      "standard_file": "3.普通高中数学课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-007｜PDF第12-15页（书内第4-7页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.logical_reasoning",
+        "mathematics.modeling",
+        "mathematics.visual_imagination",
+        "mathematics.operation",
+        "mathematics.data_analysis"
+      ],
+      "coverage_unit_ids": [
+        "CU-075",
+        "CU-076",
+        "CU-077",
+        "CU-078",
+        "CU-079",
+        "CU-080",
+        "CU-081",
+        "CU-082",
+        "CU-083"
+      ]
+    },
+    {
+      "id": "physical_education_health",
+      "label": "体育与健康",
+      "file_id": "PDF-005",
+      "standard_file": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-005｜PDF第13-14页（书内第5-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "physical_education_health.motor_ability",
+        "physical_education_health.health_behavior",
+        "physical_education_health.sports_ethics"
+      ],
+      "coverage_unit_ids": [
+        "CU-031",
+        "CU-032",
+        "CU-033",
+        "CU-034",
+        "CU-035",
+        "CU-036",
+        "CU-037",
+        "CU-038",
+        "CU-039",
+        "CU-040",
+        "CU-041",
+        "CU-042",
+        "CU-043",
+        "CU-044",
+        "CU-045",
+        "CU-046",
+        "CU-047",
+        "CU-048",
+        "CU-049",
+        "CU-050",
+        "CU-051",
+        "CU-052",
+        "CU-053",
+        "CU-054",
+        "CU-055",
+        "CU-056"
+      ]
+    }
+  ],
+  "competencies": [
+    {
+      "id": "biology.life_concept",
+      "subject_id": "biology",
+      "label": "生命观念"
+    },
+    {
+      "id": "biology.scientific_inquiry",
+      "subject_id": "biology",
+      "label": "科学探究"
+    },
+    {
+      "id": "biology.scientific_thinking",
+      "subject_id": "biology",
+      "label": "科学思维"
+    },
+    {
+      "id": "biology.social_responsibility",
+      "subject_id": "biology",
+      "label": "社会责任"
+    },
+    {
+      "id": "chemistry.attitude_responsibility",
+      "subject_id": "chemistry",
+      "label": "科学态度与社会责任"
+    },
+    {
+      "id": "chemistry.evidence_model",
+      "subject_id": "chemistry",
+      "label": "证据推理与模型认知"
+    },
+    {
+      "id": "chemistry.macro_micro",
+      "subject_id": "chemistry",
+      "label": "宏观辨识与微观探析"
+    },
+    {
+      "id": "chinese.language_construction",
+      "subject_id": "chinese",
+      "label": "语言建构与运用"
+    },
+    {
+      "id": "chinese.thinking_development",
+      "subject_id": "chinese",
+      "label": "思维发展与提升"
+    },
+    {
+      "id": "civics.public_participation",
+      "subject_id": "civics",
+      "label": "公共参与"
+    },
+    {
+      "id": "civics.rule_of_law",
+      "subject_id": "civics",
+      "label": "法治意识"
+    },
+    {
+      "id": "civics.scientific_spirit",
+      "subject_id": "civics",
+      "label": "科学精神"
+    },
+    {
+      "id": "history.historical_explanation",
+      "subject_id": "history",
+      "label": "历史解释"
+    },
+    {
+      "id": "history.historical_materialism",
+      "subject_id": "history",
+      "label": "唯物史观"
+    },
+    {
+      "id": "history.source_evidence",
+      "subject_id": "history",
+      "label": "史料实证"
+    },
+    {
+      "id": "information_technology.information_awareness",
+      "subject_id": "information_technology",
+      "label": "信息意识"
+    },
+    {
+      "id": "information_technology.information_social_responsibility",
+      "subject_id": "information_technology",
+      "label": "信息社会责任"
+    },
+    {
+      "id": "mathematics.abstraction",
+      "subject_id": "mathematics",
+      "label": "数学抽象"
+    },
+    {
+      "id": "mathematics.data_analysis",
+      "subject_id": "mathematics",
+      "label": "数据分析"
+    },
+    {
+      "id": "mathematics.logical_reasoning",
+      "subject_id": "mathematics",
+      "label": "逻辑推理"
+    },
+    {
+      "id": "mathematics.modeling",
+      "subject_id": "mathematics",
+      "label": "数学建模"
+    },
+    {
+      "id": "mathematics.operation",
+      "subject_id": "mathematics",
+      "label": "数学运算"
+    },
+    {
+      "id": "mathematics.visual_imagination",
+      "subject_id": "mathematics",
+      "label": "直观想象"
+    },
+    {
+      "id": "physical_education_health.health_behavior",
+      "subject_id": "physical_education_health",
+      "label": "健康行为"
+    },
+    {
+      "id": "physical_education_health.motor_ability",
+      "subject_id": "physical_education_health",
+      "label": "运动能力"
+    },
+    {
+      "id": "physical_education_health.sports_ethics",
+      "subject_id": "physical_education_health",
+      "label": "体育品德"
+    }
+  ],
+  "retrieval_notes": {
+    "dependency_direction": "prerequisite_id -> topic_id",
+    "human_review_required": true,
+    "full_graph_href": "https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json",
+    "use_full_graph_when": "The task needs cross-theme paths, graph-wide validation, or an ID not present in this bundle."
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "contract_version": "2.0-universal-entry",
+  "contract_version": "2.1-link-first",
   "name": "BunnyBook Curriculum Source",
   "description": "A link-first, read-only curriculum knowledge service for teacher-AI lesson planning conversations.",
   "language": "zh-CN",
@@ -23,6 +23,9 @@
     "offline_context": "/llms-full.txt",
     "start_here": "/agent/START-HERE.md",
     "source_manifest": "/api/v1/source-manifest.json",
+    "search_index": "/api/v1/search-index.json",
+    "theme_index": "/api/v1/theme-index.json",
+    "theme_bundle_template": "/api/v1/themes/{BQ1-BQ8}.json",
     "learning_map": "/api/v1/learning-map.json",
     "detailed_graph_manifest": "/api/v1/graph-manifest.json",
     "data_notice": "/mvp/data-notice.md",
@@ -35,6 +38,8 @@
     "reuse_information_already_provided": true,
     "progressive_retrieval": true,
     "scan_entire_site_by_default": false,
+    "search_before_full_graph": true,
+    "prefer_one_theme_bundle": true,
     "blueprint_before_full_plan": true,
     "fallback_when_web_unavailable": "Ask the teacher to paste /llms-full.txt and, when precise IDs are needed, a relevant theme package or JSON excerpt. Never pretend the site was read.",
     "must_not_require": [
@@ -60,7 +65,7 @@
       ]
     },
     "full_planning": {
-      "label_zh": "全盘规划",
+      "label_zh": "单元 / 项目规划",
       "intent": "Plan a unit, project, or multi-session learning sequence.",
       "default_deliverables": [
         "authentic question",

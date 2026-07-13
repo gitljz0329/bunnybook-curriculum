@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import subprocess
+import sys
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -22,12 +23,24 @@ REQUIRED_FILES = (
     "agent/START-HERE.md",
     "agent/manifest.json",
     "api/v1/source-manifest.json",
+    "api/v1/theme-index.json",
+    "api/v1/search-index.json",
+    "api/v1/themes/BQ1.json",
+    "api/v1/themes/BQ2.json",
+    "api/v1/themes/BQ3.json",
+    "api/v1/themes/BQ4.json",
+    "api/v1/themes/BQ5.json",
+    "api/v1/themes/BQ6.json",
+    "api/v1/themes/BQ7.json",
+    "api/v1/themes/BQ8.json",
     "docs/BUILD_YOUR_OWN.md",
     "docs/universal_entry.md",
+    "docs/cross_ai_acceptance.md",
     "mvp/index.html",
     "netlify.toml",
     "robots.txt",
     "sitemap.xml",
+    "favicon.svg",
 )
 
 EXPECTED_COUNTS = {
@@ -121,13 +134,12 @@ def validate_html(root: Path, errors: list[str]) -> None:
         errors.append(f"duplicate HTML ids: {duplicates}")
 
     required_ids = {
-        "persona-teacher",
-        "persona-agent",
         "teacher-view",
         "agent-view",
         "prompt-builder",
         "generated-prompt",
         "question-grid",
+        "copy-minimal-prompt",
     }
     missing = sorted(required_ids.difference(parser.ids))
     if missing:
@@ -148,6 +160,8 @@ def validate_html(root: Path, errors: list[str]) -> None:
         "/agent/START-HERE.md",
         "/api/v1/source-manifest.json",
         "/api/v1/learning-map.json",
+        "/api/v1/search-index.json",
+        "/api/v1/theme-index.json",
         "/docs/BUILD_YOUR_OWN.md",
     }
     missing_links = sorted(required_links.difference(parser.links))
@@ -169,6 +183,8 @@ def validate_llms(root: Path, errors: list[str]) -> None:
     for path in (
         "/agent/START-HERE.md",
         "/api/v1/source-manifest.json",
+        "/api/v1/search-index.json",
+        "/api/v1/theme-index.json",
         "/api/v1/learning-map.json",
         "/llms-full.txt",
     ):
@@ -223,6 +239,23 @@ def validate_manifests(root: Path, errors: list[str]) -> None:
         if counts != EXPECTED_COUNTS:
             errors.append(f"canonical graph counts differ: {counts}")
 
+    theme_index = load_json(root, "api/v1/theme-index.json", errors)
+    search_index = load_json(root, "api/v1/search-index.json", errors)
+    if theme_index and len(theme_index.get("themes", [])) != EXPECTED_COUNTS["themes"]:
+        errors.append("theme-index.json must expose exactly 8 themes")
+    if search_index and len(search_index.get("topics", [])) != EXPECTED_COUNTS["topics"]:
+        errors.append("search-index.json must expose exactly 87 topic lookup rows")
+    for number in range(1, EXPECTED_COUNTS["themes"] + 1):
+        relative = f"api/v1/themes/BQ{number}.json"
+        pack = load_json(root, relative, errors)
+        if not pack:
+            continue
+        theme = pack.get("theme", {})
+        if theme.get("big_question_id") != f"BQ{number}":
+            errors.append(f"{relative} has the wrong big_question_id")
+        if not pack.get("topics"):
+            errors.append(f"{relative} has no topic context")
+
 
 def validate_config_and_scripts(root: Path, errors: list[str], warnings: list[str]) -> None:
     config = read_text(root, "site-config.js", errors)
@@ -236,8 +269,23 @@ def validate_config_and_scripts(root: Path, errors: list[str], warnings: list[st
         if str(count) not in config:
             errors.append(f"site-config.js does not expose expected count value: {count}")
 
-    if 'document.querySelectorAll(".persona-button[data-persona]")' not in app:
-        errors.append("app.js must scope persona controls to persona buttons, not the body data-persona attribute")
+    if "copy-minimal-prompt" not in app or "bunnybook-curriculum.netlify.app 帮我备节课" not in app:
+        errors.append("app.js must preserve the one-sentence, vendor-neutral teacher entry")
+
+    try:
+        generated = subprocess.run(
+            [sys.executable, str(root / "scripts" / "build_link_first_assets.py"), "--check"],
+            cwd=root,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+    except OSError as exc:
+        errors.append(f"cannot verify link-first assets: {exc}")
+    else:
+        if generated.returncode:
+            detail = generated.stdout.strip() or generated.stderr.strip()
+            errors.append(f"link-first assets are stale: {detail[:800]}")
 
     for script in ("site-config.js", "app.js"):
         try:

@@ -1,0 +1,1729 @@
+{
+  "index_version": "1.0-link-first",
+  "generated_from": "/mvp/learning-map.json",
+  "purpose": "Locate one relevant theme or topic before fetching a bounded theme bundle.",
+  "retrieval_order": [
+    "/api/v1/search-index.json",
+    "/api/v1/themes/{BQ1-BQ8}.json",
+    "/api/v1/learning-map.json only when graph-wide context is necessary"
+  ],
+  "subjects": [
+    {
+      "id": "chinese",
+      "label": "语文"
+    },
+    {
+      "id": "mathematics",
+      "label": "数学"
+    },
+    {
+      "id": "english",
+      "label": "英语"
+    },
+    {
+      "id": "civics",
+      "label": "思想政治"
+    },
+    {
+      "id": "history",
+      "label": "历史"
+    },
+    {
+      "id": "geography",
+      "label": "地理"
+    },
+    {
+      "id": "physics",
+      "label": "物理"
+    },
+    {
+      "id": "chemistry",
+      "label": "化学"
+    },
+    {
+      "id": "biology",
+      "label": "生物学"
+    },
+    {
+      "id": "information_technology",
+      "label": "信息技术"
+    },
+    {
+      "id": "art",
+      "label": "艺术"
+    },
+    {
+      "id": "physical_education_health",
+      "label": "体育与健康"
+    }
+  ],
+  "themes": [
+    {
+      "id": "theme-bq1-wellbeing",
+      "big_question_id": "BQ1",
+      "title": "怎样生活才算健康？",
+      "question": "怎样用证据设计一个既适合自己、尊重个体差异，又能得到同伴支持的健康生活方案？",
+      "description": "有尊严的健康成长不是用统一指标约束每个人，而是理解身体节律、情绪、学习、关系与环境之间的联系，在保护隐私和尊重差异的前提下形成可持续的自我管理与共同照护。",
+      "subject_ids": [
+        "biology",
+        "chemistry",
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physical_education_health"
+      ],
+      "topic_count": 25,
+      "performance_task": {
+        "title": "四周健康改进与共同照护方案",
+        "authentic_audience": "学生本人、同伴小组、体育与健康教师或学校健康支持人员",
+        "brief": "在保护隐私的前提下记录健康行为，解释关键变量，设计并试行个人改进方案，同时为班级形成一份尊重差异的同伴支持约定。",
+        "required_artifacts": [
+          "匿名健康数据日志",
+          "机制解释卡",
+          "个人健康改进方案",
+          "同伴支持约定",
+          "迭代反思"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ1.json"
+    },
+    {
+      "id": "theme-bq2-data-truth",
+      "big_question_id": "BQ2",
+      "title": "数据能告诉我们真相吗？",
+      "question": "同一组数据为什么可能支持不同结论？",
+      "description": "数据可信度不是单纯的统计计算问题，而是由数据如何采集和表示、数学上能否成立、语言上如何陈述，以及面向公众是否负责任共同决定。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "english",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 25,
+      "performance_task": {
+        "title": "一则数据主张的公开审查与可信改写",
+        "authentic_audience": "同学、家长或校园公共议题的真实受众",
+        "brief": "选择一则新闻、校园调查或公开报告中的数据主张，找到原始来源，完成跨学科审查，重绘图表、改写结论，并在公开质询中为修改理由辩护。",
+        "required_artifacts": [
+          "数据来源与证据链卡",
+          "样本与口径审查表",
+          "修正版图表",
+          "公众说明",
+          "质询回应记录"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ2.json"
+    },
+    {
+      "id": "theme-bq3-campus-flow",
+      "big_question_id": "BQ3",
+      "title": "未来真的可以被预测吗？",
+      "question": "校园高峰时段为什么会拥堵？模型能预测哪些通行变化，又可能遗漏什么？",
+      "description": "复杂系统不能仅靠列举因素解释；需要划定边界，识别变量、流动、反馈和约束，再用经过现实检验的模型支持行动，同时承认模型的简化和不确定性。",
+      "subject_ids": [
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 24,
+      "performance_task": {
+        "title": "校园高峰通行优化提案与小规模试验",
+        "authentic_audience": "学校管理者、师生与后勤人员",
+        "brief": "选择一个真实拥堵点，完成测量、系统图和简化模型，提出至少两种干预方案，并通过小规模试验或模拟比较效果。",
+        "required_artifacts": [
+          "校园通行观察地图",
+          "变量与系统关系图",
+          "简化预测模型",
+          "方案比较表",
+          "试验记录",
+          "优化提案"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ3.json"
+    },
+    {
+      "id": "theme-bq4-carbon-campus",
+      "big_question_id": "BQ4",
+      "title": "我们能实现碳中和吗？",
+      "question": "我们的校园如何从能源、材料和行为上减少碳足迹？",
+      "description": "校园碳中和不是一句倡议，而是物质与能量流动、生态过程、生活行为和制度选择共同构成的系统问题，需要透明的核算、情境化的权衡和持续行动。",
+      "subject_ids": [
+        "biology",
+        "chemistry",
+        "chinese",
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 30,
+      "performance_task": {
+        "title": "校园碳预算与三年减排行动路线",
+        "authentic_audience": "学校管理层、后勤部门、师生代表",
+        "brief": "完成一个边界明确的校园碳排调查，比较若干减排情景，提出包含优先级、责任人、成本、预期效果和复盘机制的行动路线。",
+        "required_artifacts": [
+          "校园碳流图",
+          "碳排核算表",
+          "假设与不确定性说明",
+          "减排情景比较",
+          "三年行动路线",
+          "公众展示"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ4.json"
+    },
+    {
+      "id": "theme-bq5-ai-decisions",
+      "big_question_id": "BQ5",
+      "title": "AI 可以替我们做决定吗？",
+      "question": "AI 参与判断时，责任、偏差和公平该如何被讨论？",
+      "description": "AI 判断不是机器独立完成的技术动作，而是数据、模型、机构决策、权利影响和治理规则共同构成的社会技术过程。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 27,
+      "performance_task": {
+        "title": "AI 使用边界公共咨询与建议书",
+        "authentic_audience": "模拟学校数字教育委员会或公共决策听证会",
+        "brief": "选择招聘、学习诊断、医疗分诊或公共服务中的 AI 案例，完成技术和社会风险审查，举行多方圆桌并提交使用边界建议。",
+        "required_artifacts": [
+          "数据—模型—决策—责任链图",
+          "风险矩阵",
+          "利益相关者与权责图",
+          "复核与申诉流程",
+          "公共建议书"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ5.json"
+    },
+    {
+      "id": "theme-bq6-digital-heritage",
+      "big_question_id": "BQ6",
+      "title": "文化遗产如何活在未来？",
+      "question": "数字技术如何帮助我们理解、保存和再表达文化遗产？",
+      "description": "文化遗产数字化不是把对象复制到屏幕上，而是基于史料作出选择、解释、翻译和设计；数字表达必须同时处理真实性、文化语境、审美、受众和权利。",
+      "subject_ids": [
+        "art",
+        "chinese",
+        "civics",
+        "english",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 23,
+      "performance_task": {
+        "title": "一项文化遗产的可信数字微展",
+        "authentic_audience": "学校、地方社区或线上公众",
+        "brief": "选择一个地方或校园文化对象，建立可追溯资料档案，完成数字展陈、双语介绍和解释说明，并接受历史真实性与表达伦理质询。",
+        "required_artifacts": [
+          "资料与来源档案",
+          "时间—空间线索图",
+          "文化解释说明",
+          "数字展陈原型",
+          "双语展签",
+          "版权与表达伦理说明"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ6.json"
+    },
+    {
+      "id": "theme-bq7-fair-rules",
+      "big_question_id": "BQ7",
+      "title": "什么样的规则才公平？",
+      "question": "围绕手机、空间、社团资源或体育活动的一条校园规则，怎样制定才更公平、更可执行？",
+      "description": "公平规则不是简单地对所有人一模一样，而是把公共价值转化为理由透明、程序正当、权责清楚、可以申诉并能根据结果修订的共同约定。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physical_education_health"
+      ],
+      "topic_count": 23,
+      "performance_task": {
+        "title": "校园规则公开听证与修订草案",
+        "authentic_audience": "班级、学生会、教师代表或学校管理者",
+        "brief": "选择一项有真实争议的校园规则，完成利益相关者调查、证据分析、公平标准比较和模拟听证，提交包含执行、复核、申诉与评估机制的修订草案。",
+        "required_artifacts": [
+          "利益相关者图",
+          "需求与影响数据",
+          "公平标准比较表",
+          "听证记录",
+          "规则修订草案",
+          "执行与申诉流程"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ7.json"
+    },
+    {
+      "id": "theme-bq8-campus-change-lab",
+      "big_question_id": "BQ8",
+      "title": "好主意怎样才能真正解决问题？",
+      "question": "我们能否把一个校园真实问题变成可测试、可改进、真正被使用的解决方案？",
+      "description": "负责任的创造不是提出一个点子或完成一次展示，而是与受影响者共同界定问题，把证据转化为设计标准，制作和测试原型，并为采用、维护、影响和意外后果承担责任。",
+      "subject_ids": [
+        "art",
+        "chinese",
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 32,
+      "performance_task": {
+        "title": "一个校园解决方案的原型、试验与采用提案",
+        "authentic_audience": "真实使用者、学校管理者、后勤人员或学生社群",
+        "brief": "围绕噪声、光照、用水、通行、安全或信息服务等真实问题，完成需求研究、原型、测试和至少一次迭代，并提交可采用、可维护的校园行动提案。",
+        "required_artifacts": [
+          "问题与需求简报",
+          "设计标准",
+          "原型",
+          "测试数据与记录",
+          "迭代历史",
+          "影响与风险说明",
+          "采用和维护提案"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ8.json"
+    }
+  ],
+  "topics": [
+    {
+      "id": "T-EVID-001",
+      "name": "事实、数据与主张",
+      "subject": "chinese",
+      "curriculum_subject_ids": [
+        "chinese"
+      ],
+      "domain": "证据表达",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-EVID-002",
+      "name": "论点、证据与推理",
+      "subject": "chinese",
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "domain": "证据表达",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-EVID-003",
+      "name": "信息来源核验",
+      "subject": "chinese",
+      "curriculum_subject_ids": [
+        "chinese",
+        "information_technology",
+        "history"
+      ],
+      "domain": "媒介与阅读",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-EVID-004",
+      "name": "限定语与不确定性表达",
+      "subject": "chinese",
+      "curriculum_subject_ids": [
+        "chinese",
+        "mathematics"
+      ],
+      "domain": "公共表达",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-EVID-005",
+      "name": "公开质询与理由回应",
+      "subject": "chinese",
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "domain": "公共表达",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-001",
+      "name": "观测对象与变量",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "domain": "数据与统计",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-002",
+      "name": "比例、百分比与基数",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "domain": "数据与统计",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq2-data-truth"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-003",
+      "name": "样本与总体",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "domain": "数据与统计",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-004",
+      "name": "抽样偏差与代表性",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "domain": "数据与统计",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-005",
+      "name": "统计口径与可比性",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "domain": "数据与统计",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-006",
+      "name": "平均数、中位数与分布",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "domain": "数据与统计",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-007",
+      "name": "相关关系与因果解释",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "civics"
+      ],
+      "domain": "数据与统计",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-008",
+      "name": "坐标轴、比例与图表编码",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "domain": "数据表达",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-009",
+      "name": "缺失数据与异常值",
+      "subject": "mathematics",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "domain": "数据与统计",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-010",
+      "name": "识别误导性数据表达",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology",
+        "chinese"
+      ],
+      "domain": "数据判断",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq2-data-truth"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-011",
+      "name": "重绘图表与改写结论",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology",
+        "chinese"
+      ],
+      "domain": "数据判断",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq2-data-truth"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-012",
+      "name": "审查一个数据主张",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology",
+        "civics"
+      ],
+      "domain": "数据判断",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-DATA-013",
+      "name": "面向公众说明证据边界",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "domain": "公共表达",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-TECH-001",
+      "name": "数据来源与采集过程",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "domain": "数据与计算",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-TECH-002",
+      "name": "数据清洗与转换",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "domain": "数据与计算",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-TECH-003",
+      "name": "数据结构与字段含义",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "domain": "数据与数据结构",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq3-campus-flow",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-001",
+      "name": "数据、模型与决策者",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics"
+      ],
+      "domain": "人工智能基础",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-002",
+      "name": "训练数据与标签",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "domain": "人工智能基础",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-003",
+      "name": "模型输出与置信度",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "domain": "人工智能基础",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-004",
+      "name": "自动化偏差与反馈回路",
+      "subject": "information_technology",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics",
+        "civics"
+      ],
+      "domain": "人工智能与社会",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-005",
+      "name": "数据—模型—决策责任链",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics",
+        "history"
+      ],
+      "domain": "人工智能与社会",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-AI-006",
+      "name": "设定人类复核边界",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics",
+        "history"
+      ],
+      "domain": "人工智能与社会",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-001",
+      "name": "权利、责任与公共利益",
+      "subject": "civics",
+      "curriculum_subject_ids": [
+        "civics"
+      ],
+      "domain": "公共判断",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-002",
+      "name": "利益相关者与受影响群体",
+      "subject": "civics",
+      "curriculum_subject_ids": [
+        "civics",
+        "history"
+      ],
+      "domain": "公共判断",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq3-campus-flow",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-003",
+      "name": "错误代价与风险分配",
+      "subject": "civics",
+      "curriculum_subject_ids": [
+        "civics",
+        "mathematics"
+      ],
+      "domain": "公共判断",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-004",
+      "name": "公平与差别影响",
+      "subject": "civics",
+      "curriculum_subject_ids": [
+        "civics",
+        "mathematics"
+      ],
+      "domain": "公共判断",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-005",
+      "name": "解释、复核与申诉",
+      "subject": "civics",
+      "curriculum_subject_ids": [
+        "civics",
+        "history",
+        "chinese"
+      ],
+      "domain": "公共判断",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq4-carbon-campus",
+        "theme-bq5-ai-decisions",
+        "theme-bq7-fair-rules",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-006",
+      "name": "制度规则与责任边界",
+      "subject": "history",
+      "curriculum_subject_ids": [
+        "history",
+        "civics"
+      ],
+      "domain": "社会治理",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq5-ai-decisions",
+        "theme-bq6-digital-heritage",
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-GOV-007",
+      "name": "制定 AI 使用建议",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics",
+        "history"
+      ],
+      "domain": "公共行动",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq5-ai-decisions"
+      ],
+      "review_status": "pilot_draft"
+    },
+    {
+      "id": "T-ENG-001",
+      "name": "英语信息定位与语境判断",
+      "subject": "english",
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "domain": "语言理解",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-002",
+      "name": "跨语言来源比较",
+      "subject": "english",
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "domain": "跨语言阅读",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-003",
+      "name": "跨文化视角与文化语境",
+      "subject": "english",
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "domain": "文化理解",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-004",
+      "name": "双语解释与受众适配",
+      "subject": "english",
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "domain": "跨文化表达",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-005",
+      "name": "国际对话与跨文化回应",
+      "subject": "english",
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "domain": "国际沟通",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq2-data-truth",
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ART-001",
+      "name": "艺术语言与多感官感知",
+      "subject": "art",
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "domain": "艺术感知",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ART-002",
+      "name": "审美判断与文化理解",
+      "subject": "art",
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "domain": "艺术与文化",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ART-003",
+      "name": "视觉叙事与信息层级",
+      "subject": "art",
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "domain": "视觉表达",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ART-004",
+      "name": "以使用者为中心的创意原型",
+      "subject": "art",
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "domain": "创意实践",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ART-005",
+      "name": "公共创意表达与文化责任",
+      "subject": "art",
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "domain": "公共艺术",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq6-digital-heritage",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PE-001",
+      "name": "运动能力与身体反馈",
+      "subject": "physical_education_health",
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "domain": "运动能力",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PE-002",
+      "name": "健康行为与生活方式",
+      "subject": "physical_education_health",
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "domain": "健康行为",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PE-003",
+      "name": "个人运动与健康改进计划",
+      "subject": "physical_education_health",
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "domain": "自我管理",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PE-004",
+      "name": "规则、公平与团队合作",
+      "subject": "physical_education_health",
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "domain": "体育品德",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PE-005",
+      "name": "健康行动成效与共同照护",
+      "subject": "physical_education_health",
+      "curriculum_subject_ids": [
+        "physical_education_health"
+      ],
+      "domain": "健康促进",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-001",
+      "name": "生命系统与结构功能",
+      "subject": "biology",
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "domain": "生命系统",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-002",
+      "name": "稳态、节律与健康",
+      "subject": "biology",
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "domain": "稳态与调节",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-003",
+      "name": "生态系统、碳循环与生物多样性",
+      "subject": "biology",
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "domain": "生物与环境",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-004",
+      "name": "生物学观察与对照探究",
+      "subject": "biology",
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "domain": "科学探究",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-BIO-005",
+      "name": "生物技术、健康与生态责任",
+      "subject": "biology",
+      "curriculum_subject_ids": [
+        "biology"
+      ],
+      "domain": "生物技术与社会",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-001",
+      "name": "空间位置、尺度与地图表达",
+      "subject": "geography",
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "domain": "空间认知",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq3-campus-flow"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-002",
+      "name": "人地关系与复合系统",
+      "subject": "geography",
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "domain": "人地关系",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-003",
+      "name": "区域比较与空间差异",
+      "subject": "geography",
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "domain": "区域认知",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq3-campus-flow"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-004",
+      "name": "地理调查、路线与空间数据",
+      "subject": "geography",
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "domain": "地理实践",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-005",
+      "name": "可持续空间决策",
+      "subject": "geography",
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "domain": "可持续发展",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-001",
+      "name": "物理量、测量与单位",
+      "subject": "physics",
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "domain": "测量基础",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-002",
+      "name": "运动、能量与系统转换",
+      "subject": "physics",
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "domain": "运动与能量",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-003",
+      "name": "变量关系与物理模型",
+      "subject": "physics",
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "domain": "模型建构",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-004",
+      "name": "物理实验、证据与模型校准",
+      "subject": "physics",
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "domain": "科学探究",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-005",
+      "name": "物理技术、环境与社会责任",
+      "subject": "physics",
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "domain": "STSE",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq4-carbon-campus",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-001",
+      "name": "宏观现象、微观结构与符号表征",
+      "subject": "chemistry",
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "domain": "物质结构",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-002",
+      "name": "物质变化、能量与动态平衡",
+      "subject": "chemistry",
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "domain": "化学变化",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-003",
+      "name": "化学证据与模型解释",
+      "subject": "chemistry",
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "domain": "证据推理",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq1-wellbeing",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-004",
+      "name": "化学实验、安全与创新探究",
+      "subject": "chemistry",
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "domain": "科学探究",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CHEM-005",
+      "name": "材料生命周期与化学责任",
+      "subject": "chemistry",
+      "curriculum_subject_ids": [
+        "chemistry"
+      ],
+      "domain": "化学与社会",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-001",
+      "name": "健康问题、个体差异与尊严",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "chinese"
+      ],
+      "domain": "健康与幸福",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-002",
+      "name": "健康证据画像与机制解释",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "mathematics"
+      ],
+      "domain": "健康证据",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-WELL-003",
+      "name": "健康改进与共同照护方案",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "physical_education_health",
+        "biology",
+        "civics",
+        "chinese"
+      ],
+      "domain": "行动与照护",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq1-wellbeing"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-SYS-001",
+      "name": "系统边界、要素与变量",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "geography",
+        "information_technology"
+      ],
+      "domain": "系统建模",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-SYS-002",
+      "name": "流动、反馈与动态变化",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "physics",
+        "geography"
+      ],
+      "domain": "复杂系统",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-SYS-003",
+      "name": "模型检验、局限与方案比较",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "physics",
+        "civics"
+      ],
+      "domain": "模型判断",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq3-campus-flow",
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ECO-001",
+      "name": "校园碳流、核算边界与排放因子",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "geography",
+        "chemistry",
+        "physics",
+        "mathematics"
+      ],
+      "domain": "碳核算",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ECO-002",
+      "name": "减排情景、成本与公平比较",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "mathematics",
+        "geography",
+        "civics"
+      ],
+      "domain": "减排决策",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ECO-003",
+      "name": "校园碳预算与行动路线",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "geography",
+        "chemistry",
+        "biology",
+        "civics"
+      ],
+      "domain": "可持续行动",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq4-carbon-campus"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-001",
+      "name": "文化对象的来源、时空与语境",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "history",
+        "chinese",
+        "art"
+      ],
+      "domain": "文化证据",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-002",
+      "name": "数字建档、视觉叙事与跨文化解释",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "art",
+        "english"
+      ],
+      "domain": "数字文化",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-003",
+      "name": "可信数字微展与解释责任",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "history",
+        "art",
+        "chinese",
+        "english"
+      ],
+      "domain": "公共文化",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq6-digital-heritage"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-FAIR-001",
+      "name": "规则、权利与公平标准",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "civics",
+        "history",
+        "physical_education_health"
+      ],
+      "domain": "公平与规则",
+      "stage": 2,
+      "theme_ids": [
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-FAIR-002",
+      "name": "规则影响调查与程序设计",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "civics",
+        "mathematics",
+        "chinese"
+      ],
+      "domain": "公共程序",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-FAIR-003",
+      "name": "校园规则听证与修订草案",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "civics",
+        "history",
+        "physical_education_health"
+      ],
+      "domain": "公共决策",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq7-fair-rules"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ACT-001",
+      "name": "真实需求、受影响者与成功标准",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "chinese",
+        "civics"
+      ],
+      "domain": "设计问题",
+      "stage": 1,
+      "theme_ids": [
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ACT-002",
+      "name": "原型、测试与证据迭代",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "physics",
+        "art",
+        "mathematics"
+      ],
+      "domain": "创造与试验",
+      "stage": 3,
+      "theme_ids": [
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "id": "T-ACT-003",
+      "name": "采用、维护与负责任行动",
+      "subject": "interdisciplinary",
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics",
+        "art",
+        "chinese"
+      ],
+      "domain": "共同未来",
+      "stage": 4,
+      "theme_ids": [
+        "theme-bq8-campus-change-lab"
+      ],
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ]
+}

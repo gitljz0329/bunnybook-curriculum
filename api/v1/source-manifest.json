@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0",
   "service": "BunnyBook Curriculum Source",
-  "release": "0.3-full-alpha+universal-entry-2.0",
+  "release": "0.3-full-alpha+universal-entry-2.1",
   "language": "zh-CN",
   "canonical_site_url": "https://bunnybook-curriculum.netlify.app",
   "repository_url": "https://github.com/gitljz0329/bunnybook-curriculum",
@@ -48,6 +48,16 @@
       "href": "https://bunnybook-curriculum.netlify.app/agent/manifest.json",
       "media_type": "application/json",
       "purpose": "Machine-readable conversation capabilities and defaults."
+    },
+    "search_index": {
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/search-index.json",
+      "media_type": "application/json",
+      "purpose": "Lightweight theme and topic lookup before fetching bounded curriculum context."
+    },
+    "theme_index": {
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/theme-index.json",
+      "media_type": "application/json",
+      "purpose": "Eight bounded theme bundle URLs for progressive retrieval."
     },
     "learning_map": {
       "href": "https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json",
@@ -100,6 +110,8 @@
     "classify_task_first": true,
     "progressive_retrieval": true,
     "scan_entire_site_by_default": false,
+    "search_before_full_graph": true,
+    "prefer_one_theme_bundle": true,
     "maximum_initial_questions": 3,
     "blueprint_before_full_plan": true,
     "invalid_id_policy": "State that the ID was not found, offer up to three real candidates, and never invent an ID."

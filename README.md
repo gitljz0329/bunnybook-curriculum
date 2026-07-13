@@ -8,7 +8,7 @@ BunnyBook 以 8 个 Meta Big Questions 为上层组织、以真实跨学科主�
 教师自然语言请求
   -> /llms.txt 与 /agent/START-HERE.md
   -> 主题、学习节点、前置关系与课标来源
-  -> 全盘规划 / 学习进阶 / 单课时备课 / 教案核对
+  -> 单元或项目规划 / 学习进阶 / 单课时备课 / 教案核对
   -> 依据、警告与教师复核
 ```
 
@@ -137,6 +137,8 @@ python3 scripts/validate_universal_entry.py
 node scripts/validate_agent_trial.js
 ```
 
+跨宿主人工验收使用 [`docs/cross_ai_acceptance.md`](docs/cross_ai_acceptance.md)。它以同一句教师请求检查豆包、Kimi、ChatGPT、千问等宿主是否遵守最多 3 个问题、轻量检索、先给蓝图和人工复核边界。
+
 安装 MCP 依赖后，还可以运行：
 
 ```bash
@@ -161,6 +163,9 @@ python3 scripts/validate_kimi_plugin.py
 - `/explore/*` → `/mvp/:splat`（图谱页面及相对资源）
 - `/map` 与 `/map/*` → `/explore/` 兼容跳转
 - `/api/v1/learning-map.json` → `/mvp/learning-map.json`
+- `/api/v1/search-index.json` → 轻量主题与节点检索
+- `/api/v1/theme-index.json` → 8 个主题包入口
+- `/api/v1/themes/BQ1.json` 至 `BQ8.json` → 单主题有界上下文
 - `/api/v1/graph-manifest.json` → `/mvp/agent-manifest.json`
 
 先做预览部署：

@@ -79,7 +79,7 @@ BunnyBook 的目标不是再造一个只能在某个平台运行的教案生成�
 5. 需要的材料、分组与差异化支持。
 6. BunnyBook 稳定 ID、课标依据和教师复核清单。
 
-### `full_planning` · 全盘规划
+### `full_planning` · 单元 / 项目规划
 
 典型请求：“这个单元、项目或几节课整体应该怎样组织？”
 
@@ -244,6 +244,9 @@ BunnyBook 的目标不是再造一个只能在某个平台运行的教案生成�
 - 最短索引：`https://bunnybook-curriculum.netlify.app/llms.txt`
 - Agent 协议：`https://bunnybook-curriculum.netlify.app/agent/START-HERE.md`
 - 信息源 Manifest：`https://bunnybook-curriculum.netlify.app/api/v1/source-manifest.json`
+- 轻量搜索索引：`https://bunnybook-curriculum.netlify.app/api/v1/search-index.json`
+- 主题包索引：`https://bunnybook-curriculum.netlify.app/api/v1/theme-index.json`
+- 独立主题包：`https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ1.json` 至 `BQ8.json`
 - 完整图谱：`https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json`
 - 交互图谱：`https://bunnybook-curriculum.netlify.app/map/?role=teacher`
 - 源代码：`https://github.com/gitljz0329/bunnybook-curriculum`

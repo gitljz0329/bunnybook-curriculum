@@ -27,6 +27,16 @@ ROOT_FILES = (
     "SECURITY.md",
     "CODE_OF_CONDUCT.md",
     "requirements-mcp.txt",
+    "index.html",
+    "styles.css",
+    "app.js",
+    "site-config.js",
+    "llms.txt",
+    "llms-full.txt",
+    "netlify.toml",
+    "robots.txt",
+    "sitemap.xml",
+    "favicon.svg",
 )
 DIRECTORIES = (
     ".github",
@@ -38,6 +48,8 @@ DIRECTORIES = (
     "docs",
     "themes",
     "materials",
+    "agent",
+    "api",
 )
 PUBLIC_SCRIPTS = (
     "browser_persona_qa.js",
@@ -47,6 +59,9 @@ PUBLIC_SCRIPTS = (
     "validate_mcp_server.py",
     "validate_agent_trial.js",
     "validate_public_release.py",
+    "build_link_first_assets.py",
+    "validate_universal_entry.py",
+    "validate_netlify_contract.py",
 )
 
 
@@ -133,7 +148,7 @@ def main() -> int:
     manifest = {
         "format_version": "1",
         "product": "BunnyBook Curriculum",
-        "version": "0.3-full-alpha",
+        "version": "0.3-full-alpha+universal-entry-2.1",
         "rights_holder": "lixiaozuyi",
         "license_map": {
             "database": "ODbL-1.0",

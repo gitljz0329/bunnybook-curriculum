@@ -1,0 +1,3090 @@
+{
+  "bundle_version": "1.0-link-first",
+  "generated_from": "/mvp/learning-map.json",
+  "canonical_href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ8.json",
+  "purpose": "A bounded theme context for general-purpose AI lesson-planning conversations.",
+  "theme": {
+    "id": "theme-bq8-campus-change-lab",
+    "big_question_id": "BQ8",
+    "secondary_big_question_id": "BQ5",
+    "title": "好主意怎样才能真正解决问题？",
+    "question": "我们能否把一个校园真实问题变成可测试、可改进、真正被使用的解决方案？",
+    "description": "负责任的创造不是提出一个点子或完成一次展示，而是与受影响者共同界定问题，把证据转化为设计标准，制作和测试原型，并为采用、维护、影响和意外后果承担责任。",
+    "source_theme_ids": [
+      "TH-CAND-009",
+      "TH-CAND-012",
+      "TH-CAND-005"
+    ],
+    "topic_ids": [
+      "T-ACT-001",
+      "T-ACT-002",
+      "T-ACT-003",
+      "T-EVID-001",
+      "T-EVID-002",
+      "T-EVID-003",
+      "T-EVID-004",
+      "T-EVID-005",
+      "T-DATA-001",
+      "T-DATA-003",
+      "T-DATA-004",
+      "T-DATA-006",
+      "T-DATA-007",
+      "T-DATA-012",
+      "T-TECH-001",
+      "T-TECH-002",
+      "T-TECH-003",
+      "T-ART-001",
+      "T-ART-003",
+      "T-ART-004",
+      "T-ART-005",
+      "T-PHY-001",
+      "T-PHY-003",
+      "T-PHY-004",
+      "T-PHY-005",
+      "T-GOV-001",
+      "T-GOV-002",
+      "T-GOV-003",
+      "T-GOV-005",
+      "T-SYS-001",
+      "T-SYS-003",
+      "T-GEO-004"
+    ],
+    "entry_topic_ids": [
+      "T-ACT-003"
+    ],
+    "topic_roles": [
+      {
+        "topic_id": "T-ACT-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ACT-002",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ACT-003",
+        "phase": "create_and_act",
+        "importance": "entry"
+      },
+      {
+        "topic_id": "T-EVID-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-003",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-004",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-006",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-007",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-DATA-012",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PHY-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PHY-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PHY-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-PHY-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-003",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-005",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-SYS-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-SYS-003",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GEO-004",
+        "phase": "interpret",
+        "importance": "core"
+      }
+    ],
+    "theme_learning": {
+      "theme_statement": "负责任的创造不是提出一个点子或完成一次展示，而是与受影响者共同界定问题，把证据转化为设计标准，制作和测试原型，并为采用、维护、影响和意外后果承担责任。",
+      "learning_goals": [
+        "通过观察、访谈和数据明确真实需求，把模糊问题转化为可检验的设计标准。",
+        "综合科学原理、计算、数据和艺术设计制作原型，并依据测试证据持续迭代。",
+        "评估方案的可及性、公共影响、维护责任和采用条件，完成面向真实受众的行动沟通。"
+      ],
+      "subject_contributions": [
+        {
+          "subject_id": "information_technology",
+          "content_area": "数据采集、计算设计与数字原型",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "contribution": "设计数据采集、反馈逻辑和数字或传感器原型。"
+        },
+        {
+          "subject_id": "physics",
+          "content_area": "测量、传感、能量、运动与声光应用",
+          "competency_ids": [
+            "physics.physical_concepts",
+            "physics.scientific_thinking",
+            "physics.scientific_inquiry",
+            "physics.scientific_attitude_responsibility"
+          ],
+          "contribution": "解释原型所依赖的测量、传感、能量、运动或声光等物理原理。"
+        },
+        {
+          "subject_id": "mathematics",
+          "content_area": "数学建模、测试指标与数据分析",
+          "competency_ids": [
+            "mathematics.modeling",
+            "mathematics.data_analysis",
+            "mathematics.logical_reasoning"
+          ],
+          "contribution": "定义成功指标，分析测试数据并比较迭代效果。"
+        },
+        {
+          "subject_id": "art",
+          "content_area": "艺术与科学、视觉传达与体验设计",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.creative_expression",
+            "art.aesthetic_taste"
+          ],
+          "contribution": "完成以使用者为中心的形态、界面、视觉和体验设计。"
+        },
+        {
+          "subject_id": "chinese",
+          "content_area": "调查访谈、设计说明与公众表达",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "contribution": "组织需求访谈、设计说明、公共展示和反馈回应。"
+        },
+        {
+          "subject_id": "civics",
+          "content_area": "公共价值、参与协商与责任机制",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "contribution": "分析公共价值、不同群体影响、资源使用、采用规则与维护责任。"
+        }
+      ],
+      "final_performance_task": {
+        "title": "一个校园解决方案的原型、试验与采用提案",
+        "authentic_audience": "真实使用者、学校管理者、后勤人员或学生社群",
+        "brief": "围绕噪声、光照、用水、通行、安全或信息服务等真实问题，完成需求研究、原型、测试和至少一次迭代，并提交可采用、可维护的校园行动提案。",
+        "required_artifacts": [
+          "问题与需求简报",
+          "设计标准",
+          "原型",
+          "测试数据与记录",
+          "迭代历史",
+          "影响与风险说明",
+          "采用和维护提案"
+        ]
+      }
+    },
+    "material_links": {}
+  },
+  "topics": [
+    {
+      "id": "T-ACT-001",
+      "name": "真实需求、受影响者与成功标准",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "设计问题",
+      "stage": 1,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "通过观察和访谈把模糊抱怨转化为可验证的真实需求，识别受影响者、约束条件和可衡量的成功标准。",
+      "mastery_evidence": [
+        "能提交问题简报，说明谁受到影响、现有做法、真实需求、约束和成功指标。"
+      ],
+      "assessment_prompt": "为什么“我们需要一个应用程序”通常还不是一个好的问题定义？",
+      "source_anchor_ids": [
+        "CU-020",
+        "CU-022",
+        "CU-058",
+        "CU-063",
+        "CU-091"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 44 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.computational_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-020",
+            "CU-022"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CU-058",
+            "CU-063"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-091"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ACT-002",
+      "name": "原型、测试与证据迭代",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "创造与试验",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "将需求与科学原理转化为可体验原型，用预先定义的指标测试，并依据证据记录每次迭代。",
+      "mastery_evidence": [
+        "能展示原型版本、测试方案、原始结果、失败点和有证据的修改记录。"
+      ],
+      "assessment_prompt": "原型测试得到正面反馈，为什么仍需要记录失败和意外结果？",
+      "source_anchor_ids": [
+        "CU-020",
+        "CU-022",
+        "CU-136",
+        "CU-150",
+        "CU-025",
+        "CU-026",
+        "CU-079"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 44 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 49 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 42 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.digital_learning_innovation"
+          ],
+          "content_anchor_ids": [
+            "CU-020",
+            "CU-022"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "physics",
+          "role": "supporting",
+          "competency_ids": [
+            "physics.scientific_thinking",
+            "physics.scientific_inquiry"
+          ],
+          "content_anchor_ids": [
+            "CU-136",
+            "CU-150"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "art",
+          "role": "supporting",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.artistic_perception"
+          ],
+          "content_anchor_ids": [
+            "CU-025",
+            "CU-026"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.modeling",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-079"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "physics",
+        "art",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "physics.scientific_thinking",
+        "physics.scientific_inquiry",
+        "art.creative_expression",
+        "art.artistic_perception",
+        "mathematics.modeling",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ACT-003",
+      "name": "采用、维护与负责任行动",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "共同未来",
+      "stage": 4,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "综合测试证据、可及性、公共影响、资源、维护与意外后果，形成能被真实机构采用并持续复盘的行动提案。",
+      "mastery_evidence": [
+        "能提交采用与维护提案，明确证据、责任、资源、风险、效果指标和退出或调整条件。"
+      ],
+      "assessment_prompt": "一个原型测试成功，为什么仍可能不适合在全校推广？",
+      "source_anchor_ids": [
+        "CU-014",
+        "CU-020",
+        "CU-091",
+        "CU-092",
+        "CU-026",
+        "CU-058",
+        "CU-063"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 23 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 25 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-014",
+            "CU-020"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-091",
+            "CU-092"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "art",
+          "role": "supporting",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.aesthetic_taste"
+          ],
+          "content_anchor_ids": [
+            "CU-026"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CU-058",
+            "CU-063"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "civics",
+        "art",
+        "chinese"
+      ],
+      "competency_ids": [
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility",
+        "civics.scientific_spirit",
+        "civics.public_participation",
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "chinese.language_construction",
+        "chinese.thinking_development"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-001",
+      "name": "事实、数据与主张",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "区分发生了什么、记录了什么，以及表达者据此声称了什么，避免把主张直接当成事实。",
+      "mastery_evidence": [
+        "能在一段材料中分别标出事实陈述、数据和结论性主张。",
+        "能指出一个主张还需要什么证据才能成立。"
+      ],
+      "assessment_prompt": "这句话是在报告事实、呈现数据，还是提出一个需要证明的主张？",
+      "source_anchor_ids": [
+        "CA-CU-063"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-002",
+      "name": "论点、证据与推理",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 2,
+      "type": "representational",
+      "description": "用“论点—证据—推理”结构检查结论如何由材料支持，并识别推理中的跳步。",
+      "mastery_evidence": [
+        "能把一段论证拆成论点、证据和连接二者的理由。",
+        "能解释证据为什么支持或不足以支持结论。"
+      ],
+      "assessment_prompt": "这份证据和结论之间缺少哪一步解释？",
+      "source_anchor_ids": [
+        "CA-CU-057",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development",
+            "chinese.language_construction"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-057",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "chinese.language_construction",
+        "civics.scientific_spirit"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-003",
+      "name": "信息来源核验",
+      "subject": "chinese",
+      "domain": "媒介与阅读",
+      "stage": 2,
+      "type": "procedural",
+      "description": "检查材料的作者、出处、时间、证据来源与传播语境，判断是否值得继续使用。",
+      "mastery_evidence": [
+        "能追溯一则数据或说法的原始出处。",
+        "能说明来源的利益位置、时效与可核验程度。"
+      ],
+      "assessment_prompt": "如果只能做三项检查，你会怎样确认这条信息的来源可靠吗？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-013",
+        "CU-104"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 45 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.source_evidence"
+          ],
+          "content_anchor_ids": [
+            "CU-104"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "information_technology",
+        "history"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "information_technology.information_awareness",
+        "information_technology.information_social_responsibility",
+        "history.source_evidence"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-004",
+      "name": "限定语与不确定性表达",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 3,
+      "type": "language",
+      "description": "用范围、条件、概率和保留意见准确表达证据边界，不把有限发现写成绝对结论。",
+      "mastery_evidence": [
+        "能把“证明了”改写为与证据强度相称的表述。",
+        "能在结论中主动写明对象、时间和适用条件。"
+      ],
+      "assessment_prompt": "这句话需要加入哪些限定语，才不会说得比证据更多？",
+      "source_anchor_ids": [
+        "CA-CU-063",
+        "CU-078"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "language",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.logical_reasoning",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "mathematics.logical_reasoning",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-005",
+      "name": "公开质询与理由回应",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 4,
+      "type": "meta",
+      "description": "围绕证据、方法、影响与边界提出可回答的质询，并用理由回应而非只表达立场。",
+      "mastery_evidence": [
+        "每个质询都能指向具体证据或推理环节。",
+        "回应时能修正原判断或说明为何保留原判断。"
+      ],
+      "assessment_prompt": "你的问题是在追问证据和理由，还是只在表达赞成或反对？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "meta",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-001",
+      "name": "观测对象与变量",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "明确数据描述的是谁或什么，以及哪些特征正在被测量、分类或比较。",
+      "mastery_evidence": [
+        "能指出数据表中的观测对象、变量和变量取值。",
+        "能发现问题与所测变量不匹配的情形。"
+      ],
+      "assessment_prompt": "这张表的一行代表什么？每一列又在记录什么？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CU-013"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.data_analysis",
+        "information_technology.information_awareness"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-003",
+      "name": "样本与总体",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "区分实际收集到的样本与希望描述的总体，理解从局部推向整体需要条件。",
+      "mastery_evidence": [
+        "能指出研究的总体、样本和抽样单位。",
+        "能判断样本结论是否被过度推广。"
+      ],
+      "assessment_prompt": "这次调查问了谁，又想代表谁？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis",
+            "mathematics.modeling"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.data_analysis",
+        "mathematics.modeling"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-004",
+      "name": "抽样偏差与代表性",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 2,
+      "type": "procedural",
+      "description": "分析抽样方式如何系统性遗漏某些人或放大某些群体，从而改变结论。",
+      "mastery_evidence": [
+        "能识别自愿应答、便利抽样和覆盖不足带来的偏差。",
+        "能提出更能代表总体的抽样改进方案。"
+      ],
+      "assessment_prompt": "哪些人更可能没有进入样本？这会让结果向哪个方向偏？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082",
+        "CU-013"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.data_analysis",
+            "mathematics.modeling",
+            "mathematics.logical_reasoning"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology"
+      ],
+      "competency_ids": [
+        "mathematics.data_analysis",
+        "mathematics.modeling",
+        "mathematics.logical_reasoning",
+        "information_technology.information_awareness"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-006",
+      "name": "平均数、中位数与分布",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 2,
+      "type": "representational",
+      "description": "根据数据分布选择合适的集中趋势指标，并避免用单一平均数遮蔽差异。",
+      "mastery_evidence": [
+        "能比较平均数与中位数对极端值的敏感性。",
+        "能结合分布而不是只报一个中心数值。"
+      ],
+      "assessment_prompt": "这个“平均水平”是否被少数极端值拉高或拉低了？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.data_analysis",
+            "mathematics.operation",
+            "mathematics.visual_imagination"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics"
+      ],
+      "competency_ids": [
+        "mathematics.data_analysis",
+        "mathematics.operation",
+        "mathematics.visual_imagination"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-007",
+      "name": "相关关系与因果解释",
+      "subject": "mathematics",
+      "domain": "数据与统计",
+      "stage": 3,
+      "type": "conceptual",
+      "description": "区分变量一起变化与一个变量导致另一个变化，寻找混杂因素和替代解释。",
+      "mastery_evidence": [
+        "能为相关关系提出至少一个替代解释。",
+        "能说明什么额外证据才更接近因果判断。"
+      ],
+      "assessment_prompt": "两件事同时发生，为什么还不能直接说一个导致了另一个？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-082",
+        "CU-096"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 54 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "mathematics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.logical_reasoning",
+            "mathematics.modeling",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078",
+            "CA-CU-082"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "civics"
+      ],
+      "competency_ids": [
+        "mathematics.logical_reasoning",
+        "mathematics.modeling",
+        "mathematics.data_analysis",
+        "civics.scientific_spirit"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-DATA-012",
+      "name": "审查一个数据主张",
+      "subject": "interdisciplinary",
+      "domain": "数据判断",
+      "stage": 3,
+      "type": "meta",
+      "description": "把来源、样本、变量、统计方法、图表和结论串成完整证据链，形成暂时判断。",
+      "mastery_evidence": [
+        "能用统一审查框架检查一则真实或模拟数据主张。",
+        "能给出“可信、部分可信或证据不足”的理由。"
+      ],
+      "assessment_prompt": "从数据被收集到结论被公开，证据链的哪一环最薄弱？",
+      "source_anchor_ids": [
+        "CA-CU-078",
+        "CA-CU-013",
+        "CA-CU-096"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": null,
+      "node_kind": "meta",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-078"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-096"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "information_technology",
+        "civics"
+      ],
+      "competency_ids": [
+        "mathematics.data_analysis",
+        "information_technology.information_awareness",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-001",
+      "name": "数据来源与采集过程",
+      "subject": "information_technology",
+      "domain": "数据与计算",
+      "stage": 1,
+      "type": "procedural",
+      "description": "追踪数据从现实对象到数字记录的过程，识别传感、问卷、平台日志或人工录入各自的限制。",
+      "mastery_evidence": [
+        "能画出一组数据的采集流程。",
+        "能指出采集工具和规则可能引入的误差。"
+      ],
+      "assessment_prompt": "这条数据在进入表格之前，现实中发生了什么？",
+      "source_anchor_ids": [
+        "CA-CU-013",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.computational_thinking"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "mathematics.abstraction",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-002",
+      "name": "数据清洗与转换",
+      "subject": "information_technology",
+      "domain": "数据与计算",
+      "stage": 2,
+      "type": "procedural",
+      "description": "处理重复、格式不一、编码错误与缺失记录，并保留可复核的转换说明。",
+      "mastery_evidence": [
+        "能制定一致的清洗规则并保留原始数据。",
+        "能说明每项转换会不会改变分析对象。"
+      ],
+      "assessment_prompt": "你对原始数据做了哪些改变，别人能否复现？",
+      "source_anchor_ids": [
+        "CA-CU-013",
+        "CA-CU-015",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 26 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013",
+            "CA-CU-015"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-003",
+      "name": "数据结构与字段含义",
+      "subject": "information_technology",
+      "domain": "数据与数据结构",
+      "stage": 2,
+      "type": "representational",
+      "description": "理解字段、记录、类别与编码如何表示现实对象，并检查数字标签是否掩盖重要差异。",
+      "mastery_evidence": [
+        "能为一张数据表写出字段字典。",
+        "能指出分类编码对后续分析的影响。"
+      ],
+      "assessment_prompt": "这个字段在现实世界中究竟代表什么，又遗漏了什么？",
+      "source_anchor_ids": [
+        "CA-CU-015",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 26 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-015"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.computational_thinking",
+        "information_technology.information_awareness",
+        "mathematics.abstraction",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-001",
+      "name": "艺术语言与多感官感知",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "艺术感知",
+      "stage": 1,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "识别形、色、声、节奏、动作、镜头等艺术语言，描述它们如何组织感知和情感体验。",
+      "mastery_evidence": [
+        "能使用具体艺术语言描述一件作品，并区分可观察形式与个人联想。"
+      ],
+      "assessment_prompt": "“我喜欢”或“我不喜欢”为什么还不是完整的艺术分析？",
+      "source_anchor_ids": [
+        "CU-023",
+        "CU-024",
+        "CU-025"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.artistic_perception"
+          ],
+          "content_anchor_ids": [
+            "CU-023",
+            "CU-024",
+            "CU-025"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.artistic_perception"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-003",
+      "name": "视觉叙事与信息层级",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "视觉表达",
+      "stage": 2,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "运用构图、顺序、对比、焦点和媒介选择，把复杂信息转化为可理解且不误导的视觉叙事。",
+      "mastery_evidence": [
+        "能制作一版视觉信息草图，并说明层级、阅读路径和关键取舍。"
+      ],
+      "assessment_prompt": "一个视觉作品很吸引人，为什么仍可能传达错误信息？",
+      "source_anchor_ids": [
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.creative_expression"
+          ],
+          "content_anchor_ids": [
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.artistic_perception",
+        "art.creative_expression"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-004",
+      "name": "以使用者为中心的创意原型",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "创意实践",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "从真实使用情境与受众反馈出发，将想法转化为可体验、可测试、可迭代的视觉或空间原型。",
+      "mastery_evidence": [
+        "能呈现原型、设计标准和用户反馈，并说明至少一次有证据的修改。"
+      ],
+      "assessment_prompt": "一个创意原型怎样证明它不仅“好看”，而且真正回应了需要？",
+      "source_anchor_ids": [
+        "CU-023",
+        "CU-025",
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.artistic_perception",
+            "art.aesthetic_taste"
+          ],
+          "content_anchor_ids": [
+            "CU-023",
+            "CU-025",
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.creative_expression",
+        "art.artistic_perception",
+        "art.aesthetic_taste"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-005",
+      "name": "公共创意表达与文化责任",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "公共艺术",
+      "stage": 4,
+      "type": "meta",
+      "node_kind": "meta",
+      "description": "面向公共受众整合审美、文化语境、可及性和表达伦理，完成能被质询的艺术或数字媒介作品。",
+      "mastery_evidence": [
+        "能说明作品的文化来源、受众、版权、可及性与可能影响，并根据反馈修订。"
+      ],
+      "assessment_prompt": "公共表达中的创意自由为什么仍需要文化与受众责任？",
+      "source_anchor_ids": [
+        "CU-024",
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.aesthetic_taste",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-024",
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "art.cultural_understanding"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-001",
+      "name": "物理量、测量与单位",
+      "subject": "physics",
+      "primary_subject_id": "physics",
+      "domain": "测量基础",
+      "stage": 1,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "把现实属性转化为定义清楚、单位一致、精度可说明的物理量，并记录测量条件。",
+      "mastery_evidence": [
+        "能选择合适工具和单位完成重复测量，并报告精度、误差来源和原始记录。"
+      ],
+      "assessment_prompt": "两个数值相同的测量结果为什么可能并不具有相同可信度？",
+      "source_anchor_ids": [
+        "CU-116",
+        "CU-117"
+      ],
+      "source_ref": "8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physics",
+          "role": "primary",
+          "competency_ids": [
+            "physics.scientific_inquiry",
+            "physics.scientific_attitude_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-116",
+            "CU-117"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "competency_ids": [
+        "physics.scientific_inquiry",
+        "physics.scientific_attitude_responsibility"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-003",
+      "name": "变量关系与物理模型",
+      "subject": "physics",
+      "primary_subject_id": "physics",
+      "domain": "模型建构",
+      "stage": 2,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "从真实情境中抽取关键变量、条件和关系，建立能解释或预测的简化物理模型。",
+      "mastery_evidence": [
+        "能说明模型保留和忽略了什么，并用观测数据检查模型的解释范围。"
+      ],
+      "assessment_prompt": "模型越接近现实、变量越多，就一定越好吗？",
+      "source_anchor_ids": [
+        "CU-117",
+        "CU-122"
+      ],
+      "source_ref": "8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 25 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physics",
+          "role": "primary",
+          "competency_ids": [
+            "physics.physical_concepts",
+            "physics.scientific_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-117",
+            "CU-122"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "competency_ids": [
+        "physics.physical_concepts",
+        "physics.scientific_thinking"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-004",
+      "name": "物理实验、证据与模型校准",
+      "subject": "physics",
+      "primary_subject_id": "physics",
+      "domain": "科学探究",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "通过提出问题、控制变量、重复测量和比较模型预测，获得证据并修正物理解释。",
+      "mastery_evidence": [
+        "能设计可重复的实验或现场测试，并用误差分析说明结论的可靠程度。"
+      ],
+      "assessment_prompt": "实验结果与预测不一致时，怎样判断应修改模型还是重做测量？",
+      "source_anchor_ids": [
+        "CU-116",
+        "CU-136"
+      ],
+      "source_ref": "8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physics",
+          "role": "primary",
+          "competency_ids": [
+            "physics.scientific_inquiry",
+            "physics.scientific_thinking",
+            "physics.scientific_attitude_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-116",
+            "CU-136"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "competency_ids": [
+        "physics.scientific_inquiry",
+        "physics.scientific_thinking",
+        "physics.scientific_attitude_responsibility"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-PHY-005",
+      "name": "物理技术、环境与社会责任",
+      "subject": "physics",
+      "primary_subject_id": "physics",
+      "domain": "STSE",
+      "stage": 4,
+      "type": "meta",
+      "node_kind": "meta",
+      "description": "从物理机制、性能证据、资源消耗、环境影响与公共需要综合评价一项技术方案。",
+      "mastery_evidence": [
+        "能基于物理证据比较两个技术方案，并明确收益、代价、风险和不确定性。"
+      ],
+      "assessment_prompt": "效率更高的技术为什么仍可能不是更负责任的选择？",
+      "source_anchor_ids": [
+        "CU-127",
+        "CU-144",
+        "CU-145",
+        "CU-148"
+      ],
+      "source_ref": "8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 30 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 46 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 47 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 48 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "physics",
+          "role": "primary",
+          "competency_ids": [
+            "physics.physical_concepts",
+            "physics.scientific_thinking",
+            "physics.scientific_attitude_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-127",
+            "CU-144",
+            "CU-145",
+            "CU-148"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "physics"
+      ],
+      "competency_ids": [
+        "physics.physical_concepts",
+        "physics.scientific_thinking",
+        "physics.scientific_attitude_responsibility"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-001",
+      "name": "权利、责任与公共利益",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "从个人权利、机构责任和公共利益三个角度理解技术决策，而不是只比较效率高低。",
+      "mastery_evidence": [
+        "能指出一个技术决策影响了哪些权利与公共利益。",
+        "能区分“可以做”与“应该做”。"
+      ],
+      "assessment_prompt": "即使系统更高效，它还可能损害哪些不应被交换掉的权利？",
+      "source_anchor_ids": [
+        "CA-CU-090",
+        "CA-CU-091"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-090",
+            "CA-CU-091"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics"
+      ],
+      "competency_ids": [
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-002",
+      "name": "利益相关者与受影响群体",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 2,
+      "type": "representational",
+      "description": "识别谁设计、购买、使用系统，谁从中受益，以及谁承担错误和被忽视的成本。",
+      "mastery_evidence": [
+        "能绘制利益相关者图并标出权力差异。",
+        "能补入容易在设计讨论中缺席的受影响群体。"
+      ],
+      "assessment_prompt": "谁没有坐在决策桌前，却要承担这个系统的后果？",
+      "source_anchor_ids": [
+        "CA-CU-091",
+        "CA-CU-100"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 30 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.public_participation",
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-091"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.historical_materialism",
+            "history.historical_explanation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-100"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics",
+        "history"
+      ],
+      "competency_ids": [
+        "civics.public_participation",
+        "civics.scientific_spirit",
+        "history.historical_materialism",
+        "history.historical_explanation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-003",
+      "name": "错误代价与风险分配",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 3,
+      "type": "conceptual",
+      "description": "比较不同错误由谁承担、是否可逆，以及同样准确率下风险是否集中在少数群体。",
+      "mastery_evidence": [
+        "能分别说明漏判和误判的现实代价。",
+        "能判断风险是否被不成比例地转嫁给弱势群体。"
+      ],
+      "assessment_prompt": "系统犯错时，谁付出的代价最大？这个代价还能补救吗？",
+      "source_anchor_ids": [
+        "CA-CU-091",
+        "CU-078"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-091"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-005",
+      "name": "解释、复核与申诉",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 3,
+      "type": "procedural",
+      "description": "为受影响者建立知情、获得理由、请求人工复核、纠正数据和提出申诉的渠道。",
+      "mastery_evidence": [
+        "能设计一条从收到决定到完成申诉的流程。",
+        "能说明解释应包含哪些信息才能真正可用。"
+      ],
+      "assessment_prompt": "被系统判为“高风险”的人，怎样知道原因并获得一次真实的纠正机会？",
+      "source_anchor_ids": [
+        "CA-CU-090",
+        "CA-CU-100",
+        "CU-063"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 30 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "author",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-090"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.historical_explanation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-100"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction"
+          ],
+          "content_anchor_ids": [
+            "CU-063"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics",
+        "history",
+        "chinese"
+      ],
+      "competency_ids": [
+        "civics.rule_of_law",
+        "civics.public_participation",
+        "history.historical_explanation",
+        "chinese.language_construction"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-SYS-001",
+      "name": "系统边界、要素与变量",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "系统建模",
+      "stage": 1,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "为复杂问题划定研究边界，识别系统中的要素、变量、流入流出、约束和外部环境。",
+      "mastery_evidence": [
+        "能画出一个系统边界图，并解释至少三项纳入或排除的理由。"
+      ],
+      "assessment_prompt": "划定系统边界时，什么重要因素最容易被不小心排除？",
+      "source_anchor_ids": [
+        "CU-079",
+        "CU-105",
+        "CU-106",
+        "CU-013"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 42 页；7.普通高中地理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 16 页；7.普通高中地理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 18 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.modeling"
+          ],
+          "content_anchor_ids": [
+            "CU-079"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "geography",
+          "role": "supporting",
+          "competency_ids": [
+            "geography.comprehensive_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-105",
+            "CU-106"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.computational_thinking"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "geography",
+        "information_technology"
+      ],
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.modeling",
+        "geography.comprehensive_thinking",
+        "information_technology.computational_thinking"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-SYS-003",
+      "name": "模型检验、局限与方案比较",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "模型判断",
+      "stage": 4,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "用现实数据校准模型，分析误差、假设与适用范围，并比较不同干预方案的预测效果和价值权衡。",
+      "mastery_evidence": [
+        "能提交模型预测、现实检验、误差解释和至少两个方案的比较。"
+      ],
+      "assessment_prompt": "一个预测准确的模型，为什么仍可能不能直接决定行动？",
+      "source_anchor_ids": [
+        "CU-079",
+        "CU-083",
+        "CU-117",
+        "CU-096"
+      ],
+      "source_ref": "3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 42 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 58 页；8.普通高中物理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "mathematics",
+          "role": "primary",
+          "competency_ids": [
+            "mathematics.modeling",
+            "mathematics.data_analysis",
+            "mathematics.logical_reasoning"
+          ],
+          "content_anchor_ids": [
+            "CU-079",
+            "CU-083"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "physics",
+          "role": "supporting",
+          "competency_ids": [
+            "physics.scientific_thinking",
+            "physics.scientific_inquiry"
+          ],
+          "content_anchor_ids": [
+            "CU-117"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "mathematics",
+        "physics",
+        "civics"
+      ],
+      "competency_ids": [
+        "mathematics.modeling",
+        "mathematics.data_analysis",
+        "mathematics.logical_reasoning",
+        "physics.scientific_thinking",
+        "physics.scientific_inquiry",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GEO-004",
+      "name": "地理调查、路线与空间数据",
+      "subject": "geography",
+      "primary_subject_id": "geography",
+      "domain": "地理实践",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "设计现场观察路线，采集位置与环境信息，形成可回溯的空间数据并检验空间解释。",
+      "mastery_evidence": [
+        "能提交包含路线、采样点、时间、工具、记录规范和安全要求的调查方案。"
+      ],
+      "assessment_prompt": "为什么空间调查不能只选择最方便到达的地点？",
+      "source_anchor_ids": [
+        "CU-114",
+        "CU-115"
+      ],
+      "source_ref": "7.普通高中地理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 32 页；7.普通高中地理课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 33 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "geography",
+          "role": "primary",
+          "competency_ids": [
+            "geography.geographical_practice",
+            "geography.regional_cognition"
+          ],
+          "content_anchor_ids": [
+            "CU-114",
+            "CU-115"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "geography"
+      ],
+      "competency_ids": [
+        "geography.geographical_practice",
+        "geography.regional_cognition"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    }
+  ],
+  "dependencies": [
+    {
+      "topic_id": "T-EVID-002",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "hard",
+      "reason": "先分清事实、数据与主张，才能判断证据如何支持论点。"
+    },
+    {
+      "topic_id": "T-EVID-003",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "识别主张与数据，有助于决定哪些来源最需要核验。"
+    },
+    {
+      "topic_id": "T-EVID-004",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "只有理解证据强度与推理，才能用合适的限定语表达结论。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "有效质询必须指向论点、证据或推理中的具体环节。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "soft",
+      "reason": "来源核验为公开质询提供可核查的事实基础。"
+    },
+    {
+      "topic_id": "T-DATA-003",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "先明确观测对象和变量，才能界定样本与总体。"
+    },
+    {
+      "topic_id": "T-DATA-004",
+      "prerequisite_id": "T-DATA-003",
+      "strength": "hard",
+      "reason": "抽样偏差的判断建立在样本与总体的区分之上。"
+    },
+    {
+      "topic_id": "T-DATA-006",
+      "prerequisite_id": "T-DATA-003",
+      "strength": "hard",
+      "reason": "描述样本分布前必须明确样本来自哪里、代表什么。"
+    },
+    {
+      "topic_id": "T-DATA-007",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "因果判断需要明确变量及其可能关系。"
+    },
+    {
+      "topic_id": "T-DATA-007",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "soft",
+      "reason": "论证结构帮助发现从相关跳到因果的推理跳步。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "数据主张审查需要把证据和结论之间的推理说清。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "hard",
+      "reason": "没有来源核验就无法确认数据链的起点。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-004",
+      "strength": "hard",
+      "reason": "样本代表性决定结论能推广到多大范围。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-007",
+      "strength": "soft",
+      "reason": "相关与因果的区分能防止过度结论。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-TECH-001",
+      "strength": "hard",
+      "reason": "数据采集过程决定证据链中可能出现哪些误差。"
+    },
+    {
+      "topic_id": "T-TECH-001",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "采集数据前必须明确对象和变量。"
+    },
+    {
+      "topic_id": "T-TECH-002",
+      "prerequisite_id": "T-TECH-001",
+      "strength": "hard",
+      "reason": "清洗与转换必须建立在对原始采集过程的理解之上。"
+    },
+    {
+      "topic_id": "T-TECH-003",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "字段设计是把对象和变量转化为数据结构的过程。"
+    },
+    {
+      "topic_id": "T-TECH-003",
+      "prerequisite_id": "T-TECH-002",
+      "strength": "soft",
+      "reason": "清洗过程会改变字段取值，需要保留字段含义的一致性。"
+    },
+    {
+      "topic_id": "T-GOV-002",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "hard",
+      "reason": "识别利益相关者要以权利、责任和公共利益为判断框架。"
+    },
+    {
+      "topic_id": "T-GOV-003",
+      "prerequisite_id": "T-GOV-002",
+      "strength": "hard",
+      "reason": "只有看见受影响群体，才能判断错误代价落在谁身上。"
+    },
+    {
+      "topic_id": "T-GOV-005",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "hard",
+      "reason": "解释和申诉是权利保障与机构责任的具体机制。"
+    },
+    {
+      "topic_id": "T-ART-003",
+      "prerequisite_id": "T-ART-001",
+      "strength": "hard",
+      "reason": "组织视觉叙事需要掌握基本艺术语言及其感知作用。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-003",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "区分事实与主张有助于避免视觉表达把推断伪装成事实。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-004",
+      "prerequisite_id": "T-ART-003",
+      "strength": "hard",
+      "reason": "设计原型需要能组织视觉信息与使用者的阅读路径。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-ART-004",
+      "strength": "hard",
+      "reason": "公共作品需要经过真实受众的原型测试与迭代。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "soft",
+      "reason": "公开质询有助于审查表达选择和影响。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-GEO-004",
+      "prerequisite_id": "T-TECH-002",
+      "strength": "soft",
+      "reason": "规范数据清洗能提高空间调查资料的可复核性。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-003",
+      "prerequisite_id": "T-PHY-001",
+      "strength": "hard",
+      "reason": "物理模型中的变量需要可定义、可测量并使用一致单位。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-003",
+      "prerequisite_id": "T-DATA-003",
+      "strength": "soft",
+      "reason": "样本意识有助于区分用于校准模型的数据与总体情境。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-004",
+      "prerequisite_id": "T-PHY-001",
+      "strength": "hard",
+      "reason": "物理实验需要可靠测量和误差记录。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-004",
+      "prerequisite_id": "T-PHY-003",
+      "strength": "hard",
+      "reason": "校准实验需要一个明确的待检验模型与预测。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-004",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "soft",
+      "reason": "论点证据关系有助于避免把一次实验结果过度推广。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-005",
+      "prerequisite_id": "T-PHY-003",
+      "strength": "hard",
+      "reason": "比较方案需要理解模型的假设与适用边界。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-005",
+      "prerequisite_id": "T-PHY-004",
+      "strength": "soft",
+      "reason": "可靠的性能证据来自可复核的实验与测试。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-005",
+      "prerequisite_id": "T-GOV-003",
+      "strength": "soft",
+      "reason": "公共技术选择还需考虑风险和代价如何分配。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-001",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "soft",
+      "reason": "系统变量需要从可观察对象和属性中界定。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-003",
+      "prerequisite_id": "T-PHY-004",
+      "strength": "hard",
+      "reason": "模型校准依赖可复核的测量、实验和误差分析。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-003",
+      "prerequisite_id": "T-DATA-007",
+      "strength": "soft",
+      "reason": "相关因果判断能防止把拟合关系误当机制。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-003",
+      "prerequisite_id": "T-GOV-003",
+      "strength": "soft",
+      "reason": "方案比较还需判断预测误差和风险由哪些群体承担。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-001",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "需求研究需要区分观察事实、使用者主张与设计者假设。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-001",
+      "prerequisite_id": "T-SYS-001",
+      "strength": "soft",
+      "reason": "系统边界帮助识别问题与外部环境、约束和利益相关者。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-002",
+      "prerequisite_id": "T-ACT-001",
+      "strength": "hard",
+      "reason": "原型和测试必须回应已经核验的真实需求和成功标准。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-002",
+      "prerequisite_id": "T-ART-004",
+      "strength": "soft",
+      "reason": "使用者中心的创意原型方法改善体验设计与反馈收集。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-002",
+      "prerequisite_id": "T-PHY-004",
+      "strength": "soft",
+      "reason": "物理实验方法支持可复核的测试与误差分析。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-002",
+      "prerequisite_id": "T-TECH-002",
+      "strength": "soft",
+      "reason": "测试数据需要经过规范清洗和转换。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-003",
+      "prerequisite_id": "T-ACT-002",
+      "strength": "hard",
+      "reason": "采用提案需要经过真实原型、测试和迭代证据。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-003",
+      "prerequisite_id": "T-DATA-012",
+      "strength": "soft",
+      "reason": "成效主张需要接受数据来源、指标和结论边界审查。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-003",
+      "prerequisite_id": "T-GOV-005",
+      "strength": "hard",
+      "reason": "负责任采用需要明确解释、复核、申诉和维护责任。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ACT-003",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "hard",
+      "reason": "行动提案需要回应真实受众质询与异议。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ],
+  "external_prerequisites": [
+    {
+      "topic_id": "T-DATA-006",
+      "prerequisite_id": "T-DATA-002",
+      "strength": "soft",
+      "reason": "比例与基数帮助理解集中趋势数字的实际规模。"
+    },
+    {
+      "topic_id": "T-DATA-012",
+      "prerequisite_id": "T-DATA-005",
+      "strength": "hard",
+      "reason": "统计口径决定比较是否成立。"
+    },
+    {
+      "topic_id": "T-GOV-005",
+      "prerequisite_id": "T-AI-003",
+      "strength": "soft",
+      "reason": "理解输出与阈值有助于设计可操作的复核理由。"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-ART-002",
+      "strength": "hard",
+      "reason": "负责任的公共艺术表达需要理解文化语境与审美判断。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-GEO-004",
+      "prerequisite_id": "T-GEO-001",
+      "strength": "hard",
+      "reason": "规划调查路线和采样点需要先掌握空间位置与尺度表达。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-PHY-005",
+      "prerequisite_id": "T-PHY-002",
+      "strength": "hard",
+      "reason": "技术评价需要理解能量转换和系统损耗。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-003",
+      "prerequisite_id": "T-SYS-002",
+      "strength": "hard",
+      "reason": "模型检验需要理解系统的动态关系与反馈机制。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-SYS-003",
+      "prerequisite_id": "T-DATA-008",
+      "strength": "soft",
+      "reason": "模型输出需要使用不误导的坐标、比例和视觉编码。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ],
+  "curriculum_subjects": [
+    {
+      "id": "art",
+      "label": "艺术",
+      "file_id": "PDF-004",
+      "standard_file": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-004｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "art.artistic_perception",
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "art.cultural_understanding"
+      ],
+      "coverage_unit_ids": [
+        "CU-023",
+        "CU-024",
+        "CU-025",
+        "CU-026",
+        "CU-027",
+        "CU-028",
+        "CU-029",
+        "CU-030"
+      ]
+    },
+    {
+      "id": "chinese",
+      "label": "语文",
+      "file_id": "PDF-006",
+      "standard_file": "2.普通高中语文课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-006｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "chinese.aesthetic_appreciation",
+        "chinese.cultural_inheritance"
+      ],
+      "coverage_unit_ids": [
+        "CU-057",
+        "CU-058",
+        "CU-059",
+        "CU-060",
+        "CU-061",
+        "CU-062",
+        "CU-063",
+        "CU-064",
+        "CU-065",
+        "CU-066",
+        "CU-067",
+        "CU-068",
+        "CU-069",
+        "CU-070",
+        "CU-071",
+        "CU-072",
+        "CU-073",
+        "CU-074"
+      ]
+    },
+    {
+      "id": "civics",
+      "label": "思想政治",
+      "file_id": "PDF-009",
+      "standard_file": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-009｜PDF第12-14页（书内第4-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "civics.political_identity",
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "coverage_unit_ids": [
+        "CU-090",
+        "CU-091",
+        "CU-092",
+        "CU-093",
+        "CU-094",
+        "CU-095",
+        "CU-096",
+        "CU-097",
+        "CU-098",
+        "CU-099"
+      ]
+    },
+    {
+      "id": "geography",
+      "label": "地理",
+      "file_id": "PDF-011",
+      "standard_file": "7.普通高中地理课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-011｜PDF第11-12页（书内第3-4页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "geography.human_land_coordination",
+        "geography.comprehensive_thinking",
+        "geography.regional_cognition",
+        "geography.geographical_practice"
+      ],
+      "coverage_unit_ids": [
+        "CU-105",
+        "CU-106",
+        "CU-107",
+        "CU-108",
+        "CU-109",
+        "CU-110",
+        "CU-111",
+        "CU-112",
+        "CU-113",
+        "CU-114",
+        "CU-115"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "历史",
+      "file_id": "PDF-010",
+      "standard_file": "6.普通高中历史课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-010｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "history.historical_materialism",
+        "history.temporal_spatial",
+        "history.source_evidence",
+        "history.historical_explanation",
+        "history.national_sentiment"
+      ],
+      "coverage_unit_ids": [
+        "CU-100",
+        "CU-101",
+        "CU-102",
+        "CU-103",
+        "CU-104"
+      ]
+    },
+    {
+      "id": "information_technology",
+      "label": "信息技术",
+      "file_id": "PDF-003",
+      "standard_file": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-003｜PDF第13-14页（书内第5-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-013",
+        "CU-014",
+        "CU-015",
+        "CU-016",
+        "CU-017",
+        "CU-018",
+        "CU-019",
+        "CU-020",
+        "CU-021",
+        "CU-022"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "label": "数学",
+      "file_id": "PDF-007",
+      "standard_file": "3.普通高中数学课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-007｜PDF第12-15页（书内第4-7页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.logical_reasoning",
+        "mathematics.modeling",
+        "mathematics.visual_imagination",
+        "mathematics.operation",
+        "mathematics.data_analysis"
+      ],
+      "coverage_unit_ids": [
+        "CU-075",
+        "CU-076",
+        "CU-077",
+        "CU-078",
+        "CU-079",
+        "CU-080",
+        "CU-081",
+        "CU-082",
+        "CU-083"
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "物理",
+      "file_id": "PDF-012",
+      "standard_file": "8.普通高中物理课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-012｜PDF第13-14页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "physics.physical_concepts",
+        "physics.scientific_thinking",
+        "physics.scientific_inquiry",
+        "physics.scientific_attitude_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-116",
+        "CU-117",
+        "CU-118",
+        "CU-119",
+        "CU-120",
+        "CU-121",
+        "CU-122",
+        "CU-123",
+        "CU-124",
+        "CU-125",
+        "CU-126",
+        "CU-127",
+        "CU-128",
+        "CU-129",
+        "CU-130",
+        "CU-131",
+        "CU-132",
+        "CU-133",
+        "CU-134",
+        "CU-135",
+        "CU-136",
+        "CU-137",
+        "CU-138",
+        "CU-139",
+        "CU-140",
+        "CU-141",
+        "CU-142",
+        "CU-143",
+        "CU-144",
+        "CU-145",
+        "CU-146",
+        "CU-147",
+        "CU-148",
+        "CU-149",
+        "CU-150",
+        "CU-151",
+        "CU-152",
+        "CU-153",
+        "CU-154",
+        "CU-155"
+      ]
+    }
+  ],
+  "competencies": [
+    {
+      "id": "art.aesthetic_taste",
+      "subject_id": "art",
+      "label": "审美情趣"
+    },
+    {
+      "id": "art.artistic_perception",
+      "subject_id": "art",
+      "label": "艺术感知"
+    },
+    {
+      "id": "art.creative_expression",
+      "subject_id": "art",
+      "label": "创意表达"
+    },
+    {
+      "id": "art.cultural_understanding",
+      "subject_id": "art",
+      "label": "文化理解"
+    },
+    {
+      "id": "chinese.language_construction",
+      "subject_id": "chinese",
+      "label": "语言建构与运用"
+    },
+    {
+      "id": "chinese.thinking_development",
+      "subject_id": "chinese",
+      "label": "思维发展与提升"
+    },
+    {
+      "id": "civics.public_participation",
+      "subject_id": "civics",
+      "label": "公共参与"
+    },
+    {
+      "id": "civics.rule_of_law",
+      "subject_id": "civics",
+      "label": "法治意识"
+    },
+    {
+      "id": "civics.scientific_spirit",
+      "subject_id": "civics",
+      "label": "科学精神"
+    },
+    {
+      "id": "geography.comprehensive_thinking",
+      "subject_id": "geography",
+      "label": "综合思维"
+    },
+    {
+      "id": "geography.geographical_practice",
+      "subject_id": "geography",
+      "label": "地理实践力"
+    },
+    {
+      "id": "geography.regional_cognition",
+      "subject_id": "geography",
+      "label": "区域认知"
+    },
+    {
+      "id": "history.historical_explanation",
+      "subject_id": "history",
+      "label": "历史解释"
+    },
+    {
+      "id": "history.historical_materialism",
+      "subject_id": "history",
+      "label": "唯物史观"
+    },
+    {
+      "id": "history.source_evidence",
+      "subject_id": "history",
+      "label": "史料实证"
+    },
+    {
+      "id": "information_technology.computational_thinking",
+      "subject_id": "information_technology",
+      "label": "计算思维"
+    },
+    {
+      "id": "information_technology.digital_learning_innovation",
+      "subject_id": "information_technology",
+      "label": "数字化学习与创新"
+    },
+    {
+      "id": "information_technology.information_awareness",
+      "subject_id": "information_technology",
+      "label": "信息意识"
+    },
+    {
+      "id": "information_technology.information_social_responsibility",
+      "subject_id": "information_technology",
+      "label": "信息社会责任"
+    },
+    {
+      "id": "mathematics.abstraction",
+      "subject_id": "mathematics",
+      "label": "数学抽象"
+    },
+    {
+      "id": "mathematics.data_analysis",
+      "subject_id": "mathematics",
+      "label": "数据分析"
+    },
+    {
+      "id": "mathematics.logical_reasoning",
+      "subject_id": "mathematics",
+      "label": "逻辑推理"
+    },
+    {
+      "id": "mathematics.modeling",
+      "subject_id": "mathematics",
+      "label": "数学建模"
+    },
+    {
+      "id": "mathematics.operation",
+      "subject_id": "mathematics",
+      "label": "数学运算"
+    },
+    {
+      "id": "mathematics.visual_imagination",
+      "subject_id": "mathematics",
+      "label": "直观想象"
+    },
+    {
+      "id": "physics.physical_concepts",
+      "subject_id": "physics",
+      "label": "物理观念"
+    },
+    {
+      "id": "physics.scientific_attitude_responsibility",
+      "subject_id": "physics",
+      "label": "科学态度与责任"
+    },
+    {
+      "id": "physics.scientific_inquiry",
+      "subject_id": "physics",
+      "label": "科学探究"
+    },
+    {
+      "id": "physics.scientific_thinking",
+      "subject_id": "physics",
+      "label": "科学思维"
+    }
+  ],
+  "retrieval_notes": {
+    "dependency_direction": "prerequisite_id -> topic_id",
+    "human_review_required": true,
+    "full_graph_href": "https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json",
+    "use_full_graph_when": "The task needs cross-theme paths, graph-wide validation, or an ID not present in this bundle."
+  }
+}

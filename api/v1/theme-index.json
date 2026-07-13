@@ -1,0 +1,252 @@
+{
+  "index_version": "1.0-link-first",
+  "generated_from": "/mvp/learning-map.json",
+  "count": 8,
+  "themes": [
+    {
+      "id": "theme-bq1-wellbeing",
+      "big_question_id": "BQ1",
+      "title": "怎样生活才算健康？",
+      "question": "怎样用证据设计一个既适合自己、尊重个体差异，又能得到同伴支持的健康生活方案？",
+      "description": "有尊严的健康成长不是用统一指标约束每个人，而是理解身体节律、情绪、学习、关系与环境之间的联系，在保护隐私和尊重差异的前提下形成可持续的自我管理与共同照护。",
+      "subject_ids": [
+        "biology",
+        "chemistry",
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physical_education_health"
+      ],
+      "topic_count": 25,
+      "performance_task": {
+        "title": "四周健康改进与共同照护方案",
+        "authentic_audience": "学生本人、同伴小组、体育与健康教师或学校健康支持人员",
+        "brief": "在保护隐私的前提下记录健康行为，解释关键变量，设计并试行个人改进方案，同时为班级形成一份尊重差异的同伴支持约定。",
+        "required_artifacts": [
+          "匿名健康数据日志",
+          "机制解释卡",
+          "个人健康改进方案",
+          "同伴支持约定",
+          "迭代反思"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ1.json"
+    },
+    {
+      "id": "theme-bq2-data-truth",
+      "big_question_id": "BQ2",
+      "title": "数据能告诉我们真相吗？",
+      "question": "同一组数据为什么可能支持不同结论？",
+      "description": "数据可信度不是单纯的统计计算问题，而是由数据如何采集和表示、数学上能否成立、语言上如何陈述，以及面向公众是否负责任共同决定。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "english",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 25,
+      "performance_task": {
+        "title": "一则数据主张的公开审查与可信改写",
+        "authentic_audience": "同学、家长或校园公共议题的真实受众",
+        "brief": "选择一则新闻、校园调查或公开报告中的数据主张，找到原始来源，完成跨学科审查，重绘图表、改写结论，并在公开质询中为修改理由辩护。",
+        "required_artifacts": [
+          "数据来源与证据链卡",
+          "样本与口径审查表",
+          "修正版图表",
+          "公众说明",
+          "质询回应记录"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ2.json"
+    },
+    {
+      "id": "theme-bq3-campus-flow",
+      "big_question_id": "BQ3",
+      "title": "未来真的可以被预测吗？",
+      "question": "校园高峰时段为什么会拥堵？模型能预测哪些通行变化，又可能遗漏什么？",
+      "description": "复杂系统不能仅靠列举因素解释；需要划定边界，识别变量、流动、反馈和约束，再用经过现实检验的模型支持行动，同时承认模型的简化和不确定性。",
+      "subject_ids": [
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 24,
+      "performance_task": {
+        "title": "校园高峰通行优化提案与小规模试验",
+        "authentic_audience": "学校管理者、师生与后勤人员",
+        "brief": "选择一个真实拥堵点，完成测量、系统图和简化模型，提出至少两种干预方案，并通过小规模试验或模拟比较效果。",
+        "required_artifacts": [
+          "校园通行观察地图",
+          "变量与系统关系图",
+          "简化预测模型",
+          "方案比较表",
+          "试验记录",
+          "优化提案"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ3.json"
+    },
+    {
+      "id": "theme-bq4-carbon-campus",
+      "big_question_id": "BQ4",
+      "title": "我们能实现碳中和吗？",
+      "question": "我们的校园如何从能源、材料和行为上减少碳足迹？",
+      "description": "校园碳中和不是一句倡议，而是物质与能量流动、生态过程、生活行为和制度选择共同构成的系统问题，需要透明的核算、情境化的权衡和持续行动。",
+      "subject_ids": [
+        "biology",
+        "chemistry",
+        "chinese",
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 30,
+      "performance_task": {
+        "title": "校园碳预算与三年减排行动路线",
+        "authentic_audience": "学校管理层、后勤部门、师生代表",
+        "brief": "完成一个边界明确的校园碳排调查，比较若干减排情景，提出包含优先级、责任人、成本、预期效果和复盘机制的行动路线。",
+        "required_artifacts": [
+          "校园碳流图",
+          "碳排核算表",
+          "假设与不确定性说明",
+          "减排情景比较",
+          "三年行动路线",
+          "公众展示"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ4.json"
+    },
+    {
+      "id": "theme-bq5-ai-decisions",
+      "big_question_id": "BQ5",
+      "title": "AI 可以替我们做决定吗？",
+      "question": "AI 参与判断时，责任、偏差和公平该如何被讨论？",
+      "description": "AI 判断不是机器独立完成的技术动作，而是数据、模型、机构决策、权利影响和治理规则共同构成的社会技术过程。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 27,
+      "performance_task": {
+        "title": "AI 使用边界公共咨询与建议书",
+        "authentic_audience": "模拟学校数字教育委员会或公共决策听证会",
+        "brief": "选择招聘、学习诊断、医疗分诊或公共服务中的 AI 案例，完成技术和社会风险审查，举行多方圆桌并提交使用边界建议。",
+        "required_artifacts": [
+          "数据—模型—决策—责任链图",
+          "风险矩阵",
+          "利益相关者与权责图",
+          "复核与申诉流程",
+          "公共建议书"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ5.json"
+    },
+    {
+      "id": "theme-bq6-digital-heritage",
+      "big_question_id": "BQ6",
+      "title": "文化遗产如何活在未来？",
+      "question": "数字技术如何帮助我们理解、保存和再表达文化遗产？",
+      "description": "文化遗产数字化不是把对象复制到屏幕上，而是基于史料作出选择、解释、翻译和设计；数字表达必须同时处理真实性、文化语境、审美、受众和权利。",
+      "subject_ids": [
+        "art",
+        "chinese",
+        "civics",
+        "english",
+        "history",
+        "information_technology",
+        "mathematics"
+      ],
+      "topic_count": 23,
+      "performance_task": {
+        "title": "一项文化遗产的可信数字微展",
+        "authentic_audience": "学校、地方社区或线上公众",
+        "brief": "选择一个地方或校园文化对象，建立可追溯资料档案，完成数字展陈、双语介绍和解释说明，并接受历史真实性与表达伦理质询。",
+        "required_artifacts": [
+          "资料与来源档案",
+          "时间—空间线索图",
+          "文化解释说明",
+          "数字展陈原型",
+          "双语展签",
+          "版权与表达伦理说明"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ6.json"
+    },
+    {
+      "id": "theme-bq7-fair-rules",
+      "big_question_id": "BQ7",
+      "title": "什么样的规则才公平？",
+      "question": "围绕手机、空间、社团资源或体育活动的一条校园规则，怎样制定才更公平、更可执行？",
+      "description": "公平规则不是简单地对所有人一模一样，而是把公共价值转化为理由透明、程序正当、权责清楚、可以申诉并能根据结果修订的共同约定。",
+      "subject_ids": [
+        "chinese",
+        "civics",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physical_education_health"
+      ],
+      "topic_count": 23,
+      "performance_task": {
+        "title": "校园规则公开听证与修订草案",
+        "authentic_audience": "班级、学生会、教师代表或学校管理者",
+        "brief": "选择一项有真实争议的校园规则，完成利益相关者调查、证据分析、公平标准比较和模拟听证，提交包含执行、复核、申诉与评估机制的修订草案。",
+        "required_artifacts": [
+          "利益相关者图",
+          "需求与影响数据",
+          "公平标准比较表",
+          "听证记录",
+          "规则修订草案",
+          "执行与申诉流程"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ7.json"
+    },
+    {
+      "id": "theme-bq8-campus-change-lab",
+      "big_question_id": "BQ8",
+      "title": "好主意怎样才能真正解决问题？",
+      "question": "我们能否把一个校园真实问题变成可测试、可改进、真正被使用的解决方案？",
+      "description": "负责任的创造不是提出一个点子或完成一次展示，而是与受影响者共同界定问题，把证据转化为设计标准，制作和测试原型，并为采用、维护、影响和意外后果承担责任。",
+      "subject_ids": [
+        "art",
+        "chinese",
+        "civics",
+        "geography",
+        "history",
+        "information_technology",
+        "mathematics",
+        "physics"
+      ],
+      "topic_count": 32,
+      "performance_task": {
+        "title": "一个校园解决方案的原型、试验与采用提案",
+        "authentic_audience": "真实使用者、学校管理者、后勤人员或学生社群",
+        "brief": "围绕噪声、光照、用水、通行、安全或信息服务等真实问题，完成需求研究、原型、测试和至少一次迭代，并提交可采用、可维护的校园行动提案。",
+        "required_artifacts": [
+          "问题与需求简报",
+          "设计标准",
+          "原型",
+          "测试数据与记录",
+          "迭代历史",
+          "影响与风险说明",
+          "采用和维护提案"
+        ]
+      },
+      "href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ8.json"
+    }
+  ]
+}

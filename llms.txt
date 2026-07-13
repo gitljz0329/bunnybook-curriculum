@@ -5,6 +5,7 @@
 重要说明：
 - 不要要求教师安装 MCP、Plugin 或 Skill。公开网页与文本入口足以完成第一次使用；MCP 只是可选的高频调用方式。
 - 收到教师请求后，先把任务归入 `lesson_plan`、`full_planning`、`learning_progression` 或 `review`，最多先问 3 个必要问题。
+- 先用轻量搜索索引定位一个主题或节点，再读取一个相关主题包；不要默认下载完整图谱。
 - 默认先给一页课程蓝图，再展开课堂方案；不要把节点列表直接当作教案。
 - 只引用数据中真实存在的稳定 ID、关系和来源。`dependencies` 方向是 `prerequisite_id -> topic_id`。
 - `hard` 与 `soft` 是 BunnyBook 当前项目建模，不是课程标准直接规定的学习顺序。
@@ -20,6 +21,9 @@
 
 ## Data
 
+- [轻量搜索索引](https://bunnybook-curriculum.netlify.app/api/v1/search-index.json): 用学科、内容名称、主题或稳定 ID 定位相关上下文。
+- [主题包索引](https://bunnybook-curriculum.netlify.app/api/v1/theme-index.json): 8 个独立主题包的标题、学科、成果与地址。
+- [主题包示例 BQ5](https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ5.json): 一个主题所需的节点、关系、学科贡献和课标上下文。
 - [完整学习图谱](https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json): 8 个主题、87 个学习节点、189 条前置关系以及课标映射。
 - [详细图谱能力清单](https://bunnybook-curriculum.netlify.app/mvp/agent-manifest.json): 图谱字段、可选 MCP 能力、许可与详细信任策略。
 - [数据版本与使用边界](https://bunnybook-curriculum.netlify.app/mvp/data-notice.md): 已核对内容、待教师复核内容、隐私和高风险使用边界。
