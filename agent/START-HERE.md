@@ -1,6 +1,6 @@
 # BunnyBook AI / Agent 操作协议
 
-版本：`2.0-universal-entry`  
+版本：`2.1-link-first`
 语言：`zh-CN`  
 访问模式：公开、只读、无需鉴权  
 教师安装要求：无  
@@ -27,8 +27,10 @@ MCP、Plugin 和 Skill 是可选加速层，不是默认入口。不要因为教
 1. `/llms.txt`：站点摘要、关键资源和边界。
 2. `/agent/START-HERE.md`：当前操作协议。
 3. `/api/v1/source-manifest.json`：版本、计数、资源地址和字段语义。
-4. `/api/v1/learning-map.json`：仅当需要检索具体主题、节点或关系时读取。
-5. `/mvp/data-notice.md`：当输出涉及证据、隐私或复核状态时核对。
+4. `/api/v1/search-index.json`：用学科、内容名称、主题或稳定 ID 定位最相关的上下文。
+5. `/api/v1/themes/BQ1.json` 至 `BQ8.json`：优先只读取一个相关主题包。
+6. `/api/v1/learning-map.json`：只有跨主题路径、图谱级校验或主题包之外的 ID 才读取完整图谱。
+7. `/mvp/data-notice.md`：当输出涉及证据、隐私或复核状态时核对。
 
 详细图谱集成清单位于 `/api/v1/graph-manifest.json`。可选本地 MCP 说明位于 `/mvp/mcp-guide.md`。
 
@@ -54,7 +56,7 @@ MCP、Plugin 和 Skill 是可选加速层，不是默认入口。不要因为教
 - 材料、分组和差异化支持
 - 依据、警告和教师复核项
 
-### `full_planning`
+### `full_planning` · 单元 / 项目规划
 
 用于一个单元、跨学科项目或多课时序列。
 
@@ -127,6 +129,8 @@ MCP、Plugin 和 Skill 是可选加速层，不是默认入口。不要因为教
 
 ### 主题检索
 
+- 先从 `/api/v1/search-index.json` 定位候选，再读取一个 `/api/v1/themes/BQ*.json`。
+- 不要因为完整图谱可访问，就在每次备课时默认下载 87 个节点和 189 条关系。
 - `themes` 是规范主题集合；`routes` 是兼容副本，同一主题不得重复计算。
 - 一个主题应同时提供真实问题、学科贡献、共同目标或共同表现任务。
 - 先选择最相关的 1 个主题；只有教学目的明确需要时才组合多个主题。

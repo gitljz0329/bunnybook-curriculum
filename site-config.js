@@ -14,6 +14,8 @@ window.BUNNYBOOK_CONFIG = Object.freeze({
     startHere: "/agent/START-HERE.md",
     universalManifest: "/agent/manifest.json",
     sourceManifest: "/api/v1/source-manifest.json",
+    searchIndex: "/api/v1/search-index.json",
+    themeIndex: "/api/v1/theme-index.json",
     learningMap: "/api/v1/learning-map.json",
     graphManifest: "/mvp/agent-manifest.json",
     dataNotice: "/mvp/data-notice.md",
@@ -34,7 +36,7 @@ window.BUNNYBOOK_CONFIG = Object.freeze({
       output: "先给一页课程蓝图，再给时间化课堂流程、学生产物、可观察掌握证据、差异化支持、依据与教师复核项",
     }),
     full_planning: Object.freeze({
-      label: "全盘规划",
+      label: "单元 / 项目规划",
       intent: "规划一个单元、项目或多课时学习序列",
       output: "给出真实问题、共同成果、学科贡献、关键节点、学习顺序、课时安排、形成性检查点、评价证据与教师决策项",
     }),

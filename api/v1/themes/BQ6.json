@@ -1,0 +1,2235 @@
+{
+  "bundle_version": "1.0-link-first",
+  "generated_from": "/mvp/learning-map.json",
+  "canonical_href": "https://bunnybook-curriculum.netlify.app/api/v1/themes/BQ6.json",
+  "purpose": "A bounded theme context for general-purpose AI lesson-planning conversations.",
+  "theme": {
+    "id": "theme-bq6-digital-heritage",
+    "big_question_id": "BQ6",
+    "secondary_big_question_id": "BQ5",
+    "title": "文化遗产如何活在未来？",
+    "question": "数字技术如何帮助我们理解、保存和再表达文化遗产？",
+    "description": "文化遗产数字化不是把对象复制到屏幕上，而是基于史料作出选择、解释、翻译和设计；数字表达必须同时处理真实性、文化语境、审美、受众和权利。",
+    "source_theme_ids": [
+      "TH-CAND-010"
+    ],
+    "topic_ids": [
+      "T-EVID-001",
+      "T-EVID-002",
+      "T-EVID-003",
+      "T-EVID-004",
+      "T-EVID-005",
+      "T-CULT-001",
+      "T-CULT-002",
+      "T-CULT-003",
+      "T-ART-001",
+      "T-ART-002",
+      "T-ART-003",
+      "T-ART-004",
+      "T-ART-005",
+      "T-ENG-001",
+      "T-ENG-002",
+      "T-ENG-003",
+      "T-ENG-004",
+      "T-ENG-005",
+      "T-TECH-001",
+      "T-TECH-002",
+      "T-TECH-003",
+      "T-GOV-001",
+      "T-GOV-006"
+    ],
+    "entry_topic_ids": [
+      "T-CULT-003"
+    ],
+    "topic_roles": [
+      {
+        "topic_id": "T-EVID-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-EVID-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-CULT-001",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-CULT-002",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-CULT-003",
+        "phase": "create_and_act",
+        "importance": "entry"
+      },
+      {
+        "topic_id": "T-ART-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ART-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ENG-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ENG-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ENG-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ENG-004",
+        "phase": "interpret",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-ENG-005",
+        "phase": "create_and_act",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-002",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-TECH-003",
+        "phase": "investigate",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-001",
+        "phase": "discover",
+        "importance": "core"
+      },
+      {
+        "topic_id": "T-GOV-006",
+        "phase": "interpret",
+        "importance": "core"
+      }
+    ],
+    "theme_learning": {
+      "theme_statement": "文化遗产数字化不是把对象复制到屏幕上，而是基于史料作出选择、解释、翻译和设计；数字表达必须同时处理真实性、文化语境、审美、受众和权利。",
+      "learning_goals": [
+        "建立文化对象的来源、时间、空间和解释证据链，区分事实、推断和当代再阐释。",
+        "理解文化意义如何在历史交流、媒介变化和不同受众中被重新建构。",
+        "运用数字与艺术语言完成有来源、尊重文化语境、适合公众理解的展陈。"
+      ],
+      "subject_contributions": [
+        {
+          "subject_id": "chinese",
+          "content_area": "文化论著研习、当代文化参与与公众表达",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.aesthetic_appreciation",
+            "chinese.cultural_inheritance"
+          ],
+          "contribution": "阅读文化材料，组织解释性叙事、展签和公众讲解。"
+        },
+        {
+          "subject_id": "history",
+          "content_area": "文化交流传播、史料研习与历史解释",
+          "competency_ids": [
+            "history.temporal_spatial",
+            "history.source_evidence",
+            "history.historical_explanation",
+            "history.national_sentiment"
+          ],
+          "contribution": "建立时空背景和史料证据链，解释文化意义的历史变化。"
+        },
+        {
+          "subject_id": "art",
+          "content_area": "艺术与文化、影视与数字媒体艺术实践",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.creative_expression",
+            "art.aesthetic_taste",
+            "art.cultural_understanding"
+          ],
+          "contribution": "分析形式、媒介和审美特征，设计数字展陈与视觉表达。"
+        },
+        {
+          "subject_id": "information_technology",
+          "content_area": "数据与数据结构、三维设计与数字创意",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "contribution": "建立数字档案、元数据和交互原型，处理版权、授权和数字保存。"
+        },
+        {
+          "subject_id": "english",
+          "content_area": "跨文化语篇、翻译与国际传播",
+          "competency_ids": [
+            "english.language_ability",
+            "english.cultural_awareness",
+            "english.thinking_quality"
+          ],
+          "contribution": "比较跨文化解释，为不同语言受众完成翻译和文化语境补充。"
+        }
+      ],
+      "final_performance_task": {
+        "title": "一项文化遗产的可信数字微展",
+        "authentic_audience": "学校、地方社区或线上公众",
+        "brief": "选择一个地方或校园文化对象，建立可追溯资料档案，完成数字展陈、双语介绍和解释说明，并接受历史真实性与表达伦理质询。",
+        "required_artifacts": [
+          "资料与来源档案",
+          "时间—空间线索图",
+          "文化解释说明",
+          "数字展陈原型",
+          "双语展签",
+          "版权与表达伦理说明"
+        ]
+      }
+    },
+    "material_links": {}
+  },
+  "topics": [
+    {
+      "id": "T-EVID-001",
+      "name": "事实、数据与主张",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "区分发生了什么、记录了什么，以及表达者据此声称了什么，避免把主张直接当成事实。",
+      "mastery_evidence": [
+        "能在一段材料中分别标出事实陈述、数据和结论性主张。",
+        "能指出一个主张还需要什么证据才能成立。"
+      ],
+      "assessment_prompt": "这句话是在报告事实、呈现数据，还是提出一个需要证明的主张？",
+      "source_anchor_ids": [
+        "CA-CU-063"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-002",
+      "name": "论点、证据与推理",
+      "subject": "chinese",
+      "domain": "证据表达",
+      "stage": 2,
+      "type": "representational",
+      "description": "用“论点—证据—推理”结构检查结论如何由材料支持，并识别推理中的跳步。",
+      "mastery_evidence": [
+        "能把一段论证拆成论点、证据和连接二者的理由。",
+        "能解释证据为什么支持或不足以支持结论。"
+      ],
+      "assessment_prompt": "这份证据和结论之间缺少哪一步解释？",
+      "source_anchor_ids": [
+        "CA-CU-057",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development",
+            "chinese.language_construction"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-057",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "chinese.language_construction",
+        "civics.scientific_spirit"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-003",
+      "name": "信息来源核验",
+      "subject": "chinese",
+      "domain": "媒介与阅读",
+      "stage": 2,
+      "type": "procedural",
+      "description": "检查材料的作者、出处、时间、证据来源与传播语境，判断是否值得继续使用。",
+      "mastery_evidence": [
+        "能追溯一则数据或说法的原始出处。",
+        "能说明来源的利益位置、时效与可核验程度。"
+      ],
+      "assessment_prompt": "如果只能做三项检查，你会怎样确认这条信息的来源可靠吗？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-013",
+        "CU-104"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 45 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "information_technology",
+          "role": "supporting",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "history",
+          "role": "supporting",
+          "competency_ids": [
+            "history.source_evidence"
+          ],
+          "content_anchor_ids": [
+            "CU-104"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "information_technology",
+        "history"
+      ],
+      "competency_ids": [
+        "chinese.thinking_development",
+        "information_technology.information_awareness",
+        "information_technology.information_social_responsibility",
+        "history.source_evidence"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-004",
+      "name": "限定语与不确定性表达",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 3,
+      "type": "language",
+      "description": "用范围、条件、概率和保留意见准确表达证据边界，不把有限发现写成绝对结论。",
+      "mastery_evidence": [
+        "能把“证明了”改写为与证据强度相称的表述。",
+        "能在结论中主动写明对象、时间和适用条件。"
+      ],
+      "assessment_prompt": "这句话需要加入哪些限定语，才不会说得比证据更多？",
+      "source_anchor_ids": [
+        "CA-CU-063",
+        "CU-078"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "language",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.logical_reasoning",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "mathematics.logical_reasoning",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-EVID-005",
+      "name": "公开质询与理由回应",
+      "subject": "chinese",
+      "domain": "公共表达",
+      "stage": 4,
+      "type": "meta",
+      "description": "围绕证据、方法、影响与边界提出可回答的质询，并用理由回应而非只表达立场。",
+      "mastery_evidence": [
+        "每个质询都能指向具体证据或推理环节。",
+        "回应时能修正原判断或说明为何保留原判断。"
+      ],
+      "assessment_prompt": "你的问题是在追问证据和理由，还是只在表达赞成或反对？",
+      "source_anchor_ids": [
+        "CA-CU-058",
+        "CA-CU-063",
+        "CU-096"
+      ],
+      "source_ref": "2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 21 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 28 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "chinese",
+      "node_kind": "meta",
+      "curriculum_links": [
+        {
+          "subject_id": "chinese",
+          "role": "primary",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-058",
+            "CA-CU-063"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "chinese",
+        "civics"
+      ],
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "civics.scientific_spirit",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-001",
+      "name": "文化对象的来源、时空与语境",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "文化证据",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "为一项文化对象建立来源、时间、空间、用途和解释语境，区分史料事实、合理推断与当代再阐释。",
+      "mastery_evidence": [
+        "能制作带来源的时空档案，并用不同标记区分事实、推断和未知。"
+      ],
+      "assessment_prompt": "一件文化对象的“原本意义”为什么常常不是唯一且固定的？",
+      "source_anchor_ids": [
+        "CU-102",
+        "CU-104",
+        "CU-064",
+        "CU-070",
+        "CU-024"
+      ],
+      "source_ref": "6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 45 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 29 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 35 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "history",
+          "role": "primary",
+          "competency_ids": [
+            "history.temporal_spatial",
+            "history.source_evidence",
+            "history.historical_explanation"
+          ],
+          "content_anchor_ids": [
+            "CU-102",
+            "CU-104"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.cultural_inheritance",
+            "chinese.thinking_development"
+          ],
+          "content_anchor_ids": [
+            "CU-064",
+            "CU-070"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "art",
+          "role": "supporting",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-024"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "history",
+        "chinese",
+        "art"
+      ],
+      "competency_ids": [
+        "history.temporal_spatial",
+        "history.source_evidence",
+        "history.historical_explanation",
+        "chinese.cultural_inheritance",
+        "chinese.thinking_development",
+        "art.artistic_perception",
+        "art.cultural_understanding"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-002",
+      "name": "数字建档、视觉叙事与跨文化解释",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "数字文化",
+      "stage": 3,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "把可信资料转化为有元数据、视觉层级、双语语境和受众路径的数字文化叙事原型。",
+      "mastery_evidence": [
+        "能呈现数字档案结构、视觉故事板和双语说明，并让目标受众完成理解测试。"
+      ],
+      "assessment_prompt": "数字展示越沉浸，为什么越需要让观众看见证据来源和解释选择？",
+      "source_anchor_ids": [
+        "CU-019",
+        "CU-022",
+        "CU-026",
+        "CU-030",
+        "CU-084",
+        "CU-087",
+        "CU-088"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 36 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 44 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CU-019",
+            "CU-022"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "art",
+          "role": "supporting",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "english",
+          "role": "supporting",
+          "competency_ids": [
+            "english.language_ability",
+            "english.cultural_awareness"
+          ],
+          "content_anchor_ids": [
+            "CU-084",
+            "CU-087",
+            "CU-088"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "art",
+        "english"
+      ],
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility",
+        "art.creative_expression",
+        "art.cultural_understanding",
+        "english.language_ability",
+        "english.cultural_awareness"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-CULT-003",
+      "name": "可信数字微展与解释责任",
+      "subject": "interdisciplinary",
+      "primary_subject_id": null,
+      "domain": "公共文化",
+      "stage": 4,
+      "type": "synthesis",
+      "node_kind": "synthesis",
+      "description": "面向真实公众完成兼顾历史真实性、审美、跨文化理解、版权和可及性的数字微展，并回应解释伦理质询。",
+      "mastery_evidence": [
+        "能公开展示作品、资料来源和解释说明，并根据真实性、受众和权利反馈修订。"
+      ],
+      "assessment_prompt": "数字化保存了文化对象的图像，为什么仍可能伤害它的文化意义？",
+      "source_anchor_ids": [
+        "CU-102",
+        "CU-104",
+        "CU-024",
+        "CU-030",
+        "CU-064",
+        "CU-070",
+        "CU-087",
+        "CU-088"
+      ],
+      "source_ref": "6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 45 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 29 页；2.普通高中语文课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 35 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "history",
+          "role": "primary",
+          "competency_ids": [
+            "history.source_evidence",
+            "history.historical_explanation",
+            "history.national_sentiment"
+          ],
+          "content_anchor_ids": [
+            "CU-102",
+            "CU-104"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "art",
+          "role": "supporting",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.aesthetic_taste",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-024",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "chinese",
+          "role": "supporting",
+          "competency_ids": [
+            "chinese.language_construction",
+            "chinese.aesthetic_appreciation",
+            "chinese.cultural_inheritance"
+          ],
+          "content_anchor_ids": [
+            "CU-064",
+            "CU-070"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "english",
+          "role": "supporting",
+          "competency_ids": [
+            "english.language_ability",
+            "english.cultural_awareness"
+          ],
+          "content_anchor_ids": [
+            "CU-087",
+            "CU-088"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "history",
+        "art",
+        "chinese",
+        "english"
+      ],
+      "competency_ids": [
+        "history.source_evidence",
+        "history.historical_explanation",
+        "history.national_sentiment",
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "art.cultural_understanding",
+        "chinese.language_construction",
+        "chinese.aesthetic_appreciation",
+        "chinese.cultural_inheritance",
+        "english.language_ability",
+        "english.cultural_awareness"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-001",
+      "name": "艺术语言与多感官感知",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "艺术感知",
+      "stage": 1,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "识别形、色、声、节奏、动作、镜头等艺术语言，描述它们如何组织感知和情感体验。",
+      "mastery_evidence": [
+        "能使用具体艺术语言描述一件作品，并区分可观察形式与个人联想。"
+      ],
+      "assessment_prompt": "“我喜欢”或“我不喜欢”为什么还不是完整的艺术分析？",
+      "source_anchor_ids": [
+        "CU-023",
+        "CU-024",
+        "CU-025"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.artistic_perception"
+          ],
+          "content_anchor_ids": [
+            "CU-023",
+            "CU-024",
+            "CU-025"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.artistic_perception"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-002",
+      "name": "审美判断与文化理解",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "艺术与文化",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "将形式分析、文化语境和审美判断联系起来，理解艺术意义如何在不同传统和时代中形成。",
+      "mastery_evidence": [
+        "能用形式与文化证据解释一个审美判断，并比较不同解释的依据。"
+      ],
+      "assessment_prompt": "审美判断有个人差异，为什么仍然需要证据和理由？",
+      "source_anchor_ids": [
+        "CU-024"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.aesthetic_taste",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-024"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.artistic_perception",
+        "art.aesthetic_taste",
+        "art.cultural_understanding"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-003",
+      "name": "视觉叙事与信息层级",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "视觉表达",
+      "stage": 2,
+      "type": "representational",
+      "node_kind": "representational",
+      "description": "运用构图、顺序、对比、焦点和媒介选择，把复杂信息转化为可理解且不误导的视觉叙事。",
+      "mastery_evidence": [
+        "能制作一版视觉信息草图，并说明层级、阅读路径和关键取舍。"
+      ],
+      "assessment_prompt": "一个视觉作品很吸引人，为什么仍可能传达错误信息？",
+      "source_anchor_ids": [
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.artistic_perception",
+            "art.creative_expression"
+          ],
+          "content_anchor_ids": [
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.artistic_perception",
+        "art.creative_expression"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-004",
+      "name": "以使用者为中心的创意原型",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "创意实践",
+      "stage": 3,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "从真实使用情境与受众反馈出发，将想法转化为可体验、可测试、可迭代的视觉或空间原型。",
+      "mastery_evidence": [
+        "能呈现原型、设计标准和用户反馈，并说明至少一次有证据的修改。"
+      ],
+      "assessment_prompt": "一个创意原型怎样证明它不仅“好看”，而且真正回应了需要？",
+      "source_anchor_ids": [
+        "CU-023",
+        "CU-025",
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 24 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.artistic_perception",
+            "art.aesthetic_taste"
+          ],
+          "content_anchor_ids": [
+            "CU-023",
+            "CU-025",
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.creative_expression",
+        "art.artistic_perception",
+        "art.aesthetic_taste"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ART-005",
+      "name": "公共创意表达与文化责任",
+      "subject": "art",
+      "primary_subject_id": "art",
+      "domain": "公共艺术",
+      "stage": 4,
+      "type": "meta",
+      "node_kind": "meta",
+      "description": "面向公共受众整合审美、文化语境、可及性和表达伦理，完成能被质询的艺术或数字媒介作品。",
+      "mastery_evidence": [
+        "能说明作品的文化来源、受众、版权、可及性与可能影响，并根据反馈修订。"
+      ],
+      "assessment_prompt": "公共表达中的创意自由为什么仍需要文化与受众责任？",
+      "source_anchor_ids": [
+        "CU-024",
+        "CU-026",
+        "CU-030"
+      ],
+      "source_ref": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；13.普通高中艺术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "art",
+          "role": "primary",
+          "competency_ids": [
+            "art.creative_expression",
+            "art.aesthetic_taste",
+            "art.cultural_understanding"
+          ],
+          "content_anchor_ids": [
+            "CU-024",
+            "CU-026",
+            "CU-030"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "art"
+      ],
+      "competency_ids": [
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "art.cultural_understanding"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-001",
+      "name": "英语信息定位与语境判断",
+      "subject": "english",
+      "primary_subject_id": "english",
+      "domain": "语言理解",
+      "stage": 1,
+      "type": "language",
+      "node_kind": "language",
+      "description": "在英语语篇中定位关键事实、来源、受众和写作目的，并借助上下文判断词句意义。",
+      "mastery_evidence": [
+        "能从一则英语材料中标出作者、出处、时间、核心信息与尚未解决的理解问题。"
+      ],
+      "assessment_prompt": "读懂每个单词，为什么仍可能误解一篇英语材料？",
+      "source_anchor_ids": [
+        "CU-085",
+        "CU-086",
+        "CU-088",
+        "CU-089"
+      ],
+      "source_ref": "4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 25 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 48 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "english",
+          "role": "primary",
+          "competency_ids": [
+            "english.language_ability",
+            "english.learning_ability"
+          ],
+          "content_anchor_ids": [
+            "CU-085",
+            "CU-086",
+            "CU-088",
+            "CU-089"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "competency_ids": [
+        "english.language_ability",
+        "english.learning_ability"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-002",
+      "name": "跨语言来源比较",
+      "subject": "english",
+      "primary_subject_id": "english",
+      "domain": "跨语言阅读",
+      "stage": 2,
+      "type": "procedural",
+      "node_kind": "procedural",
+      "description": "比较中英文材料的来源、证据、术语和语境，识别翻译、省略与框架差异造成的信息偏移。",
+      "mastery_evidence": [
+        "能制作双语来源对照表，并说明至少两处表达差异如何影响读者理解。"
+      ],
+      "assessment_prompt": "两篇材料结论相近，为什么仍需要比较它们的语境和原始来源？",
+      "source_anchor_ids": [
+        "CU-084",
+        "CU-085",
+        "CU-088"
+      ],
+      "source_ref": "4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 25 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "english",
+          "role": "primary",
+          "competency_ids": [
+            "english.language_ability",
+            "english.thinking_quality",
+            "english.learning_ability"
+          ],
+          "content_anchor_ids": [
+            "CU-084",
+            "CU-085",
+            "CU-088"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "competency_ids": [
+        "english.language_ability",
+        "english.thinking_quality",
+        "english.learning_ability"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-003",
+      "name": "跨文化视角与文化语境",
+      "subject": "english",
+      "primary_subject_id": "english",
+      "domain": "文化理解",
+      "stage": 2,
+      "type": "conceptual",
+      "node_kind": "conceptual",
+      "description": "从价值、惯例、历史和受众角度理解跨文化表达，避免把文化差异简化为固定标签。",
+      "mastery_evidence": [
+        "能用具体语篇证据解释一种文化视角，并指出自身解释可能受到的预设影响。"
+      ],
+      "assessment_prompt": "“尊重文化差异”为什么不等于不作任何判断？",
+      "source_anchor_ids": [
+        "CU-084",
+        "CU-087"
+      ],
+      "source_ref": "4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "english",
+          "role": "primary",
+          "competency_ids": [
+            "english.cultural_awareness",
+            "english.thinking_quality"
+          ],
+          "content_anchor_ids": [
+            "CU-084",
+            "CU-087"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "competency_ids": [
+        "english.cultural_awareness",
+        "english.thinking_quality"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-004",
+      "name": "双语解释与受众适配",
+      "subject": "english",
+      "primary_subject_id": "english",
+      "domain": "跨文化表达",
+      "stage": 3,
+      "type": "language",
+      "node_kind": "language",
+      "description": "根据不同语言受众的知识背景与需要，重组信息、补充语境并完成清楚而忠实的双语说明。",
+      "mastery_evidence": [
+        "能为同一主题写出面向不同受众的中英文短说明，并解释信息取舍与术语处理。"
+      ],
+      "assessment_prompt": "好翻译为什么有时需要补充原文没有明说的背景？",
+      "source_anchor_ids": [
+        "CU-085",
+        "CU-086",
+        "CU-087",
+        "CU-088"
+      ],
+      "source_ref": "4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 25 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 27 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "english",
+          "role": "primary",
+          "competency_ids": [
+            "english.language_ability",
+            "english.cultural_awareness",
+            "english.thinking_quality"
+          ],
+          "content_anchor_ids": [
+            "CU-085",
+            "CU-086",
+            "CU-087",
+            "CU-088"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "competency_ids": [
+        "english.language_ability",
+        "english.cultural_awareness",
+        "english.thinking_quality"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-ENG-005",
+      "name": "国际对话与跨文化回应",
+      "subject": "english",
+      "primary_subject_id": "english",
+      "domain": "国际沟通",
+      "stage": 4,
+      "type": "meta",
+      "node_kind": "meta",
+      "description": "综合证据、文化语境与受众反馈，就公共议题进行有立场、可倾听、能回应异议的跨文化交流。",
+      "mastery_evidence": [
+        "能完成一份双语公众材料并回应来自不同文化视角的质询。"
+      ],
+      "assessment_prompt": "跨文化交流中，怎样既保持自己的立场又真正理解对方？",
+      "source_anchor_ids": [
+        "CU-084",
+        "CU-087",
+        "CU-088"
+      ],
+      "source_ref": "4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 39 页；4.普通高中英语课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 43 页",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review",
+      "curriculum_links": [
+        {
+          "subject_id": "english",
+          "role": "primary",
+          "competency_ids": [
+            "english.language_ability",
+            "english.cultural_awareness",
+            "english.thinking_quality",
+            "english.learning_ability"
+          ],
+          "content_anchor_ids": [
+            "CU-084",
+            "CU-087",
+            "CU-088"
+          ],
+          "mapping_basis": "author",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "english"
+      ],
+      "competency_ids": [
+        "english.language_ability",
+        "english.cultural_awareness",
+        "english.thinking_quality",
+        "english.learning_ability"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-001",
+      "name": "数据来源与采集过程",
+      "subject": "information_technology",
+      "domain": "数据与计算",
+      "stage": 1,
+      "type": "procedural",
+      "description": "追踪数据从现实对象到数字记录的过程，识别传感、问卷、平台日志或人工录入各自的限制。",
+      "mastery_evidence": [
+        "能画出一组数据的采集流程。",
+        "能指出采集工具和规则可能引入的误差。"
+      ],
+      "assessment_prompt": "这条数据在进入表格之前，现实中发生了什么？",
+      "source_anchor_ids": [
+        "CA-CU-013",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.information_awareness",
+            "information_technology.computational_thinking"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "mathematics.abstraction",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-002",
+      "name": "数据清洗与转换",
+      "subject": "information_technology",
+      "domain": "数据与计算",
+      "stage": 2,
+      "type": "procedural",
+      "description": "处理重复、格式不一、编码错误与缺失记录，并保留可复核的转换说明。",
+      "mastery_evidence": [
+        "能制定一致的清洗规则并保留原始数据。",
+        "能说明每项转换会不会改变分析对象。"
+      ],
+      "assessment_prompt": "你对原始数据做了哪些改变，别人能否复现？",
+      "source_anchor_ids": [
+        "CA-CU-013",
+        "CA-CU-015",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 20 页；11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 26 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "procedural",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.digital_learning_innovation",
+            "information_technology.information_social_responsibility"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-013",
+            "CA-CU-015"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-TECH-003",
+      "name": "数据结构与字段含义",
+      "subject": "information_technology",
+      "domain": "数据与数据结构",
+      "stage": 2,
+      "type": "representational",
+      "description": "理解字段、记录、类别与编码如何表示现实对象，并检查数字标签是否掩盖重要差异。",
+      "mastery_evidence": [
+        "能为一张数据表写出字段字典。",
+        "能指出分类编码对后续分析的影响。"
+      ],
+      "assessment_prompt": "这个字段在现实世界中究竟代表什么，又遗漏了什么？",
+      "source_anchor_ids": [
+        "CA-CU-015",
+        "CU-078"
+      ],
+      "source_ref": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 26 页；3.普通高中数学课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 38 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "information_technology",
+      "node_kind": "representational",
+      "curriculum_links": [
+        {
+          "subject_id": "information_technology",
+          "role": "primary",
+          "competency_ids": [
+            "information_technology.computational_thinking",
+            "information_technology.information_awareness"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-015"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "mathematics",
+          "role": "supporting",
+          "competency_ids": [
+            "mathematics.abstraction",
+            "mathematics.data_analysis"
+          ],
+          "content_anchor_ids": [
+            "CU-078"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "information_technology",
+        "mathematics"
+      ],
+      "competency_ids": [
+        "information_technology.computational_thinking",
+        "information_technology.information_awareness",
+        "mathematics.abstraction",
+        "mathematics.data_analysis"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-001",
+      "name": "权利、责任与公共利益",
+      "subject": "civics",
+      "domain": "公共判断",
+      "stage": 1,
+      "type": "conceptual",
+      "description": "从个人权利、机构责任和公共利益三个角度理解技术决策，而不是只比较效率高低。",
+      "mastery_evidence": [
+        "能指出一个技术决策影响了哪些权利与公共利益。",
+        "能区分“可以做”与“应该做”。"
+      ],
+      "assessment_prompt": "即使系统更高效，它还可能损害哪些不应被交换掉的权利？",
+      "source_anchor_ids": [
+        "CA-CU-090",
+        "CA-CU-091"
+      ],
+      "source_ref": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 19 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 22 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "civics",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "civics",
+          "role": "primary",
+          "competency_ids": [
+            "civics.scientific_spirit",
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-090",
+            "CA-CU-091"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "civics"
+      ],
+      "competency_ids": [
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    },
+    {
+      "id": "T-GOV-006",
+      "name": "制度规则与责任边界",
+      "subject": "history",
+      "domain": "社会治理",
+      "stage": 3,
+      "type": "conceptual",
+      "description": "从制度形成与治理实践理解责任不能只交给个人善意，而需通过规则、程序和监督稳定下来。",
+      "mastery_evidence": [
+        "能把技术风险转化为机构流程和治理规则。",
+        "能区分开发者、使用者与监管者的责任边界。"
+      ],
+      "assessment_prompt": "哪些保障不能只靠“使用者会谨慎”，而必须写进制度和流程？",
+      "source_anchor_ids": [
+        "CA-CU-100",
+        "CA-CU-101",
+        "CU-096"
+      ],
+      "source_ref": "6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 30 页；6.普通高中历史课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 34 页；5.普通高中思想政治课程标准（2017年版2020年修订）.pdf，课程内容，PDF第 37 页",
+      "evidence_level": "inferred",
+      "review_status": "pilot_draft",
+      "primary_subject_id": "history",
+      "node_kind": "conceptual",
+      "curriculum_links": [
+        {
+          "subject_id": "history",
+          "role": "primary",
+          "competency_ids": [
+            "history.historical_materialism",
+            "history.historical_explanation"
+          ],
+          "content_anchor_ids": [
+            "CA-CU-100",
+            "CA-CU-101"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        },
+        {
+          "subject_id": "civics",
+          "role": "supporting",
+          "competency_ids": [
+            "civics.rule_of_law",
+            "civics.public_participation"
+          ],
+          "content_anchor_ids": [
+            "CU-096"
+          ],
+          "mapping_basis": "inferred",
+          "review_status": "pending_subject_review"
+        }
+      ],
+      "curriculum_subject_ids": [
+        "history",
+        "civics"
+      ],
+      "competency_ids": [
+        "history.historical_materialism",
+        "history.historical_explanation",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "alignment_status": "author_mapped_pending_subject_review"
+    }
+  ],
+  "dependencies": [
+    {
+      "topic_id": "T-EVID-002",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "hard",
+      "reason": "先分清事实、数据与主张，才能判断证据如何支持论点。"
+    },
+    {
+      "topic_id": "T-EVID-003",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "识别主张与数据，有助于决定哪些来源最需要核验。"
+    },
+    {
+      "topic_id": "T-EVID-004",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "只有理解证据强度与推理，才能用合适的限定语表达结论。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-002",
+      "strength": "hard",
+      "reason": "有效质询必须指向论点、证据或推理中的具体环节。"
+    },
+    {
+      "topic_id": "T-EVID-005",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "soft",
+      "reason": "来源核验为公开质询提供可核查的事实基础。"
+    },
+    {
+      "topic_id": "T-TECH-002",
+      "prerequisite_id": "T-TECH-001",
+      "strength": "hard",
+      "reason": "清洗与转换必须建立在对原始采集过程的理解之上。"
+    },
+    {
+      "topic_id": "T-TECH-003",
+      "prerequisite_id": "T-TECH-002",
+      "strength": "soft",
+      "reason": "清洗过程会改变字段取值，需要保留字段含义的一致性。"
+    },
+    {
+      "topic_id": "T-GOV-006",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "hard",
+      "reason": "制度规则把公共价值转化为稳定的责任安排。"
+    },
+    {
+      "topic_id": "T-ENG-001",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "区分事实与主张有助于定位英语语篇中的关键信息。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-002",
+      "prerequisite_id": "T-ENG-001",
+      "strength": "hard",
+      "reason": "跨语言比较需要先能准确定位英语材料的来源与核心信息。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-002",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "hard",
+      "reason": "比较来源前需要掌握作者、时间和证据链核验。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-003",
+      "prerequisite_id": "T-ENG-001",
+      "strength": "hard",
+      "reason": "文化语境理解需要准确把握语篇中的事实、立场和受众。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-004",
+      "prerequisite_id": "T-ENG-002",
+      "strength": "hard",
+      "reason": "可靠双语表达需要先识别来源、术语和语境差异。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-004",
+      "prerequisite_id": "T-EVID-004",
+      "strength": "soft",
+      "reason": "限定语和不确定性表达有助于避免跨语言传播中的过度确定。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-005",
+      "prerequisite_id": "T-ENG-003",
+      "strength": "hard",
+      "reason": "国际对话需要理解不同文化视角形成的语境。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-005",
+      "prerequisite_id": "T-ENG-004",
+      "strength": "hard",
+      "reason": "回应真实受众需要能够适配并清楚组织双语表达。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ENG-005",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "soft",
+      "reason": "公开质询与理由回应为跨文化对话提供论证基础。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-002",
+      "prerequisite_id": "T-ART-001",
+      "strength": "hard",
+      "reason": "审美与文化解释需要先能准确感知和描述艺术形式。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-002",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "soft",
+      "reason": "来源核验能帮助区分作品语境证据与后来的想象。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-003",
+      "prerequisite_id": "T-ART-001",
+      "strength": "hard",
+      "reason": "组织视觉叙事需要掌握基本艺术语言及其感知作用。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-003",
+      "prerequisite_id": "T-EVID-001",
+      "strength": "soft",
+      "reason": "区分事实与主张有助于避免视觉表达把推断伪装成事实。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-004",
+      "prerequisite_id": "T-ART-003",
+      "strength": "hard",
+      "reason": "设计原型需要能组织视觉信息与使用者的阅读路径。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-ART-002",
+      "strength": "hard",
+      "reason": "负责任的公共艺术表达需要理解文化语境与审美判断。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-ART-004",
+      "strength": "hard",
+      "reason": "公共作品需要经过真实受众的原型测试与迭代。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-ART-005",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "soft",
+      "reason": "公开质询有助于审查表达选择和影响。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-001",
+      "prerequisite_id": "T-EVID-003",
+      "strength": "hard",
+      "reason": "文化解释需要先核验材料的作者、时代、出处和传播链。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-001",
+      "prerequisite_id": "T-ART-001",
+      "strength": "soft",
+      "reason": "艺术感知支持对文化对象形式特征的准确描述。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-002",
+      "prerequisite_id": "T-CULT-001",
+      "strength": "hard",
+      "reason": "数字叙事必须建立在可追溯的文化来源与语境档案上。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-002",
+      "prerequisite_id": "T-ART-003",
+      "strength": "hard",
+      "reason": "数字展示需要组织视觉层级和阅读路径。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-002",
+      "prerequisite_id": "T-ENG-002",
+      "strength": "soft",
+      "reason": "跨语言来源比较能减少翻译和语境偏移。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-002",
+      "prerequisite_id": "T-TECH-002",
+      "strength": "soft",
+      "reason": "数据清洗与字段意识支持数字档案的一致性。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-003",
+      "prerequisite_id": "T-CULT-002",
+      "strength": "hard",
+      "reason": "可信微展需要完成数字建档、视觉叙事和跨文化解释原型。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-003",
+      "prerequisite_id": "T-ART-005",
+      "strength": "hard",
+      "reason": "公共文化表达需要审美、文化来源和受众责任。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-003",
+      "prerequisite_id": "T-ENG-005",
+      "strength": "soft",
+      "reason": "国际受众质询需要跨文化回应能力。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-003",
+      "prerequisite_id": "T-EVID-005",
+      "strength": "hard",
+      "reason": "解释责任需要能够公开回应证据和表达选择。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    },
+    {
+      "topic_id": "T-CULT-003",
+      "prerequisite_id": "T-GOV-001",
+      "strength": "soft",
+      "reason": "数字文化展陈还需处理版权、授权与公共文化权利。",
+      "evidence_level": "author",
+      "review_status": "author_draft_pending_subject_review"
+    }
+  ],
+  "external_prerequisites": [
+    {
+      "topic_id": "T-TECH-001",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "采集数据前必须明确对象和变量。"
+    },
+    {
+      "topic_id": "T-TECH-003",
+      "prerequisite_id": "T-DATA-001",
+      "strength": "hard",
+      "reason": "字段设计是把对象和变量转化为数据结构的过程。"
+    },
+    {
+      "topic_id": "T-GOV-006",
+      "prerequisite_id": "T-AI-005",
+      "strength": "soft",
+      "reason": "责任链揭示制度应在哪些环节设定规则和监督。"
+    }
+  ],
+  "curriculum_subjects": [
+    {
+      "id": "art",
+      "label": "艺术",
+      "file_id": "PDF-004",
+      "standard_file": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-004｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "art.artistic_perception",
+        "art.creative_expression",
+        "art.aesthetic_taste",
+        "art.cultural_understanding"
+      ],
+      "coverage_unit_ids": [
+        "CU-023",
+        "CU-024",
+        "CU-025",
+        "CU-026",
+        "CU-027",
+        "CU-028",
+        "CU-029",
+        "CU-030"
+      ]
+    },
+    {
+      "id": "chinese",
+      "label": "语文",
+      "file_id": "PDF-006",
+      "standard_file": "2.普通高中语文课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-006｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "chinese.language_construction",
+        "chinese.thinking_development",
+        "chinese.aesthetic_appreciation",
+        "chinese.cultural_inheritance"
+      ],
+      "coverage_unit_ids": [
+        "CU-057",
+        "CU-058",
+        "CU-059",
+        "CU-060",
+        "CU-061",
+        "CU-062",
+        "CU-063",
+        "CU-064",
+        "CU-065",
+        "CU-066",
+        "CU-067",
+        "CU-068",
+        "CU-069",
+        "CU-070",
+        "CU-071",
+        "CU-072",
+        "CU-073",
+        "CU-074"
+      ]
+    },
+    {
+      "id": "civics",
+      "label": "思想政治",
+      "file_id": "PDF-009",
+      "standard_file": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-009｜PDF第12-14页（书内第4-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "civics.political_identity",
+        "civics.scientific_spirit",
+        "civics.rule_of_law",
+        "civics.public_participation"
+      ],
+      "coverage_unit_ids": [
+        "CU-090",
+        "CU-091",
+        "CU-092",
+        "CU-093",
+        "CU-094",
+        "CU-095",
+        "CU-096",
+        "CU-097",
+        "CU-098",
+        "CU-099"
+      ]
+    },
+    {
+      "id": "english",
+      "label": "英语",
+      "file_id": "PDF-008",
+      "standard_file": "4.普通高中英语课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-008｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "english.language_ability",
+        "english.cultural_awareness",
+        "english.thinking_quality",
+        "english.learning_ability"
+      ],
+      "coverage_unit_ids": [
+        "CU-084",
+        "CU-085",
+        "CU-086",
+        "CU-087",
+        "CU-088",
+        "CU-089"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "历史",
+      "file_id": "PDF-010",
+      "standard_file": "6.普通高中历史课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-010｜PDF第12-13页（书内第4-5页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "history.historical_materialism",
+        "history.temporal_spatial",
+        "history.source_evidence",
+        "history.historical_explanation",
+        "history.national_sentiment"
+      ],
+      "coverage_unit_ids": [
+        "CU-100",
+        "CU-101",
+        "CU-102",
+        "CU-103",
+        "CU-104"
+      ]
+    },
+    {
+      "id": "information_technology",
+      "label": "信息技术",
+      "file_id": "PDF-003",
+      "standard_file": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-003｜PDF第13-14页（书内第5-6页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "information_technology.information_awareness",
+        "information_technology.computational_thinking",
+        "information_technology.digital_learning_innovation",
+        "information_technology.information_social_responsibility"
+      ],
+      "coverage_unit_ids": [
+        "CU-013",
+        "CU-014",
+        "CU-015",
+        "CU-016",
+        "CU-017",
+        "CU-018",
+        "CU-019",
+        "CU-020",
+        "CU-021",
+        "CU-022"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "label": "数学",
+      "file_id": "PDF-007",
+      "standard_file": "3.普通高中数学课程标准（2017年版2020年修订）.pdf",
+      "competency_source_ref": "PDF-007｜PDF第12-15页（书内第4-7页）｜二、学科核心素养与课程目标 > （一）学科核心素养",
+      "competency_ids": [
+        "mathematics.abstraction",
+        "mathematics.logical_reasoning",
+        "mathematics.modeling",
+        "mathematics.visual_imagination",
+        "mathematics.operation",
+        "mathematics.data_analysis"
+      ],
+      "coverage_unit_ids": [
+        "CU-075",
+        "CU-076",
+        "CU-077",
+        "CU-078",
+        "CU-079",
+        "CU-080",
+        "CU-081",
+        "CU-082",
+        "CU-083"
+      ]
+    }
+  ],
+  "competencies": [
+    {
+      "id": "art.aesthetic_taste",
+      "subject_id": "art",
+      "label": "审美情趣"
+    },
+    {
+      "id": "art.artistic_perception",
+      "subject_id": "art",
+      "label": "艺术感知"
+    },
+    {
+      "id": "art.creative_expression",
+      "subject_id": "art",
+      "label": "创意表达"
+    },
+    {
+      "id": "art.cultural_understanding",
+      "subject_id": "art",
+      "label": "文化理解"
+    },
+    {
+      "id": "chinese.aesthetic_appreciation",
+      "subject_id": "chinese",
+      "label": "审美鉴赏与创造"
+    },
+    {
+      "id": "chinese.cultural_inheritance",
+      "subject_id": "chinese",
+      "label": "文化传承与理解"
+    },
+    {
+      "id": "chinese.language_construction",
+      "subject_id": "chinese",
+      "label": "语言建构与运用"
+    },
+    {
+      "id": "chinese.thinking_development",
+      "subject_id": "chinese",
+      "label": "思维发展与提升"
+    },
+    {
+      "id": "civics.public_participation",
+      "subject_id": "civics",
+      "label": "公共参与"
+    },
+    {
+      "id": "civics.rule_of_law",
+      "subject_id": "civics",
+      "label": "法治意识"
+    },
+    {
+      "id": "civics.scientific_spirit",
+      "subject_id": "civics",
+      "label": "科学精神"
+    },
+    {
+      "id": "english.cultural_awareness",
+      "subject_id": "english",
+      "label": "文化意识"
+    },
+    {
+      "id": "english.language_ability",
+      "subject_id": "english",
+      "label": "语言能力"
+    },
+    {
+      "id": "english.learning_ability",
+      "subject_id": "english",
+      "label": "学习能力"
+    },
+    {
+      "id": "english.thinking_quality",
+      "subject_id": "english",
+      "label": "思维品质"
+    },
+    {
+      "id": "history.historical_explanation",
+      "subject_id": "history",
+      "label": "历史解释"
+    },
+    {
+      "id": "history.historical_materialism",
+      "subject_id": "history",
+      "label": "唯物史观"
+    },
+    {
+      "id": "history.national_sentiment",
+      "subject_id": "history",
+      "label": "家国情怀"
+    },
+    {
+      "id": "history.source_evidence",
+      "subject_id": "history",
+      "label": "史料实证"
+    },
+    {
+      "id": "history.temporal_spatial",
+      "subject_id": "history",
+      "label": "时空观念"
+    },
+    {
+      "id": "information_technology.computational_thinking",
+      "subject_id": "information_technology",
+      "label": "计算思维"
+    },
+    {
+      "id": "information_technology.digital_learning_innovation",
+      "subject_id": "information_technology",
+      "label": "数字化学习与创新"
+    },
+    {
+      "id": "information_technology.information_awareness",
+      "subject_id": "information_technology",
+      "label": "信息意识"
+    },
+    {
+      "id": "information_technology.information_social_responsibility",
+      "subject_id": "information_technology",
+      "label": "信息社会责任"
+    },
+    {
+      "id": "mathematics.abstraction",
+      "subject_id": "mathematics",
+      "label": "数学抽象"
+    },
+    {
+      "id": "mathematics.data_analysis",
+      "subject_id": "mathematics",
+      "label": "数据分析"
+    },
+    {
+      "id": "mathematics.logical_reasoning",
+      "subject_id": "mathematics",
+      "label": "逻辑推理"
+    }
+  ],
+  "retrieval_notes": {
+    "dependency_direction": "prerequisite_id -> topic_id",
+    "human_review_required": true,
+    "full_graph_href": "https://bunnybook-curriculum.netlify.app/api/v1/learning-map.json",
+    "use_full_graph_when": "The task needs cross-theme paths, graph-wide validation, or an ID not present in this bundle."
+  }
+}
